@@ -49,7 +49,7 @@ Internal Examiner  External Examiner
 
 ## INTERNSHIP CERTIFICATE
 
-> [ Scanned copy of the Internship Completion Certificate to be inserted here. ]
+![Internship Completion Certificate](Internship Certificate.png)
 
 
 ---
@@ -101,7 +101,7 @@ From the third week onwards the work moved into the firm’s compliance software
 
 The middle phase of the internship was devoted to statutory compliance. On the indirect tax side I worked on Goods and Services Tax filings: downloading and analysing acknowledgement forms from the GST portal, working with GSTR-1, GSTR-2B and GSTR-3B, requesting and unlocking files, and observing how returns are authenticated both online and through a Digital Signature Certificate. On the direct tax side I moved to Tax Deducted at Source, where I requested and downloaded consolidated (conso) files from TRACES using Winman TDS, extracted the data through the TDS Return Preparation Utility and entered it quarter-wise for filing. Reading conso files and Form 26AS together taught me how a deduction claimed by a deductor appears as a credit in the deductee’s account, and why any mismatch between the two must be resolved before a return is filed.
 
-The final phase brought all of this together into the preparation of the Statement of Total Income. Using the bank account abstract, the Tally data and the reconciled Form 26AS credits, I computed total income for individual and corporate clients in Winman, verified taxes already paid against taxes payable, assisted in the preparation of balance sheets, and prepared returns for upload. In the last two weeks I independently completed the filing of three returns end to end, from data entry to upload, after review by my manager, and assisted in documentation for statutory audit assignments and in the reconciliation of books maintained in Tally with GST return filings.
+The final phase brought all of this together into the preparation of the Statement of Total Income. I worked on Securities Transaction Tax and the related data entry in Winman, and then, using the bank account abstract, the Tally data and the reconciled Form 26AS credits, I computed total income for individual and corporate clients, verified taxes already paid against taxes payable, assisted in the preparation of balance sheets, and prepared returns for upload. In the last two weeks I independently completed the filing of three returns end to end, from data entry to upload, after review by my manager, and assisted in documentation for statutory audit assignments and in the reconciliation of books maintained in Tally with GST return filings.
 
 Professionally, the internship gave me three things that a classroom cannot. First, a working knowledge of the compliance calendar and of the software that Indian practitioners actually use. Second, an appreciation of accuracy as a professional obligation rather than as a personal preference, because in tax work an error is not merely a wrong figure but a notice, an interest liability and a loss of client confidence. Third, the discipline of sustained routine work, including a daily two-hour commute and long hours at a screen, and the habit of staying attentive through repetitive tasks. Working under Ms. A. Lakshmi and alongside Ms. Aruna, I also learned how a professional firm builds capability by review and correction rather than by instruction alone. In summary, the internship converted my MBA (Finance) coursework in financial accounting, direct and indirect taxation and financial reporting into something I can now perform, and it clarified my intention to build a career in accounting, taxation and audit.
 
@@ -373,8 +373,9 @@ The internship ran for ten working weeks and was structured so that each phase b
 - Read the conso file against Form 26AS to see how a deduction reported by the deductor appears as a credit in the deductee’s account, and why an error in a TDS statement becomes the deductee’s problem at the time of filing.
 
 
-#### 2.3.7  Bank Account Abstract and Statement of Total Income
+#### 2.3.7  Securities Transaction Tax, Bank Account Abstract and Statement of Total Income
 
+- Worked on Securities Transaction Tax (STT): identified securities transactions from the Annual Information Statement and the broker-wise statements, verified the STT reflected against them and entered the details in Winman for the computation.
 - Prepared bank account abstracts summarising the classified bank data into a working paper that could be used directly for computation.
 - Entered the data in Winman and prepared the Statement of Total Income for individual and corporate clients, head of income by head of income.
 - Reconciled tax credits appearing in Form 26AS with the taxes recorded in the books and the bank statement, so that advance tax, self-assessment tax and TDS were all correctly claimed.
@@ -443,8 +444,9 @@ The week-by-week record below is taken from the daily internship diary maintaine
 - Understood how a mismatch between a deductor’s statement and a deductee’s Form 26AS arises, and why it must be corrected before the return is filed.
 
 
-#### Week 8 (29 June – 3 July 2026): Bank Abstract, Reconciliation and Computation
+#### Week 8 (29 June – 3 July 2026): Securities Transaction Tax, Bank Abstract and Computation
 
+- Worked on Securities Transaction Tax and the related data entry in Winman, tracing securities transactions and the STT against them from the Annual Information Statement and broker statements.
 - Used the bank account abstract to prepare the working papers for computation, and carried out reconciliation of Form 26AS with the books.
 - Assisted in the preparation of the balance sheet from the classified data.
 - Entered the data in Winman and computed the Statement of Total Income, comparing tax already paid as per the bank statement and Tally with the tax still payable, for both individual and corporate clients.
@@ -519,6 +521,7 @@ One of the most satisfying aspects of the internship was recognising, in a live 
 - Applied the five heads of income and the structure of the Statement of Total Income while computing income for individuals and companies.
 - Used the provisions relating to Tax Deducted at Source in practice, including deduction rates, chargeability and the quarterly statement cycle.
 - Applied the concepts of advance tax, self-assessment tax and credit for taxes paid while arriving at the net tax payable or refundable.
+- Applied the taxation of securities transactions, including Securities Transaction Tax, while working on client data drawn from the Annual Information Statement and broker statements.
 
 
 #### 2.6.3  Indirect Taxation and GST
@@ -624,6 +627,7 @@ This chapter sets out what I actually took away from the internship, separating 
 - **Real-time accounting:** the ability to record varied accounting transactions in Tally with correct ledger selection, voucher type and narration, for both individual and corporate clients.
 - **Bank statement analysis:** the ability to read a bank statement as a primary accounting record, splitting entries into income, expenditure, drawings, transfers and capital items, and to prepare a bank account abstract from it.
 - **Statement of Total Income:** the ability to compute total income head by head for individuals and companies in Winman, give credit for taxes already paid, and arrive at the net tax payable or refundable.
+- **Securities Transaction Tax:** exposure to STT and to the treatment of securities transactions, including tracing them from the Annual Information Statement and broker statements into the computation.
 - **Income tax return filing:** familiarity with the full filing sequence, from portal downloads and computation through to generation and upload of the return, including three filings completed independently.
 - **TDS compliance:** working knowledge of conso files from TRACES, the TDS Return Preparation Utility, quarter-wise statement preparation, and the relationship between a deductor’s statement and the deductee’s Form 26AS.
 - **GST compliance:** practical exposure to GSTR-1, GSTR-2B and GSTR-3B, to acknowledgement and unlocking of files on the portal, to Digital Signature Certificate authentication, and to reconciliation of books with returns filed.
@@ -697,7 +701,7 @@ The Summer Internship Programme was carried out at M/s S. Ravi & Associates, Cha
 
 The internship progressed in a deliberate sequence. It began with the analysis of bank statements, first of individual clients and then of corporate clients, where I classified every entry into income, expenditure, drawings and transfers within the bank ledger account. It moved to the firm’s software environment, where I was trained on Winman CA-ERP, accessed the income tax portal and downloaded Form 26AS, AIS and TIS, and recorded client transactions in Tally. The middle weeks were devoted to statutory compliance: GST filings involving GSTR-1, GSTR-2B and GSTR-3B, acknowledgement and unlocking of files on the portal and Digital Signature Certificate authentication, followed by TDS work involving conso files from TRACES, the Return Preparation Utility and quarter-wise data entry.
 
-The closing weeks brought the strands together. Using bank account abstracts, Tally data and reconciled Form 26AS credits, I computed the Statement of Total Income for individual and corporate clients in Winman, assisted in the preparation of balance sheets, verified taxes paid against taxes payable, and prepared returns for upload. I independently completed three filings end to end after review, assisted in documentation for statutory audit assignments, and reconciled Form 26AS, AIS and TIS with the books of account as part of audit and income tax verification procedures. The client reports I prepared were verified and approved by my Manager.
+The closing weeks brought the strands together. I worked on Securities Transaction Tax and the related data entry in Winman, and then, using bank account abstracts, Tally data and reconciled Form 26AS credits, computed the Statement of Total Income for individual and corporate clients in Winman, assisted in the preparation of balance sheets, verified taxes paid against taxes payable, and prepared returns for upload. I independently completed three filings end to end after review, assisted in documentation for statutory audit assignments, and reconciled Form 26AS, AIS and TIS with the books of account as part of audit and income tax verification procedures. The client reports I prepared were verified and approved by my Manager.
 
 
 ### 5.2  KEY TAKEAWAYS
