@@ -35,20 +35,22 @@ PERIOD = '12th May 2026 to 17th July 2026'
 # ---------------------------------------------------------------------------
 FRONT = [
     # ---- title page ----
-    ('gap', 1),
+    ('gap', 2),
     ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026'),
     ('gap', 2),
     ('center', 'Summer Internship Project Report submitted to the Malaysia '
                'University of Science and Technology, in partial fulfilment of '
                'the requirements to award the degree of'),
-    ('gap', 1),
-    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION'),
     ('gap', 2),
+    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION'),
+    ('gap', 3),
     ('cbold', 'SUBMITTED BY'),
     ('gap', 1),
     ('cbold', STUDENT),
     ('cbold', REG_NO),
-    ('gap', 4),
+    ('gap', 3),
+    ('logo',),                      # MUST + ISSM Business School banner
+    ('gap', 2),
     ('cbold', 'Indian School of Science and Management'),
     ('cbold', 'Chennai'),
     ('pagebreak',),
@@ -69,16 +71,16 @@ FRONT = [
     ('p', 'Dr. Kavitha Manikandan'),
     ('p', 'Academic Head'),
     ('p', 'ISSM Business School'),
-    ('gap', 3),
+    ('gap', 2),
     ('p', 'Viva Voce Examination Conducted on:'),
-    ('gap', 5),
+    ('gap', 4),
     ('sign', ('Internal Examiner', 'External Examiner')),
     ('pagebreak',),
 
-    # ---- internship certificate (scanned image goes here) ----
-    ('gap', 2),
+    # ---- internship certificate (scanned image) ----
+    ('gap', 1),
     ('big', 'INTERNSHIP CERTIFICATE'),
-    ('gap', 2),
+    ('gap', 1),
     ('certificate_image',),
     ('pagebreak',),
 

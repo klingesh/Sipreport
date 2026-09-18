@@ -19,6 +19,8 @@ Summer Internship Project Report submitted to the Malaysia University of Science
 
 **OSI2509030**
 
+![Malaysia University of Science and Technology and ISSM Business School](assets/issm-must-logo.jpg)
+
 **Indian School of Science and Management**
 
 **Chennai**
