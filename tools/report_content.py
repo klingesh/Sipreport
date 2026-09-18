@@ -188,11 +188,12 @@ FRONT = [
           'credit in the deductee’s account, and why any mismatch between the '
           'two must be resolved before a return is filed.'),
     ('p', 'The final phase brought all of this together into the preparation of '
-          'the Statement of Total Income. Using the bank account abstract, the '
-          'Tally data and the reconciled Form 26AS credits, I computed total '
-          'income for individual and corporate clients in Winman, verified taxes '
-          'already paid against taxes payable, assisted in the preparation of '
-          'balance sheets, and prepared returns for upload. In the last two '
+          'the Statement of Total Income. I worked on Securities Transaction Tax '
+          'and the related data entry in Winman, and then, using the bank account '
+          'abstract, the Tally data and the reconciled Form 26AS credits, I '
+          'computed total income for individual and corporate clients, verified '
+          'taxes already paid against taxes payable, assisted in the preparation '
+          'of balance sheets, and prepared returns for upload. In the last two '
           'weeks I independently completed the filing of three returns end to '
           'end, from data entry to upload, after review by my manager, and '
           'assisted in documentation for statutory audit assignments and in the '
@@ -784,8 +785,13 @@ CH2 = {
             'account, and why an error in a TDS statement becomes the '
             'deductee’s problem at the time of filing.',
         ]),
-        ('h3', '2.3.7  Bank Account Abstract and Statement of Total Income'),
+        ('h3', '2.3.7  Securities Transaction Tax, Bank Account Abstract and '
+               'Statement of Total Income'),
         ('bullets', [
+            'Worked on Securities Transaction Tax (STT): identified securities '
+            'transactions from the Annual Information Statement and the '
+            'broker-wise statements, verified the STT reflected against them and '
+            'entered the details in Winman for the computation.',
             'Prepared bank account abstracts summarising the classified bank data '
             'into a working paper that could be used directly for computation.',
             'Entered the data in Winman and prepared the Statement of Total '
@@ -893,9 +899,12 @@ CH2 = {
             'deductee’s Form 26AS arises, and why it must be corrected before the '
             'return is filed.',
         ]),
-        ('h3', 'Week 8 (29 June – 3 July 2026): Bank Abstract, Reconciliation '
-               'and Computation'),
+        ('h3', 'Week 8 (29 June – 3 July 2026): Securities Transaction Tax, '
+               'Bank Abstract and Computation'),
         ('bullets', [
+            'Worked on Securities Transaction Tax and the related data entry in '
+            'Winman, tracing securities transactions and the STT against them '
+            'from the Annual Information Statement and broker statements.',
             'Used the bank account abstract to prepare the working papers for '
             'computation, and carried out reconciliation of Form 26AS with the '
             'books.',
@@ -1025,6 +1034,9 @@ CH2 = {
             'cycle.',
             'Applied the concepts of advance tax, self-assessment tax and credit '
             'for taxes paid while arriving at the net tax payable or refundable.',
+            'Applied the taxation of securities transactions, including '
+            'Securities Transaction Tax, while working on client data drawn from '
+            'the Annual Information Statement and broker statements.',
         ]),
         ('h3', '2.6.3  Indirect Taxation and GST'),
         ('bullets', [
@@ -1265,6 +1277,9 @@ CH4 = {
             'head by head for individuals and companies in Winman, give credit '
             'for taxes already paid, and arrive at the net tax payable or '
             'refundable.',
+            '**Securities Transaction Tax:** exposure to STT and to the treatment '
+            'of securities transactions, including tracing them from the Annual '
+            'Information Statement and broker statements into the computation.',
             '**Income tax return filing:** familiarity with the full filing '
             'sequence, from portal downloads and computation through to generation '
             'and upload of the return, including three filings completed '
@@ -1448,11 +1463,13 @@ CH5 = {
               'Signature Certificate authentication, followed by TDS work '
               'involving conso files from TRACES, the Return Preparation Utility '
               'and quarter-wise data entry.'),
-        ('p', 'The closing weeks brought the strands together. Using bank account '
-              'abstracts, Tally data and reconciled Form 26AS credits, I computed '
-              'the Statement of Total Income for individual and corporate clients '
-              'in Winman, assisted in the preparation of balance sheets, verified '
-              'taxes paid against taxes payable, and prepared returns for upload. '
+        ('p', 'The closing weeks brought the strands together. I worked on '
+              'Securities Transaction Tax and the related data entry in Winman, '
+              'and then, using bank account abstracts, Tally data and reconciled '
+              'Form 26AS credits, computed the Statement of Total Income for '
+              'individual and corporate clients in Winman, assisted in the '
+              'preparation of balance sheets, verified taxes paid against taxes '
+              'payable, and prepared returns for upload. '
               'I independently completed three filings end to end after review, '
               'assisted in documentation for statutory audit assignments, and '
               'reconciled Form 26AS, AIS and TIS with the books of account as '

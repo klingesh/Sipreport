@@ -25,8 +25,12 @@ from docx_writer import (Document, bookmark, drawing, esc, image_size,
                          page_break, para, rich, run, table, EMU_PER_INCH)
 import report_content as rc
 
-CERT_CANDIDATES = ['internship-certificate.jpg', 'internship-certificate.jpeg',
-                   'internship-certificate.png']
+# Scan of the internship completion certificate, searched in this order.
+CERT_CANDIDATES = ['assets/internship-certificate.jpg',
+                   'assets/internship-certificate.jpeg',
+                   'assets/internship-certificate.png',
+                   'Internship Certificate.png',
+                   'Internship Certificate.jpg']
 BODY_LINE = 360           # 1.5 line spacing
 DOC_TITLE = 'Summer Internship Project Report 2026 - Lingesh K'
 
@@ -36,7 +40,7 @@ DOC_TITLE = 'Summer Internship Project Report 2026 - Lingesh K'
 # ---------------------------------------------------------------------------
 def find_certificate():
     for name in CERT_CANDIDATES:
-        path = os.path.join(ROOT, 'assets', name)
+        path = os.path.join(ROOT, name)
         if os.path.exists(path):
             return path
     return None
