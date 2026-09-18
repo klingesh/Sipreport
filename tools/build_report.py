@@ -31,19 +31,55 @@ CERT_CANDIDATES = ['assets/internship-certificate.jpg',
                    'assets/internship-certificate.png',
                    'Internship Certificate.png',
                    'Internship Certificate.jpg']
+# Title-page banner: Malaysia University of Science and Technology + ISSM.
+LOGO_CANDIDATES = ['assets/issm-must-logo.jpg', 'assets/issm-must-logo.png']
 BODY_LINE = 360           # 1.5 line spacing
 DOC_TITLE = 'Summer Internship Project Report 2026 - Lingesh K'
+
+# --- page geometry, used by the layout checker -----------------------------
+PAGE_H_IN = 11.69                       # A4
+TEXT_H_IN = PAGE_H_IN - 2.0             # 1" top and bottom margins
+LINE_IN = {12: 0.2875, 13: 0.312, 14: 0.335, 16: 0.383, 20: 0.479}
 
 
 # ---------------------------------------------------------------------------
 # docx rendering
 # ---------------------------------------------------------------------------
-def find_certificate():
-    for name in CERT_CANDIDATES:
+def _first_existing(names):
+    for name in names:
         path = os.path.join(ROOT, name)
         if os.path.exists(path):
             return path
     return None
+
+
+def find_certificate():
+    return _first_existing(CERT_CANDIDATES)
+
+
+def find_logo():
+    return _first_existing(LOGO_CANDIDATES)
+
+
+def logo_size_in(width_twips):
+    """Logo scaled to the text width; returns (inches_w, inches_h)."""
+    path = find_logo()
+    if not path:
+        return None
+    px_w, px_h = image_size(path)
+    w_in = width_twips / 1440.0
+    return w_in, w_in * px_h / px_w
+
+
+def logo_block(doc, sec, width):
+    path = find_logo()
+    if not path:
+        return
+    rel = doc.add_image(path)
+    w_in, h_in = logo_size_in(width)
+    sec.add(para(drawing(rel, int(w_in * EMU_PER_INCH), int(h_in * EMU_PER_INCH),
+                         'MUST and ISSM Business School logo'),
+                 jc='center', line=240, after=0))
 
 
 def certificate_block(doc, sec, content_width_twips):
@@ -53,7 +89,9 @@ def certificate_block(doc, sec, content_width_twips):
         rel = doc.add_image(path)
         px_w, px_h = image_size(path)
         max_w = int(content_width_twips / 1440 * EMU_PER_INCH)
-        max_h = int(8.2 * EMU_PER_INCH)          # leave room for the heading
+        # heading block above the image uses ~1.4in, so cap the height to keep
+        # the certificate on a single page
+        max_h = int((TEXT_H_IN - 1.6) * EMU_PER_INCH)
         cx = max_w
         cy = int(cx * px_h / px_w)
         if cy > max_h:
@@ -62,9 +100,9 @@ def certificate_block(doc, sec, content_width_twips):
         sec.add(para(drawing(rel, cx, cy, 'Internship Completion Certificate'),
                      jc='center', line=240, after=0))
         return
-    note = ('[  Scanned copy of the Internship Completion Certificate issued by '
+    note = ('[ Scanned copy of the Internship Completion Certificate issued by '
             'S. Ravi & Associates, Chartered Accountants, dated 17 July 2026, '
-            'to be inserted here.  ]')
+            'to be inserted here. ]')
     rows = [['\n' * 8 + note + '\n' * 8]]
     sec.add(table(rows, widths=[1], header=False, font_size=11,
                   page_width=content_width_twips))
@@ -136,6 +174,8 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
                           page_width=width))
         elif kind == 'certificate_image':
             certificate_block(doc, sec, width)
+        elif kind == 'logo':
+            logo_block(doc, sec, width)
         elif kind == 'toc':
             sec.add(toc_table(width, estimates or {}))
         else:
@@ -227,6 +267,12 @@ def md_blocks(blocks, out):
             else:
                 out.append('> [ Scanned copy of the Internship Completion '
                            'Certificate to be inserted here. ]\n')
+        elif kind == 'logo':
+            path = find_logo()
+            if path:
+                rel = os.path.relpath(path, ROOT)
+                out.append(f'![Malaysia University of Science and Technology '
+                           f'and ISSM Business School]({rel})\n')
         elif kind == 'pagebreak':
             out.append('\n---\n')
 
@@ -258,51 +304,109 @@ def build_md(out_path):
 
 # ---------------------------------------------------------------------------
 CHARS_PER_LINE = 96          # Times New Roman 12pt across ~6" of A4
-LINES_PER_PAGE = 31          # 1.5 line spacing, 1" top/bottom margins
+TEXT_WIDTH_TWIPS = 8666      # A4 minus 1" + 1.25" margins
 
 
-def _lines(blocks):
-    """Estimate how many text lines a list of blocks occupies."""
+def _wrapped(text, chars_per_line):
+    """Lines a string occupies, allowing for words that cannot be split."""
     import math
-    total = 0.0
-    for b in blocks:
-        kind = b[0]
-        payload = b[1] if len(b) > 1 else None
-        if kind in ('p', 'center'):
-            total += math.ceil(len(payload) / CHARS_PER_LINE) + 0.4
-        elif kind in ('cbold',):
-            total += 1.2
-        elif kind == 'big':
-            total += 2.2
-        elif kind == 'h1':
-            total += 2.4
-        elif kind == 'h2':
-            total += 2.2
-        elif kind == 'h3':
-            total += 2.0
-        elif kind == 'bullets':
-            for item in payload:
-                total += math.ceil(len(item) / (CHARS_PER_LINE - 8)) + 0.35
-            total += 0.5
-        elif kind == 'table':
-            for row in payload['rows']:
-                widths = payload.get('widths') or [1] * len(row)
-                share = sum(widths)
-                cell_lines = [
-                    math.ceil(len(c) / max(12, CHARS_PER_LINE * 1.15
-                                           * widths[i] / share))
-                    for i, c in enumerate(row)]
-                total += max(cell_lines) * 0.75 + 0.3
-            total += 1.0
-        elif kind == 'gap':
-            total += payload
-        elif kind == 'toc':
-            total += 10
-        elif kind == 'certificate_image':
-            total += LINES_PER_PAGE - 6
-        elif kind == 'pagebreak':
-            total = math.ceil(total / LINES_PER_PAGE) * LINES_PER_PAGE
-    return total
+    return max(1, math.ceil(len(text) / chars_per_line))
+
+
+def _height(block, width=TEXT_WIDTH_TWIPS):
+    """Vertical space a single block occupies, in inches."""
+    kind = block[0]
+    payload = block[1] if len(block) > 1 else None
+    body = LINE_IN[12]
+    if kind in ('p', 'center'):
+        return _wrapped(payload, CHARS_PER_LINE) * body + 140 / 1440
+    if kind == 'cbold':
+        return body + 40 / 1440
+    if kind == 'big':
+        return LINE_IN[16] + 200 / 1440
+    if kind == 'h1':
+        return LINE_IN[14] + 240 / 1440
+    if kind == 'h2':
+        return LINE_IN[13] + (240 + 120) / 1440
+    if kind == 'h3':
+        return _wrapped(payload, CHARS_PER_LINE) * body + (180 + 100) / 1440
+    if kind == 'bullets':
+        total = 0.0
+        for item in payload:
+            total += _wrapped(item, CHARS_PER_LINE - 8) * body + 80 / 1440
+        return total + 60 / 1440 + body
+    if kind == 'table':
+        rows, widths = payload['rows'], payload.get('widths')
+        widths = widths or [1] * len(rows[0])
+        share = sum(widths)
+        total = 0.0
+        for row in rows:
+            cell_lines = [
+                _wrapped(c, max(10, int(CHARS_PER_LINE * 1.18
+                                        * widths[i] / share)))
+                for i, c in enumerate(row)]
+            total += max(cell_lines) * 0.19 + 40 / 1440      # 11pt, single
+        return total + 0.25 + body
+    if kind == 'gap':
+        return payload * body
+    if kind == 'toc':
+        return _height(('table', {'rows': [['x'] * 3] * 7, 'widths': [1, 5, 2]}))
+    if kind == 'sign':
+        return body + 140 / 1440
+    if kind == 'certificate_image':
+        path = find_certificate()
+        if not path:
+            return TEXT_H_IN - 2.0
+        px_w, px_h = image_size(path)
+        w_in = width / 1440.0
+        return min(w_in * px_h / px_w, TEXT_H_IN - 1.6)
+    if kind == 'logo':
+        size = logo_size_in(width)
+        return size[1] if size else 0.0
+    if kind in ('pagebreak', 'box'):
+        return 0.0
+    return 0.0
+
+
+def check_front_pages(verbose=True):
+    """Front matter is one page per page-break: flag any page that overflows."""
+    import math
+    pages, current, used = [], [], 0.0
+    for block in rc.FRONT:
+        if block[0] == 'pagebreak':
+            pages.append((used, current))
+            current, used = [], 0.0
+            continue
+        used += _height(block)
+        current.append(block[0])
+    pages.append((used, current))
+
+    # (label, pages the section is meant to occupy)
+    expected = [('title page', 1), ('certificate', 1),
+                ('internship certificate', 1), ('declaration', 1),
+                ('acknowledgement', 1), ('executive summary', 2),
+                ('table of contents', 1)]
+    problems = []
+    if verbose:
+        print(f'front matter layout (A4 text height {TEXT_H_IN:.2f}in):')
+    for i, (used, _kinds) in enumerate(pages):
+        name, allow = expected[i] if i < len(expected) else (f'page {i + 1}', 1)
+        needed = max(1, math.ceil(used / TEXT_H_IN))
+        fill_last = (used - (needed - 1) * TEXT_H_IN) / TEXT_H_IN * 100
+        note = f'{needed} page' + ('s' if needed > 1 else '')
+        if needed > allow:
+            note += '  <-- SPILLS past its intended length'
+            problems.append(name)
+        elif needed > 1 and fill_last < 15:
+            note += '  <-- leaves an almost empty last page'
+            problems.append(name)
+        elif used > TEXT_H_IN - 0.35 and needed == 1:
+            note += '  <-- very tight, check in Word'
+            problems.append(name)
+        if verbose:
+            print(f'  {name:<26}{used:>6.2f}in   {note}'
+                  f'{"" if needed > 1 else f"  ({fill_last:.0f}% of the page)"}')
+    return problems
 
 
 def estimate_pages(verbose=False):
@@ -312,17 +416,18 @@ def estimate_pages(verbose=False):
     out = {}
     rows = []
     for ch in rc.CHAPTERS:
-        body = math.ceil(_lines(ch['blocks']) / LINES_PER_PAGE)
+        inches = sum(_height(b) for b in ch['blocks'])
+        body = max(1, math.ceil(inches / TEXT_H_IN))
         pages = body + 1                      # + divider page
         out[ch['num']] = (page, page + pages - 1)
         rows.append((ch['num'], ch['title'], pages, page, page + pages - 1))
         page += pages
     if verbose:
-        front = math.ceil(_lines(rc.FRONT) / LINES_PER_PAGE)
-        print(f'front matter: ~{front} pages (unnumbered)')
+        front = len([b for b in rc.FRONT if b[0] == 'pagebreak']) + 1
+        print(f'front matter: {front} pages (unnumbered)')
         for n, title, pages, start, end in rows:
             print(f'  CH{n} {title[:30]:<32} {pages:>3} pages   {start}-{end}')
-        print(f'  numbered pages: {page - 1}   total: ~{front + page - 1}')
+        print(f'  numbered pages: {page - 1}   total: {front + page - 1}')
     return out
 
 
@@ -333,3 +438,11 @@ if __name__ == '__main__':
     print('wrote', os.path.relpath(md_path, ROOT))
     print()
     estimate_pages(verbose=True)
+    print()
+    issues = check_front_pages()
+    print()
+    cert, logo = find_certificate(), find_logo()
+    print(f'certificate scan : {os.path.relpath(cert, ROOT) if cert else "MISSING"}')
+    print(f'title page logo  : {os.path.relpath(logo, ROOT) if logo else "MISSING"}')
+    if issues:
+        print(f'\nreview these pages: {", ".join(issues)}')

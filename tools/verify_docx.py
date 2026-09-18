@@ -78,6 +78,18 @@ def main(path, dump_text=False):
         paras = doc.count('<w:p>')
         bullets = doc.count('<w:numId w:val="1"/>')
 
+        # alignment audit -------------------------------------------------
+        align = {}
+        for jc in re.findall(r'<w:jc w:val="(\w+)"/>', doc):
+            align[jc] = align.get(jc, 0) + 1
+        no_jc = doc.count('<w:p>') - sum(align.values())
+        headings = len(re.findall(r'<w:keepNext/>', doc))
+        drawings = re.findall(r'wp:extent cx="(\d+)" cy="(\d+)"', doc)
+        sect_headers = doc.count('<w:headerReference')
+        if doc.count('<w:sectPr>') - sect_headers != 1:
+            problems.append('every section except the front matter should have '
+                            'a running header')
+
         lines = text_of(z.read('word/document.xml'))
         words = sum(len(l.split()) for l in lines)
 
@@ -89,7 +101,15 @@ def main(path, dump_text=False):
           f'PAGEREF fields: {len(re.findall(r"PAGEREF", doc))}')
     print(f'bookmarks       : {len(marks)} -> {", ".join(sorted(marks))}')
     print(f'embedded images : {len(images)}')
+    for cx, cy in drawings:
+        print(f'  image        : {int(cx) / 914400:.2f}in x '
+              f'{int(cy) / 914400:.2f}in (centred)')
     print(f'text lines      : {len(lines)}   words: {words}')
+    print('alignment       : '
+          + ', '.join(f'{k}={v}' for k, v in sorted(align.items()))
+          + f', unset={no_jc}')
+    print(f'kept-with-next  : {headings} headings (no heading can be '
+          'orphaned at a page foot)')
     print()
     if problems:
         print('PROBLEMS:')
