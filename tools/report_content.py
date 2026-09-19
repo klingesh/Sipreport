@@ -233,7 +233,7 @@ FRONT = [
 CH1 = {
     'num': 1,
     'title': 'INDUSTRY AND COMPANY OVERVIEW',
-    'header': 'CHAPTER 1  |  INDUSTRY AND COMPANY OVERVIEW',
+    'header': ['CHAPTER 1', 'INDUSTRY AND COMPANY OVERVIEW'],
     'blocks': [
         ('h1', '1. INDUSTRY AND COMPANY OVERVIEW'),
 
@@ -617,7 +617,7 @@ CH1 = {
 CH2 = {
     'num': 2,
     'title': 'JOB / TASK DESCRIPTION',
-    'header': 'CHAPTER 2  |  JOB / TASK DESCRIPTION',
+    'header': ['CHAPTER 2', 'JOB / TASK DESCRIPTION'],
     'blocks': [
         ('h1', '2. JOB / TASK DESCRIPTION'),
 
@@ -1081,7 +1081,7 @@ CH2 = {
 CH3 = {
     'num': 3,
     'title': 'ANALYSIS OF JOB PERFORMANCE',
-    'header': 'CHAPTER 3  |  ANALYSIS OF JOB PERFORMANCE',
+    'header': ['CHAPTER 3', 'ANALYSIS OF JOB PERFORMANCE'],
     'blocks': [
         ('h1', '3. ANALYSIS OF JOB PERFORMANCE'),
         ('p', 'This chapter is an honest assessment of how I performed during the '
@@ -1258,7 +1258,7 @@ CH3 = {
 CH4 = {
     'num': 4,
     'title': 'LEARNING OUTCOMES',
-    'header': 'CHAPTER 4  |  LEARNING OUTCOMES',
+    'header': ['CHAPTER 4', 'LEARNING OUTCOMES'],
     'blocks': [
         ('h1', '4. LEARNING OUTCOMES'),
         ('p', 'This chapter sets out what I actually took away from the '
@@ -1440,7 +1440,7 @@ CH4 = {
 CH5 = {
     'num': 5,
     'title': 'SUMMARY AND CONCLUSION',
-    'header': 'CHAPTER 5  |  SUMMARY AND CONCLUSION',
+    'header': ['CHAPTER 5', 'SUMMARY AND CONCLUSION'],
     'blocks': [
         ('h1', '5. SUMMARY AND CONCLUSION'),
 
@@ -1585,7 +1585,7 @@ CH5 = {
 CH6 = {
     'num': 6,
     'title': 'REFERENCES',
-    'header': 'REFERENCES',
+    'header': ['REFERENCES', ''],
     'divider_title': 'REFERENCES',
     'blocks': [
         ('h1', 'REFERENCES'),
