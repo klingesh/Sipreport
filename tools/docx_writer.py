@@ -305,19 +305,31 @@ class Document:
         return f'<w:sectPr>{"".join(bits)}</w:sectPr>'
 
     def _header_xml(self, sec):
+        """Running header: chapter block on the left, report name on the right,
+        page number underneath. header_left / header_right may be a string or a
+        list of lines."""
         width = self.content_width
-        line1 = para(
-            run(sec.header_left or '', bold=True, size=10)
-            + ('<w:r><w:tab/></w:r>' if sec.header_right else '')
-            + (run(sec.header_right, bold=True, size=10) if sec.header_right else ''),
-            jc='left', line=240, after=0,
-            tabs=[('right', width)])
-        line2 = para(page_field() if sec.page_numbers else '',
-                     jc='right', line=240, after=0, border_bottom=True)
+        left = sec.header_left or ''
+        right = sec.header_right or ''
+        left = [left] if isinstance(left, str) else list(left)
+        right = [right] if isinstance(right, str) else list(right)
+        rows = max(len(left), len(right))
+        left += [''] * (rows - len(left))
+        right += [''] * (rows - len(right))
+
+        lines = []
+        for l_text, r_text in zip(left, right):
+            lines.append(para(
+                run(l_text, bold=True, size=10)
+                + '<w:r><w:tab/></w:r>'
+                + run(r_text, bold=True, size=10),
+                jc='left', line=240, after=0, tabs=[('right', width)]))
+        lines.append(para(page_field() if sec.page_numbers else '',
+                          jc='right', line=240, after=0, border_bottom=True))
         return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
                 f'<w:hdr xmlns:w="{W}" xmlns:r="http://schemas.openxmlformats.org'
                 '/officeDocument/2006/relationships">'
-                f'{line1}{line2}</w:hdr>')
+                f'{"".join(lines)}</w:hdr>')
 
     def _document_xml(self):
         body = []
