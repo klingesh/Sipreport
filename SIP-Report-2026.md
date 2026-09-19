@@ -1,9 +1,3 @@
-# Summer Internship Project (SIP) – 2026
-
-**LINGESH K** (OSI2509030) · MBA (Finance) · Indian School of Science and Management, Chennai
-
-Internship: M/s S. Ravi & Associates, Chartered Accountants, Mylapore, Chennai · 12th May 2026 to 17th July 2026 · Guide: Ms. A. Lakshmi, Manager
-
 > Markdown copy of the report text, generated from `tools/report_content.py` for easy reading. The submission copy is the .docx file.
 
 
