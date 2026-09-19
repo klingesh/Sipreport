@@ -210,7 +210,7 @@ def build_docx(out_path):
     bid = 100
     for i, chapter in enumerate(rc.CHAPTERS):
         sec = doc.section(header_left=chapter['header'],
-                          header_right='SUMMER INTERNSHIP PROJECT',
+                          header_right=['SUMMER INTERNSHIP', 'PROJECT'],
                           page_numbers=True,
                           restart_at=1 if i == 0 else None)
         divider_page(sec, chapter, bid)
