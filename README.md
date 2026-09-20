@@ -6,7 +6,7 @@
 |---|---|
 | `Lingesh K - SIP Report 2026.docx` | **The submission copy.** Open in Word and export to PDF. |
 | `SIP-Report-2026.md` | Same text in Markdown, for reading/reviewing on GitHub. |
-| `Internship Certificate.png` | Scan of the internship completion certificate, embedded in the report. |
+| `Internship Certificate.png` | Scan of the internship completion certificate, kept here for reference. It is **not** printed into the report. |
 | `assets/issm-must-logo.jpg` | MUST + ISSM banner used on the title page. |
 | `Aarti Chettiar-SIP Report .pdf`, `Final SIP KYR.pdf` | Seniors' reports, used only as references for structure and formatting. |
 | `tools/report_content.py` | All report text lives here — edit this to change any wording. |
@@ -31,5 +31,6 @@ python3 tools/lint_text.py
   running header along with the chapter name.
 - The page numbers in the Table of Contents are Word `PAGEREF` fields, so they update
   themselves. If they show stale values, press `Ctrl+A` then `F9` in Word.
-- The certificate scan is embedded automatically. To swap in a different scan, overwrite
-  `Internship Certificate.png` or add `assets/internship-certificate.png`, then rebuild.
+- The INTERNSHIP CERTIFICATE page carries the heading only, matching both sample reports —
+  the certificate is attached as a separate sheet. To print the scan onto that page
+  instead, set `EMBED_CERTIFICATE = True` in `tools/report_content.py` and rebuild.
