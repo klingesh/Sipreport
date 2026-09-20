@@ -127,7 +127,7 @@ FRONT = [
           'empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, '
           'for her continuous support and meaningful guidance, which played a '
           'key role in our progress.'),
-    ('p', 'I am highly indebted to our Academic Head, **Dr. KAVITHA '
+    ('p', 'I am highly indebted to our Academic Head, **Mrs. KAVITHA '
           'MANIKANDAN**, '
           'for her guidance and constant supervision, for providing the '
           'necessary information regarding the project and for her support in '
