@@ -1,12 +1,13 @@
 # SIP Reports
 
-Two Summer Internship Project reports, both built to the format of the sample reports in
+Three Summer Internship Project reports, all built to the format of the sample reports in
 this repository.
 
 | Report | Submission copy | Text for review |
 |---|---|---|
 | Lingesh K (OSI2509030) — S. Ravi & Associates, Chartered Accountants | `Lingesh K - SIP Report 2026.docx` | `SIP-Report-2026.md` |
 | Prahadhesvaryaa K. S. (OSI2509093) — Neuberg Diagnostics Private Limited, Internal Audit | `Prahadhesvaryaa K S - SIP Report 2026.docx` | `SIP-Report-2026-Prahadhesvaryaa.md` |
+| Senthamil Selvan V (OSI2509099) — ACTC Studio Pvt. Ltd., Business Development & Events | `Senthamil Selvan V - SIP Report 2026.docx` | `SIP-Report-2026-Senthamil.md` |
 
 ## Other files
 
@@ -17,18 +18,21 @@ this repository.
 | `Aarti Chettiar-SIP Report .pdf`, `Final SIP KYR.pdf` | Seniors' reports, used only as references for structure and formatting. |
 | `tools/report_content.py` | All of Lingesh's report text — edit this to change any wording. |
 | `tools/content_prahadhesvaryaa.py` | All of Prahadhesvaryaa's report text. |
+| `tools/content_senthamil.py` | All of Senthamil's report text. |
 | `tools/build_report.py` | Renders a content module into a `.docx` and a `.md`. |
 | `tools/docx_writer.py` | Minimal OOXML writer (no external packages needed). |
 | `tools/verify_docx.py` | Structural check of a generated `.docx`. |
 | `tools/lint_text.py` | Proof-reading pass over the report text. |
+| `tools/compare_docx.py` | Checks that two generated reports share the same formatting and structure. |
 
 ## Rebuilding after an edit
 
 ```sh
-python3 tools/build_report.py                   # both reports
+python3 tools/build_report.py                   # all three reports
 python3 tools/build_report.py prahadhesvaryaa   # just one
 python3 tools/verify_docx.py "Prahadhesvaryaa K S - SIP Report 2026.docx"
 python3 tools/lint_text.py
+python3 tools/compare_docx.py "Lingesh K - SIP Report 2026.docx" "Prahadhesvaryaa K S - SIP Report 2026.docx"
 ```
 
 ## Notes on the documents

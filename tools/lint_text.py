@@ -95,7 +95,7 @@ def main():
     return 0
 
 
-MODULES = ['report_content', 'content_prahadhesvaryaa']
+MODULES = ['report_content', 'content_prahadhesvaryaa', 'content_senthamil']
 
 
 if __name__ == '__main__':

@@ -27,7 +27,7 @@ OSI2509093
 
 This is to certify that the Summer Internship Project Report is an authentic record of Ms. Prahadhesvaryaa K. S. (OSI2509093) carried out at Neuberg Diagnostics Private Limited, Chennai, in partial fulfilment of the requirements for the award of the MBA degree.
 
-The project was completed under the guidance of Ms. S. Saradha, Chartered Accountant, Internal Audit, Neuberg Diagnostics Private Limited, during the period from May 15th to July 28th, 2026.
+The project was completed under the guidance of Ms. S. Saradha, Chartered Accountant, Internal Audit, Neuberg Diagnostics Private Limited, during the period from May 11th to July 30th, 2026.
 
 Dr. Kavitha Manikandan
 
@@ -51,7 +51,7 @@ Internal Examiner  External Examiner
 
 ## DECLARATION
 
-I, Ms. Prahadhesvaryaa K. S., hereby declare that this SIP Project Report is based on my internship of a little over two months done at Neuberg Diagnostics Private Limited, Chennai, as an Intern in the Internal Audit department, during the period from May 15th to July 28th, 2026, under the guidance of Ms. S. Saradha, Chartered Accountant, Neuberg Diagnostics Private Limited and Indian School of Science and Management, Chennai.
+I, Ms. Prahadhesvaryaa K. S., hereby declare that this SIP Project Report is based on my internship of approximately two and a half months done at Neuberg Diagnostics Private Limited, Chennai, as an Intern in the Internal Audit department, during the period from May 11th to July 30th, 2026, under the guidance of Ms. S. Saradha, Chartered Accountant, Neuberg Diagnostics Private Limited and Indian School of Science and Management, Chennai.
 
 I further declare that the work presented in this report is my own, that it has been prepared from the assignments actually handled by me during the internship, and that it has not been submitted earlier for the award of any other degree or diploma.
 
@@ -85,7 +85,7 @@ I am also thankful to the members of the internal audit team and to the branch a
 
 ## The Executive Summary
 
-This report presents the work carried out during my Summer Internship Programme at Neuberg Diagnostics Private Limited, a Chennai headquartered diagnostics and pathology organisation. The internship was undertaken on-site in the Internal Audit department from 15 May 2026 to 28 July 2026, a period of a little over two months, under the guidance of Ms. S. Saradha, Chartered Accountant.
+This report presents the work carried out during my Summer Internship Programme at Neuberg Diagnostics Private Limited, a Chennai headquartered diagnostics and pathology organisation. The internship was undertaken on-site in the Internal Audit department from 11 May 2026 to 30 July 2026, a period of approximately two and a half months covering twelve working weeks, under the guidance of Ms. S. Saradha, Chartered Accountant.
 
 The internship was located in a part of the business that students rarely see from the inside. A diagnostics chain earns its revenue through a very large number of small transactions spread across branches, collection centres, walk-in patients and corporate or business-to-business clients. Each of those transactions can be discounted, cancelled, amended or billed on credit. Internal audit exists to test whether those events happened within the organisation’s own rules, and that testing is what I was given to do.
 
@@ -297,7 +297,7 @@ For a student of finance, the useful lesson in this history is that growth by co
 
 ### 2.1  OBJECTIVES OF THE INTERNSHIP
 
-The purpose of the internship was to convert the auditing and internal control concepts studied in the MBA programme into supervised practical work inside a functioning internal audit department. The internship was carried out at Neuberg Diagnostics Private Limited, Chennai, from 15 May 2026 to 28 July 2026, in the Internal Audit department, under the guidance of Ms. S. Saradha, Chartered Accountant.
+The purpose of the internship was to convert the auditing and internal control concepts studied in the MBA programme into supervised practical work inside a functioning internal audit department. The internship was carried out at Neuberg Diagnostics Private Limited, Chennai, from 15 May 2026 to 30 July 2026, in the Internal Audit department, under the guidance of Ms. S. Saradha, Chartered Accountant.
 
 The specific objectives agreed at the start of the internship were as follows:
 
@@ -396,81 +396,88 @@ The internship covered seven areas of verification within the internal audit fun
 
 ### 2.4  TIMELINE OF ACTIVITIES
 
-The internship ran from 15 May 2026 to 28 July 2026. The daily internship diary records the areas of verification as continuing through the whole period, because records for each area became available at different times; the week-by-week account below therefore groups the work by the phase in which each area was principally taken up.
+The internship ran from 11 May 2026 to 30 July 2026, twelve working weeks in all. The daily internship diary records the areas of verification as continuing through the whole period, because records for each area became available at different times; the week-by-week account below therefore groups the work by the phase in which each area was principally taken up.
 
 
-#### Week 1 (15 May – 23 May 2026): Orientation and Internal Audit Induction
+#### Week 1 (11 May – 16 May 2026): Orientation and Internal Audit Induction
 
 - Completed joining formalities and was introduced to the internal audit team and to the scope of its work.
 - Learned the revenue cycle of a diagnostics branch and the distinction between walk-in and business-to-business customers.
-- Was familiarised with Suflam LIMS and shown where bookings, discounts, deletions and payment records are held.
-- Studied the company’s discount policy and the authorisation levels applicable to concessions.
+- Was familiarised with Suflam LIMS and shown where bookings, laboratory identification numbers, discounts, deletions and payment records are held.
+- Studied the company’s discount policy and the authorisation levels applicable to concessions and free of cost services.
 
 
-#### Week 2 (25 May – 30 May 2026): B2B KYC Verification
+#### Week 2 (18 May – 23 May 2026): B2B KYC Verification
 
 - Began collecting KYC documents and signed memoranda of understanding from the sales personnel for the B2B clients assigned to them.
 - Checked the completeness of documentation for each client and listed the files in which documents were missing.
 - Started maintaining the KYC records in the format used by the department.
 
 
-#### Week 3 (1 June – 6 June 2026): B2B Documentation and TRF Verification
+#### Week 3 (25 May – 30 May 2026): B2B Documentation and Eligibility
 
 - Continued the follow-up for pending KYC documents and updated the records as they were received.
+- Verified that the clients on record were eligible for the business-to-business benefits being extended to them.
+- Learned how verification of business credentials distinguishes a genuine B2B client from a B2C customer.
+
+
+#### Week 4 (1 June – 6 June 2026): Test Requisition Form Verification
+
 - Took up verification of Test Requisition Forms received from different branches.
 - Verified whether the B2B bills were sealed with the respective laboratory name and noted the cases in which the seal was missing.
+- Passed the details of the incomplete forms to the audit team so that the branches concerned could be asked to regularise them.
 
 
-#### Week 4 (8 June – 13 June 2026): Deep Discount Verification
+#### Week 5 (8 June – 13 June 2026): Deep Discount Verification
 
 - Identified walk-in customers who had received discounts of more than thirty per cent.
 - Cross-checked those cases against the company’s discount policy to establish whether the concession was authorised.
 - Recorded the exceptions for further verification by the team and continued TRF verification alongside.
 
 
-#### Week 5 (15 June – 20 June 2026): Free of Cost Verification
+#### Week 6 (15 June – 20 June 2026): Free of Cost Verification
 
 - Checked records to identify walk-in and B2B customers who had been given a hundred per cent discount.
 - Verified the basis and authorisation for each free of cost case and recorded them for review.
 - Observed how free services and deep discounts together indicate the extent of concessions being granted at branch level.
 
 
-#### Week 6 (22 June – 27 June 2026): Cash Due Monitoring
+#### Week 7 (22 June – 27 June 2026): Cash Due Monitoring
 
 - Reviewed payment records to establish outstanding amounts.
 - Calculated the number of days between the payment date and the current date to identify the cash due status.
 - Presented the ageing position so that older dues could be taken up first with the branches and clients concerned.
 
 
-#### Week 7 (29 June – 4 July 2026): Service Deletion Verification
+#### Week 8 (29 June – 4 July 2026): Service Deletion Verification
 
 - Reviewed deleted service records to identify tests booked by customers and later removed from the system.
 - Traced the respective laboratory identification numbers and examined who had deleted each service.
 - Checked the reason recorded for each deletion and listed the cases in which no adequate reason was available.
 
 
-#### Week 8 (6 July – 11 July 2026): Action Taken Report Follow-Up
+#### Week 9 (6 July – 11 July 2026): Action Taken Report Follow-Up
 
 - Began follow-up of Action Taken Reports for branch audits, contacting branch staff by telephone to collect the evidence needed to close observations.
 - Recorded the responses received and updated the pending and completed status of each observation.
 - Learned how an observation moves from being raised to being closed, and why closure requires evidence rather than assurance.
 
 
-#### Week 9 (13 July – 18 July 2026): Continued Follow-Up and Recurring Verifications
+#### Week 10 (13 July – 18 July 2026): Continued Follow-Up and Recurring Verifications
 
 - Continued the ATR follow-up and escalated observations on which no response had been received.
 - Carried out the recurring verifications for the period, covering deep discounts, free of cost cases and deletions.
 - Updated the KYC and TRF records with the documents received during the week.
 
 
-#### Week 10 (20 July – 25 July 2026): Consolidation of Exception Records
+#### Week 11 (20 July – 25 July 2026): Consolidation of Exception Records
 
 - Consolidated the exceptions identified across discounts, free of cost cases, deletions and TRF seals into the formats used by the department.
 - Reconciled the cash due position with the latest payment records.
 - Submitted the consolidated working sheets for review and made the corrections indicated.
 
 
-#### Week 11 (27 July – 28 July 2026): Closure and Handover
+#### Week 12 (27 July – 30 July 2026): Closure and Handover
 
 - Completed the pending updates to the ATR status and to the KYC records.
 - Handed over the working sheets, exception listings and pending items to the audit team in a form in which they could be continued.
@@ -586,7 +593,7 @@ Working with patient billing records, client rate cards and branch-level finding
 
 #### 2.7.8  Adaptability
 
-Seven areas of verification, each with its own logic and format, had to be learned within a little over two months, and I developed the habit of noting the steps of a process immediately after it was demonstrated so that I could repeat it unaided.
+Seven areas of verification, each with its own logic and format, had to be learned within twelve weeks, and I developed the habit of noting the steps of a process immediately after it was demonstrated so that I could repeat it unaided.
 
 
 ### 2.8  KEY OBSERVATIONS FROM THE JOB
@@ -854,7 +861,7 @@ The third concerns my own career direction. Before the internship my interest in
 
 ### 5.1  SUMMARY OF INTERNSHIP EXPERIENCE
 
-The Summer Internship Programme was carried out at Neuberg Diagnostics Private Limited, Chennai, on-site in the Internal Audit department, from 15 May 2026 to 28 July 2026, under the guidance of Ms. S. Saradha, Chartered Accountant. The work concerned the verification of revenue-side controls in a multi-branch diagnostics network.
+The Summer Internship Programme was carried out at Neuberg Diagnostics Private Limited, Chennai, on-site in the Internal Audit department, from 11 May 2026 to 30 July 2026, under the guidance of Ms. S. Saradha, Chartered Accountant. The work concerned the verification of revenue-side controls in a multi-branch diagnostics network.
 
 The internship covered seven areas. In business-to-business KYC verification I collected KYC documents and signed memoranda of understanding from the sales personnel responsible for their assigned clients and maintained the records so that only eligible B2B customers received corporate benefits. In requisition form verification I checked Test Requisition Forms received from branches and confirmed whether B2B bills carried the seal of the respective laboratory, noting every case in which it was missing.
 
@@ -912,7 +919,7 @@ The work was carried out using Suflam LIMS as the source of records, Microsoft E
 
 ### 5.3  CONCLUSION
 
-The internship at Neuberg Diagnostics Private Limited was the point at which my study of finance became practical. Over a little over two months I moved from being shown how a verification is performed to carrying out the recurring checks independently, consolidating exception records and following up audit observations with branches directly. In doing so I acquired a set of skills that are directly employable: verification against policy, KYC and documentation review, discount and free of cost testing, receivables ageing, examination of system amendments and deletions, exception reporting and audit follow-up.
+The internship at Neuberg Diagnostics Private Limited was the point at which my study of finance became practical. Over twelve weeks I moved from being shown how a verification is performed to carrying out the recurring checks independently, consolidating exception records and following up audit observations with branches directly. In doing so I acquired a set of skills that are directly employable: verification against policy, KYC and documentation review, discount and free of cost testing, receivables ageing, examination of system amendments and deletions, exception reporting and audit follow-up.
 
 Beyond the technical content, three things changed. First, my understanding of control: a rule is only as good as the evidence that it was followed, and testing that evidence is a distinct professional activity. Second, my understanding of revenue: in a business made up of many small transactions, margins are protected or lost in the detail of discounts, concessions, amendments and collections. Third, my understanding of myself. I learned that detailed, verifiable work suits me, that I can follow up persistently without causing friction, and that I can absorb correction without losing confidence.
 

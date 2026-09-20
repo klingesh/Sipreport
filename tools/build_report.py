@@ -456,6 +456,11 @@ REPORTS = {
         'docx': 'Prahadhesvaryaa K S - SIP Report 2026.docx',
         'md': 'SIP-Report-2026-Prahadhesvaryaa.md',
     },
+    'senthamil': {
+        'module': 'content_senthamil',
+        'docx': 'Senthamil Selvan V - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Senthamil.md',
+    },
 }
 
 

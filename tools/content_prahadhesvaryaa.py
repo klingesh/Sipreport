@@ -4,7 +4,7 @@ Content of the Summer Internship Project report of Prahadhesvaryaa K. S.
 (OSI2509093), MBA (Finance), ISSM Business School, Chennai.
 
 Internship: Neuberg Diagnostics Private Limited, Chennai
-Department: Internal Audit | Period: 15.05.2026 to 28.07.2026
+Department: Internal Audit | Period: 11.05.2026 to 30.07.2026
 
 Block vocabulary is documented in report_content.py.
 """
@@ -15,7 +15,7 @@ FIRM = 'Neuberg Diagnostics Private Limited'
 FIRM_SHORT = 'Neuberg Diagnostics'
 MENTOR = 'Ms. S. Saradha'
 MENTOR_ROLE = 'Chartered Accountant'
-PERIOD = '15th May 2026 to 28th July 2026'
+PERIOD = '11th May 2026 to 30th July 2026'
 
 # The INTERNSHIP CERTIFICATE page carries the heading only, matching the
 # sample reports; the certificate is attached as a separate sheet.
@@ -57,7 +57,7 @@ FRONT = [
     ('gap', 1),
     ('p', 'The project was completed under the guidance of Ms. S. Saradha, '
           'Chartered Accountant, Internal Audit, Neuberg Diagnostics Private '
-          'Limited, during the period from May 15th to July 28th, 2026.'),
+          'Limited, during the period from May 11th to July 30th, 2026.'),
     ('gap', 4),
     ('p', 'Dr. Kavitha Manikandan'),
     ('p', 'Academic Head'),
@@ -79,10 +79,11 @@ FRONT = [
     ('big', 'DECLARATION'),
     ('gap', 2),
     ('p', 'I, Ms. Prahadhesvaryaa K. S., hereby declare that this SIP Project '
-          'Report is based on my internship of a little over two months done at '
+          'Report is based on my internship of approximately two and a half '
+          'months done at '
           'Neuberg Diagnostics Private Limited, Chennai, as an Intern in the '
-          'Internal Audit department, during the period from May 15th to July '
-          '28th, 2026, under the guidance of Ms. S. Saradha, Chartered '
+          'Internal Audit department, during the period from May 11th to July '
+          '30th, 2026, under the guidance of Ms. S. Saradha, Chartered '
           'Accountant, Neuberg Diagnostics Private Limited and Indian School of '
           'Science and Management, Chennai.'),
     ('gap', 1),
@@ -138,8 +139,9 @@ FRONT = [
           'Internship Programme at Neuberg Diagnostics Private Limited, a '
           'Chennai headquartered diagnostics and pathology organisation. The '
           'internship was undertaken on-site in the Internal Audit department '
-          'from 15 May 2026 to 28 July 2026, a period of a little over two '
-          'months, under the guidance of Ms. S. Saradha, Chartered Accountant.'),
+          'from 11 May 2026 to 30 July 2026, a period of approximately two and '
+          'a half months covering twelve working weeks, under the guidance of '
+          'Ms. S. Saradha, Chartered Accountant.'),
     ('p', 'The internship was located in a part of the business that students '
           'rarely see from the inside. A diagnostics chain earns its revenue '
           'through a very large number of small transactions spread across '
@@ -636,7 +638,7 @@ CH2 = {
                      'into supervised practical work inside a functioning '
                      'internal audit department. The internship was carried out '
                      'at Neuberg Diagnostics Private Limited, Chennai, from 15 '
-                     'May 2026 to 28 July 2026, in the Internal Audit '
+                     'May 2026 to 30 July 2026, in the Internal Audit '
                      'department, under the guidance of Ms. S. Saradha, '
                      'Chartered Accountant.'),
         ('p', 'The specific objectives agreed at the start of the internship were '
@@ -809,13 +811,14 @@ CH2 = {
         ]),
 
         ('h2', '2.4  TIMELINE OF ACTIVITIES'),
-        ('p', 'The internship ran from 15 May 2026 to 28 July 2026. The daily '
+        ('p', 'The internship ran from 11 May 2026 to 30 July 2026, twelve '
+              'working weeks in all. The daily '
               'internship diary records the areas of verification as continuing '
               'through the whole period, because records for each area became '
               'available at different times; the week-by-week account below '
               'therefore groups the work by the phase in which each area was '
               'principally taken up.'),
-        ('h3', 'Week 1 (15 May – 23 May 2026): Orientation and Internal Audit '
+        ('h3', 'Week 1 (11 May – 16 May 2026): Orientation and Internal Audit '
                'Induction'),
         ('bullets', [
             'Completed joining formalities and was introduced to the internal '
@@ -823,11 +826,12 @@ CH2 = {
             'Learned the revenue cycle of a diagnostics branch and the '
             'distinction between walk-in and business-to-business customers.',
             'Was familiarised with Suflam LIMS and shown where bookings, '
-            'discounts, deletions and payment records are held.',
+            'laboratory identification numbers, discounts, deletions and payment '
+            'records are held.',
             'Studied the company’s discount policy and the authorisation levels '
-            'applicable to concessions.',
+            'applicable to concessions and free of cost services.',
         ]),
-        ('h3', 'Week 2 (25 May – 30 May 2026): B2B KYC Verification'),
+        ('h3', 'Week 2 (18 May – 23 May 2026): B2B KYC Verification'),
         ('bullets', [
             'Began collecting KYC documents and signed memoranda of '
             'understanding from the sales personnel for the B2B clients assigned '
@@ -837,17 +841,26 @@ CH2 = {
             'Started maintaining the KYC records in the format used by the '
             'department.',
         ]),
-        ('h3', 'Week 3 (1 June – 6 June 2026): B2B Documentation and TRF '
-               'Verification'),
+        ('h3', 'Week 3 (25 May – 30 May 2026): B2B Documentation and Eligibility'),
         ('bullets', [
             'Continued the follow-up for pending KYC documents and updated the '
             'records as they were received.',
+            'Verified that the clients on record were eligible for the '
+            'business-to-business benefits being extended to them.',
+            'Learned how verification of business credentials distinguishes a '
+            'genuine B2B client from a B2C customer.',
+        ]),
+        ('h3', 'Week 4 (1 June – 6 June 2026): Test Requisition Form '
+               'Verification'),
+        ('bullets', [
             'Took up verification of Test Requisition Forms received from '
             'different branches.',
             'Verified whether the B2B bills were sealed with the respective '
             'laboratory name and noted the cases in which the seal was missing.',
+            'Passed the details of the incomplete forms to the audit team so that '
+            'the branches concerned could be asked to regularise them.',
         ]),
-        ('h3', 'Week 4 (8 June – 13 June 2026): Deep Discount Verification'),
+        ('h3', 'Week 5 (8 June – 13 June 2026): Deep Discount Verification'),
         ('bullets', [
             'Identified walk-in customers who had received discounts of more '
             'than thirty per cent.',
@@ -856,7 +869,7 @@ CH2 = {
             'Recorded the exceptions for further verification by the team and '
             'continued TRF verification alongside.',
         ]),
-        ('h3', 'Week 5 (15 June – 20 June 2026): Free of Cost Verification'),
+        ('h3', 'Week 6 (15 June – 20 June 2026): Free of Cost Verification'),
         ('bullets', [
             'Checked records to identify walk-in and B2B customers who had been '
             'given a hundred per cent discount.',
@@ -865,7 +878,7 @@ CH2 = {
             'Observed how free services and deep discounts together indicate the '
             'extent of concessions being granted at branch level.',
         ]),
-        ('h3', 'Week 6 (22 June – 27 June 2026): Cash Due Monitoring'),
+        ('h3', 'Week 7 (22 June – 27 June 2026): Cash Due Monitoring'),
         ('bullets', [
             'Reviewed payment records to establish outstanding amounts.',
             'Calculated the number of days between the payment date and the '
@@ -873,7 +886,7 @@ CH2 = {
             'Presented the ageing position so that older dues could be taken up '
             'first with the branches and clients concerned.',
         ]),
-        ('h3', 'Week 7 (29 June – 4 July 2026): Service Deletion Verification'),
+        ('h3', 'Week 8 (29 June – 4 July 2026): Service Deletion Verification'),
         ('bullets', [
             'Reviewed deleted service records to identify tests booked by '
             'customers and later removed from the system.',
@@ -882,7 +895,7 @@ CH2 = {
             'Checked the reason recorded for each deletion and listed the cases '
             'in which no adequate reason was available.',
         ]),
-        ('h3', 'Week 8 (6 July – 11 July 2026): Action Taken Report Follow-Up'),
+        ('h3', 'Week 9 (6 July – 11 July 2026): Action Taken Report Follow-Up'),
         ('bullets', [
             'Began follow-up of Action Taken Reports for branch audits, '
             'contacting branch staff by telephone to collect the evidence needed '
@@ -892,7 +905,7 @@ CH2 = {
             'Learned how an observation moves from being raised to being closed, '
             'and why closure requires evidence rather than assurance.',
         ]),
-        ('h3', 'Week 9 (13 July – 18 July 2026): Continued Follow-Up and '
+        ('h3', 'Week 10 (13 July – 18 July 2026): Continued Follow-Up and '
                'Recurring Verifications'),
         ('bullets', [
             'Continued the ATR follow-up and escalated observations on which no '
@@ -902,7 +915,7 @@ CH2 = {
             'Updated the KYC and TRF records with the documents received during '
             'the week.',
         ]),
-        ('h3', 'Week 10 (20 July – 25 July 2026): Consolidation of Exception '
+        ('h3', 'Week 11 (20 July – 25 July 2026): Consolidation of Exception '
                'Records'),
         ('bullets', [
             'Consolidated the exceptions identified across discounts, free of '
@@ -912,7 +925,7 @@ CH2 = {
             'Submitted the consolidated working sheets for review and made the '
             'corrections indicated.',
         ]),
-        ('h3', 'Week 11 (27 July – 28 July 2026): Closure and Handover'),
+        ('h3', 'Week 12 (27 July – 30 July 2026): Closure and Handover'),
         ('bullets', [
             'Completed the pending updates to the ATR status and to the KYC '
             'records.',
@@ -1075,7 +1088,7 @@ CH2 = {
               'the department until they are formally reported.'),
         ('h3', '2.7.8  Adaptability'),
         ('p', 'Seven areas of verification, each with its own logic and format, '
-              'had to be learned within a little over two months, and I developed '
+              'had to be learned within twelve weeks, and I developed '
               'the habit of noting the steps of a process immediately after it '
               'was demonstrated so that I could repeat it unaided.'),
 
@@ -1614,7 +1627,7 @@ CH5 = {
         ('h2', '5.1  SUMMARY OF INTERNSHIP EXPERIENCE'),
         ('p_indent', 'The Summer Internship Programme was carried out at Neuberg '
                      'Diagnostics Private Limited, Chennai, on-site in the '
-                     'Internal Audit department, from 15 May 2026 to 28 July '
+                     'Internal Audit department, from 11 May 2026 to 30 July '
                      '2026, under the guidance of Ms. S. Saradha, Chartered '
                      'Accountant. The work concerned the verification of '
                      'revenue-side controls in a multi-branch diagnostics '
@@ -1711,8 +1724,8 @@ CH5 = {
 
         ('h2', '5.3  CONCLUSION'),
         ('p', 'The internship at Neuberg Diagnostics Private Limited was the '
-              'point at which my study of finance became practical. Over a little '
-              'over two months I moved from being shown how a verification is '
+              'point at which my study of finance became practical. Over twelve '
+              'weeks I moved from being shown how a verification is '
               'performed to carrying out the recurring checks independently, '
               'consolidating exception records and following up audit '
               'observations with branches directly. In doing so I acquired a set '
