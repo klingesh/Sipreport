@@ -27,8 +27,11 @@ python3 tools/lint_text.py
 
 - A4, Times New Roman 12 pt, 1.5 line spacing, justified; 1" margins with 1.25" on the
   binding edge.
-- Front matter is unnumbered; page numbering restarts at 1 from Chapter 1, shown in the
-  running header along with the chapter name.
+- Layout follows the sample reports (`Final SIP KYR.pdf`, `Aarti Chettiar-SIP Report .pdf`):
+  running header with `CHAPTER n` on the left and the chapter title on the right over a blue
+  rule; running footer with `SUMMER INTERNSHIP PROJECT` on the left and the page number on
+  the right under a blue rule. Front matter carries neither; page numbering restarts at 1
+  from Chapter 1.
 - The page numbers in the Table of Contents are Word `PAGEREF` fields, so they update
   themselves. If they show stale values, press `Ctrl+A` then `F9` in Word.
 - The INTERNSHIP CERTIFICATE page carries the heading only, matching both sample reports —

@@ -103,9 +103,10 @@ def _bold_runs(text, kwargs):
 
 
 def para(content='', jc=None, before=0, after=0, line=360, ind_left=None,
-         ind_hanging=None, keep_next=False, border_bottom=False, tabs=None,
-         page_break_before=False, style=None, num_id=None, num_level=0,
-         contextual=False):
+         ind_hanging=None, ind_first_line=None, keep_next=False,
+         border_bottom=False, border_top=False, border_color='000000',
+         border_size=6, tabs=None, page_break_before=False, style=None,
+         num_id=None, num_level=0, contextual=False):
     """Assemble a <w:p>. Child order inside w:pPr must follow the schema."""
     # NB: children of w:pPr must appear in the order defined by CT_PPr:
     # pStyle, keepNext, keepLines, pageBreakBefore, numPr, pBdr, tabs,
@@ -120,19 +121,29 @@ def para(content='', jc=None, before=0, after=0, line=360, ind_left=None,
     if num_id is not None:
         p.append(f'<w:numPr><w:ilvl w:val="{num_level}"/>'
                  f'<w:numId w:val="{num_id}"/></w:numPr>')
-    if border_bottom:
-        p.append('<w:pBdr><w:bottom w:val="single" w:sz="6" w:space="1" '
-                 'w:color="000000"/></w:pBdr>')
+    if border_bottom or border_top:
+        # CT_PBdr order: top, left, bottom, right, between, bar
+        edges = ''
+        if border_top:
+            edges += (f'<w:top w:val="single" w:sz="{border_size}" '
+                      f'w:space="1" w:color="{border_color}"/>')
+        if border_bottom:
+            edges += (f'<w:bottom w:val="single" w:sz="{border_size}" '
+                      f'w:space="1" w:color="{border_color}"/>')
+        p.append(f'<w:pBdr>{edges}</w:pBdr>')
     if tabs:
         stops = ''.join(
             f'<w:tab w:val="{val}" w:pos="{pos}"/>' for val, pos in tabs)
         p.append(f'<w:tabs>{stops}</w:tabs>')
     p.append(f'<w:spacing w:before="{before}" w:after="{after}" '
              f'w:line="{line}" w:lineRule="auto"/>')
-    if ind_left is not None or ind_hanging is not None:
+    if (ind_left is not None or ind_hanging is not None
+            or ind_first_line is not None):
         bits = []
         if ind_left is not None:
             bits.append(f'w:left="{ind_left}"')
+        if ind_first_line is not None:
+            bits.append(f'w:firstLine="{ind_first_line}"')
         if ind_hanging is not None:
             bits.append(f'w:hanging="{ind_hanging}"')
         p.append(f'<w:ind {" ".join(bits)}/>')
@@ -158,8 +169,13 @@ def page_field():
 # tables
 # --------------------------------------------------------------------------
 def table(rows, widths=None, header=True, font_size=11, align='left',
-          shade='D9D9D9', page_width=9360):
-    """rows: list of list of cell strings. widths: list of relative ints."""
+          shade='D9D9D9', page_width=9360, row_height=None, col_bold=None,
+          col_align=None, cell_line=240):
+    """rows: list of list of cell strings. widths: list of relative ints.
+
+    col_bold / col_align give per-column formatting for the body rows, e.g.
+    col_bold=[True, False], col_align=['center', 'left'].
+    """
     ncols = max(len(r) for r in rows)
     if not widths:
         widths = [1] * ncols
@@ -188,17 +204,28 @@ def table(rows, widths=None, header=True, font_size=11, align='left',
         for c_i in range(ncols):
             text = row[c_i] if c_i < len(row) else ''
             shading = (f'<w:shd w:val="clear" w:color="auto" w:fill="{shade}"/>'
-                       if is_head else '')
-            body = para(rich(text, bold=is_head, size=font_size),
-                        jc='center' if is_head else 'left',
-                        before=20, after=20, line=240)
+                       if is_head and shade else '')
+            bold = is_head or bool(col_bold and c_i < len(col_bold)
+                                   and col_bold[c_i])
+            if is_head:
+                jc = 'center'
+            elif col_align and c_i < len(col_align):
+                jc = col_align[c_i]
+            else:
+                jc = 'left'
+            body = para(rich(text, bold=bold, size=font_size), jc=jc,
+                        before=20, after=20, line=cell_line)
             cells.append(
                 f'<w:tc><w:tcPr><w:tcW w:w="{abs_w[c_i]}" w:type="dxa"/>'
                 f'{shading}<w:vAlign w:val="center"/></w:tcPr>{body}</w:tc>')
-        # CT_TrPr order: cantSplit before tblHeader
-        trpr = ('<w:trPr><w:cantSplit/><w:tblHeader/></w:trPr>' if is_head
-                else '<w:trPr><w:cantSplit/></w:trPr>')
-        tbl.append(f'<w:tr>{trpr}{"".join(cells)}</w:tr>')
+        # CT_TrPr order: cantSplit, trHeight, tblHeader
+        trpr = ['<w:cantSplit/>']
+        if row_height:
+            trpr.append(f'<w:trHeight w:val="{row_height}" w:hRule="atLeast"/>')
+        if is_head:
+            trpr.append('<w:tblHeader/>')
+        tbl.append(f'<w:tr><w:trPr>{"".join(trpr)}</w:trPr>'
+                   f'{"".join(cells)}</w:tr>')
     return f'<w:tbl>{"".join(tbl)}</w:tbl>'
 
 
@@ -249,12 +276,21 @@ def drawing(rel_id, cx, cy, name='Picture'):
 # --------------------------------------------------------------------------
 class Section:
     def __init__(self, header_left=None, header_right=None, page_numbers=False,
-                 restart_at=None):
+                 restart_at=None, footer_left=None):
         self.header_left = header_left
         self.header_right = header_right
+        self.footer_left = footer_left
         self.page_numbers = page_numbers
         self.restart_at = restart_at
         self.body = []
+
+    @property
+    def has_header(self):
+        return bool(self.header_left or self.header_right)
+
+    @property
+    def has_footer(self):
+        return bool(self.footer_left or self.page_numbers)
 
     def add(self, xml):
         self.body.append(xml)
@@ -291,10 +327,12 @@ class Document:
         return f'rIdImg{idx}'
 
     # ---------------- parts ----------------
-    def _sect_pr(self, sec, header_rel):
+    def _sect_pr(self, sec, header_rel, footer_rel=None):
         bits = []
         if header_rel:
             bits.append(f'<w:headerReference w:type="default" r:id="{header_rel}"/>')
+        if footer_rel:
+            bits.append(f'<w:footerReference w:type="default" r:id="{footer_rel}"/>')
         bits.append(f'<w:pgSz w:w="{self.PAGE_W}" w:h="{self.PAGE_H}"/>')
         t, r, b, l = self.margins
         bits.append(f'<w:pgMar w:top="{t}" w:right="{r}" w:bottom="{b}" '
@@ -304,38 +342,42 @@ class Document:
         bits.append('<w:cols w:space="720"/><w:docGrid w:linePitch="360"/>')
         return f'<w:sectPr>{"".join(bits)}</w:sectPr>'
 
-    def _header_xml(self, sec):
-        """Running header: chapter block on the left, report name on the right,
-        page number underneath. header_left / header_right may be a string or a
-        list of lines."""
-        width = self.content_width
-        left = sec.header_left or ''
-        right = sec.header_right or ''
-        left = [left] if isinstance(left, str) else list(left)
-        right = [right] if isinstance(right, str) else list(right)
-        rows = max(len(left), len(right))
-        left += [''] * (rows - len(left))
-        right += [''] * (rows - len(right))
+    RULE_COLOR = '5B9BD5'          # the blue rule used by the sample reports
 
-        lines = []
-        for l_text, r_text in zip(left, right):
-            lines.append(para(
-                run(l_text, bold=True, size=10)
-                + '<w:r><w:tab/></w:r>'
-                + run(r_text, bold=True, size=10),
-                jc='left', line=240, after=0, tabs=[('right', width)]))
-        lines.append(para(page_field() if sec.page_numbers else '',
-                          jc='right', line=240, after=0, border_bottom=True))
+    def _header_xml(self, sec):
+        """Running header: 'CHAPTER n' on the left, chapter title on the right,
+        with a rule underneath."""
+        width = self.content_width
+        body = para(
+            run(sec.header_left or '', bold=True, size=11)
+            + '<w:r><w:tab/></w:r>'
+            + run(sec.header_right or '', bold=True, size=11),
+            jc='left', line=240, after=0, tabs=[('right', width)],
+            border_bottom=True, border_color=self.RULE_COLOR, border_size=6)
         return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
                 f'<w:hdr xmlns:w="{W}" xmlns:r="http://schemas.openxmlformats.org'
-                '/officeDocument/2006/relationships">'
-                f'{"".join(lines)}</w:hdr>')
+                f'/officeDocument/2006/relationships">{body}</w:hdr>')
+
+    def _footer_xml(self, sec):
+        """Running footer: report name on the left, page number on the right,
+        with a rule above."""
+        width = self.content_width
+        body = para(
+            run(sec.footer_left or '', size=11)
+            + '<w:r><w:tab/></w:r>'
+            + (page_field() if sec.page_numbers else ''),
+            jc='left', line=240, after=0, tabs=[('right', width)],
+            border_top=True, border_color=self.RULE_COLOR, border_size=12)
+        return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+                f'<w:ftr xmlns:w="{W}" xmlns:r="http://schemas.openxmlformats.org'
+                f'/officeDocument/2006/relationships">{body}</w:ftr>')
 
     def _document_xml(self):
         body = []
         for i, sec in enumerate(self.sections):
-            header_rel = f'rIdHdr{i + 1}' if (sec.header_left or sec.page_numbers) else None
-            sect_pr = self._sect_pr(sec, header_rel)
+            header_rel = f'rIdHdr{i + 1}' if sec.has_header else None
+            footer_rel = f'rIdFtr{i + 1}' if sec.has_footer else None
+            sect_pr = self._sect_pr(sec, header_rel, footer_rel)
             body.extend(sec.body)
             if i < len(self.sections) - 1:
                 # section break carried on an empty paragraph
@@ -407,12 +449,14 @@ w:uri="http://schemas.microsoft.com/office/word" /></w:compat>
 </w:settings>'''
 
     def save(self, path):
-        n_sections = len(self.sections)
-        headers = {}
+        headers, footers = {}, {}
         for i, sec in enumerate(self.sections):
-            if sec.header_left or sec.page_numbers:
+            if sec.has_header:
                 headers[f'rIdHdr{i + 1}'] = (f'header{i + 1}.xml',
                                              self._header_xml(sec))
+            if sec.has_footer:
+                footers[f'rIdFtr{i + 1}'] = (f'footer{i + 1}.xml',
+                                             self._footer_xml(sec))
 
         ct = ['<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
               '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">',
@@ -429,6 +473,9 @@ w:uri="http://schemas.microsoft.com/office/word" /></w:compat>
         for rel, (fname, _) in headers.items():
             ct.append(f'<Override PartName="/word/{fname}" ContentType='
                       '"application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/>')
+        for rel, (fname, _) in footers.items():
+            ct.append(f'<Override PartName="/word/{fname}" ContentType='
+                      '"application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/>')
         ct.append('</Types>')
 
         rels = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -445,6 +492,8 @@ w:uri="http://schemas.microsoft.com/office/word" /></w:compat>
                     '<Relationship Id="rIdNum" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering" Target="numbering.xml"/>']
         for rel, (fname, _) in headers.items():
             doc_rels.append(f'<Relationship Id="{rel}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="{fname}"/>')
+        for rel, (fname, _) in footers.items():
+            doc_rels.append(f'<Relationship Id="{rel}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="{fname}"/>')
         for rel, fname, _ in self.images:
             doc_rels.append(f'<Relationship Id="{rel}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/{fname}"/>')
         doc_rels.append('</Relationships>')
@@ -471,6 +520,8 @@ xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
             z.writestr('word/numbering.xml', self._numbering_xml())
             z.writestr('word/_rels/document.xml.rels', '\n'.join(doc_rels))
             for rel, (fname, xml) in headers.items():
+                z.writestr(f'word/{fname}', xml)
+            for rel, (fname, xml) in footers.items():
                 z.writestr(f'word/{fname}', xml)
             for rel, fname, blob in self.images:
                 z.writestr(f'word/media/{fname}', blob)

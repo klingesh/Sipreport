@@ -72,6 +72,11 @@ def main(path, dump_text=False):
 
         sections = doc.count('<w:sectPr>')
         headers = [n for n in names if re.match(r'word/header\d+\.xml', n)]
+        footers = [n for n in names if re.match(r'word/footer\d+\.xml', n)]
+        page_in_footer = sum(1 for n in footers
+                             if 'instr=" PAGE' in parts[n])
+        if footers and page_in_footer != len(footers):
+            problems.append('every running footer should carry a PAGE field')
         images = [n for n in names if n.startswith('word/media/')]
         page_fields = len(re.findall(r'instr=" PAGE', doc))
         tables = doc.count('<w:tbl>')
@@ -95,7 +100,8 @@ def main(path, dump_text=False):
 
     print(f'file            : {path}')
     print(f'parts           : {len(names)}')
-    print(f'sections        : {sections}   headers: {len(headers)}')
+    print(f'sections        : {sections}   headers: {len(headers)}   '
+          f'footers: {len(footers)} (page number in {page_in_footer})')
     print(f'paragraphs      : {paras}   tables: {tables}   bullets: {bullets}')
     print(f'PAGE fields     : {page_fields}   '
           f'PAGEREF fields: {len(re.findall(r"PAGEREF", doc))}')

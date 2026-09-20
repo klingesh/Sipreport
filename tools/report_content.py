@@ -39,19 +39,19 @@ EMBED_CERTIFICATE = False
 # ---------------------------------------------------------------------------
 FRONT = [
     # ---- title page ----
-    ('gap', 2),
+    ('gap', 4),
     ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026'),
     ('gap', 2),
-    ('center', 'Summer Internship Project Report submitted to the Malaysia '
-               'University of Science and Technology, in partial fulfilment of '
-               'the requirements to award the degree of'),
+    ('cbi', 'Summer Internship Project Report submitted to the Malaysia '
+            'University of Science and Technology, in partial fulfilment of '
+            'the requirements to award the degree of'),
     ('gap', 2),
     ('cbold', 'MASTER OF BUSINESS ADMINISTRATION'),
     ('gap', 3),
-    ('cbold', 'SUBMITTED BY'),
+    ('center', 'SUBMITTED BY'),
     ('gap', 1),
     ('cbold', STUDENT),
-    ('cbold', REG_NO),
+    ('center', REG_NO),
     ('gap', 3),
     ('logo',),                      # MUST + ISSM Business School banner
     ('gap', 2),
@@ -85,13 +85,13 @@ FRONT = [
     # Heading only, as in both sample reports: the certificate is attached as a
     # separate sheet rather than printed into the document. Flip
     # EMBED_CERTIFICATE to True to have the scan placed on this page instead.
-    ('gap', 1),
+    ('gap', 12),
     ('big', 'INTERNSHIP CERTIFICATE'),
     *([('gap', 1), ('certificate_image',)] if EMBED_CERTIFICATE else []),
     ('pagebreak',),
 
     # ---- declaration ----
-    ('gap', 1),
+    ('gap', 6),
     ('big', 'DECLARATION'),
     ('gap', 2),
     ('p', 'I, Mr. Lingesh K, hereby declare that this SIP Project Report is '
@@ -112,7 +112,7 @@ FRONT = [
     ('pagebreak',),
 
     # ---- acknowledgement ----
-    ('gap', 1),
+    ('gap', 4),
     ('big', 'ACKNOWLEDGEMENT'),
     ('gap', 1),
     ('p', 'The completion of this internship has been possible only because of '
@@ -146,7 +146,7 @@ FRONT = [
 
     # ---- executive summary ----
     ('gap', 1),
-    ('big', 'EXECUTIVE SUMMARY'),
+    ('big', 'The Executive Summary'),
     ('gap', 1),
     ('p', 'This report presents the work carried out during my Summer '
           'Internship Programme at M/s S. Ravi & Associates, Chartered '
@@ -239,12 +239,13 @@ FRONT = [
 CH1 = {
     'num': 1,
     'title': 'INDUSTRY AND COMPANY OVERVIEW',
-    'header': ['CHAPTER 1', 'INDUSTRY AND COMPANY OVERVIEW'],
+    'header_left': 'CHAPTER 1',
+    'header_right': 'INDUSTRY AND COMPANY OVERVIEW',
     'blocks': [
         ('h1', '1. INDUSTRY AND COMPANY OVERVIEW'),
 
-        ('h2', '1.1  GLOBAL LANDSCAPE'),
-        ('p', 'Accountancy is one of the oldest business services in the world '
+        ('h2', '1.1  GLOBAL ACCOUNTING AND TAXATION LANDSCAPE'),
+        ('p_indent', 'Accountancy is one of the oldest business services in the world '
               'and, at the same time, one of the fastest changing. The global '
               'accounting services market was valued at about USD 688.2 billion '
               'in 2025 and is expected to move from USD 740.1 billion in 2026 to '
@@ -278,7 +279,7 @@ CH1 = {
               'usually the quality of its software workflow and the discipline of '
               'its documentation.'),
 
-        ('h2', '1.2  THE INDIAN CONTEXT'),
+        ('h2', '1.2  THE INDIAN ACCOUNTING AND TAXATION CONTEXT'),
         ('p', 'India is one of the most compliance-intensive accounting markets '
               'in the world, and it is also one of the most digitised. The Indian '
               'accounting professional services market is estimated at about USD '
@@ -328,7 +329,7 @@ CH1 = {
 
         ('h2', '1.3  COMPANY OVERVIEW: S. RAVI & ASSOCIATES, CHARTERED '
                'ACCOUNTANTS'),
-        ('h3', '1.3.1  Background and Operations'),
+        ('h3', '1.3.1  BACKGROUND AND OPERATIONS'),
         ('p', 'S. Ravi & Associates (referred to within the firm as SRA) is a '
               'Chennai based firm of chartered accountants founded by CA S. Ravi, '
               'B.Com., F.C.A., in 2001 as an audit practice. The firm has since '
@@ -356,7 +357,7 @@ CH1 = {
               'finally filing and archiving of working papers. During the '
               'internship I worked at every stage of this sequence except the '
               'final signing authority, which rests with the proprietor.'),
-        ('h3', '1.3.2  Service Lines'),
+        ('h3', '1.3.2  SERVICE LINES'),
         ('p', 'The firm’s work can be grouped into four broad service lines, '
               'summarised below. The classification is based on the assignments '
               'observed and worked on during the internship period.'),
@@ -389,7 +390,7 @@ CH1 = {
               'rather than by a ticketing system. The firm’s focus therefore '
               'rests on accuracy, continuity of relationship and responsiveness '
               'during statutory deadlines.'),
-        ('h3', '1.4.1  Values in Practice'),
+        ('h3', '1.4.1  VALUES IN PRACTICE'),
         ('bullets', [
             '**Accuracy before speed:** every computation is prepared by one '
             'person and reviewed by another before it leaves the office. Nothing '
@@ -405,7 +406,7 @@ CH1 = {
             'but why a particular treatment has been adopted, which reduces '
             'disputes and improves the quality of records the client maintains.',
         ]),
-        ('h3', '1.4.2  Workplace Culture'),
+        ('h3', '1.4.2  WORKPLACE CULTURE'),
         ('p', 'The working culture of the firm is disciplined and deadline-led, '
               'but it is also unusually instructive. Because a practice trains '
               'article assistants as a matter of course, teaching is part of the '
@@ -421,7 +422,7 @@ CH1 = {
               'and specific. Peer support was equally important: Ms. Aruna, a '
               'colleague in the team, walked me through most processes for the '
               'first time and remained available whenever I was unsure.'),
-        ('h3', '1.4.3  Strategic Positioning'),
+        ('h3', '1.4.3  STRATEGIC POSITIONING'),
         ('p', 'SRA does not compete with the large networks on scale, and does '
               'not need to. Its positioning lies in the space between the '
               'unorganised bookkeeping segment, which lacks statutory depth, and '
@@ -438,7 +439,7 @@ CH1 = {
               'observed of the firm’s working during the internship period. It is '
               'presented from the perspective of a mid-sized professional '
               'practice operating in a highly regulated market.'),
-        ('h3', '1.5.1  Strengths'),
+        ('h3', '1.5.1  STRENGTHS'),
         ('bullets', [
             '**Established practice with a long record:** a firm founded in 2001 '
             'and still growing has survived two full decades of statutory change, '
@@ -457,7 +458,7 @@ CH1 = {
             'article assistants and interns creates a steady internal pipeline of '
             'staff who already know the firm’s methods.',
         ]),
-        ('h3', '1.5.2  Weaknesses'),
+        ('h3', '1.5.2  WEAKNESSES'),
         ('bullets', [
             '**Dependence on key individuals:** in a proprietary practice, '
             'technical judgement and client relationships are concentrated in the '
@@ -472,7 +473,7 @@ CH1 = {
             'incomplete records, a significant part of the work still begins with '
             'manual classification of bank statements and vouchers.',
         ]),
-        ('h3', '1.5.3  Opportunities'),
+        ('h3', '1.5.3  OPPORTUNITIES'),
         ('bullets', [
             '**Widening compliance base:** growth in registered GST taxpayers and '
             'in the number of returns filed each year expands the addressable '
@@ -490,7 +491,7 @@ CH1 = {
             'professionals and start-ups continue to add first-time assessees who '
             'need a full-service local adviser.',
         ]),
-        ('h3', '1.5.4  Threats'),
+        ('h3', '1.5.4  THREATS'),
         ('bullets', [
             '**Frequent statutory change:** amendments to the income tax and GST '
             'framework require continuous re-learning and software updates, and '
@@ -514,7 +515,7 @@ CH1 = {
               'service providers, each at a different point in the market. The '
               'tables below set out the principal categories with representative '
               'names.'),
-        ('h3', '1.6.1  Global Networks and Their Indian Member Firms'),
+        ('h3', '1.6.1  GLOBAL NETWORKS AND THEIR INDIAN MEMBER FIRMS'),
         ('table', {'rows': [
             ['Firm / Network', 'Principal Services', 'Key Focus Area'],
             ['Deloitte, PwC, EY and KPMG affiliates',
@@ -524,7 +525,7 @@ CH1 = {
              'Audit, tax, risk advisory and transaction services',
              'Mid-market and growth-stage corporate clients'],
         ], 'widths': [3, 4, 4]}),
-        ('h3', '1.6.2  Established Indian and Chennai-Based Practices'),
+        ('h3', '1.6.2  ESTABLISHED INDIAN AND CHENNAI-BASED PRACTICES'),
         ('table', {'rows': [
             ['Firm', 'Principal Services', 'Key Focus Area'],
             ['Brahmayya & Co.',
@@ -540,7 +541,7 @@ CH1 = {
              'Accounting, GST, TDS and income tax compliance',
              'Individuals, professionals and closely-held businesses'],
         ], 'widths': [3, 4, 4]}),
-        ('h3', '1.6.3  Technology Platforms and Compliance Service Providers'),
+        ('h3', '1.6.3  TECHNOLOGY PLATFORMS AND COMPLIANCE SERVICE PROVIDERS'),
         ('table', {'rows': [
             ['Platform', 'Offering', 'Competitive Effect'],
             ['Online tax filing portals',
@@ -578,7 +579,7 @@ CH1 = {
               'difficult for a software platform to replicate and uneconomical '
               'for a large firm to offer at the same fee level.'),
 
-        ('h2', '1.8  GROWTH JOURNEY AND PRACTICE DEVELOPMENT'),
+        ('h2', '1.8  KEY MILESTONES'),
         ('p', 'The development of the firm reflects the development of the '
               'profession in India over the same period. SRA was established in '
               '2001 as an audit practice at a time when Indian accounting was '
@@ -623,12 +624,13 @@ CH1 = {
 CH2 = {
     'num': 2,
     'title': 'JOB / TASK DESCRIPTION',
-    'header': ['CHAPTER 2', 'JOB / TASK DESCRIPTION'],
+    'header_left': 'CHAPTER 2',
+    'header_right': 'JOB / TASK DESCRIPTION',
     'blocks': [
         ('h1', '2. JOB / TASK DESCRIPTION'),
 
         ('h2', '2.1  OBJECTIVES OF THE INTERNSHIP'),
-        ('p', 'The purpose of the internship was to convert the accounting and '
+        ('p_indent', 'The purpose of the internship was to convert the accounting and '
               'taxation concepts studied in the first year of the MBA programme '
               'into practical, supervised work inside a functioning chartered '
               'accountancy practice. The internship was carried out at '
@@ -1077,6 +1079,195 @@ CH2 = {
             'Applied reporting discipline in preparing working papers and '
             'client reports for my Manager’s verification and approval.',
         ]),
+
+        ('h2', '2.7  SKILLS DEVELOPED DURING THE INTERNSHIP'),
+        ('p', 'The internship developed both technical and behavioural skills, '
+              'and in most cases the two grew together, because accuracy in this '
+              'work is as much a habit as it is a technique.'),
+        ('h3', '2.7.1  Classification and Documentation Skills'),
+        ('p', 'I became confident in reading a bank statement or a ledger and '
+              'deciding how each entry should be treated, and in assembling the '
+              'supporting downloads and working papers into a file that a '
+              'reviewer could follow without explanation.'),
+        ('h3', '2.7.2  Attention to Detail'),
+        ('p', 'Tax work punishes carelessness. Checking a figure against its '
+              'source before accepting it, and flagging what could not be '
+              'verified, became automatic by the later weeks of the internship.'),
+        ('h3', '2.7.3  Software Proficiency'),
+        ('p', 'I moved from being a beginner to working independently in Tally '
+              'and Winman CA-ERP, and gained working familiarity with Winman TDS, '
+              'the TDS Return Preparation Utility, the income tax e-filing portal '
+              'and the GST portal.'),
+        ('h3', '2.7.4  Time Management'),
+        ('p', 'With several client files open at once during filing season, I '
+              'learned to sequence work by due date rather than by convenience, '
+              'and to finish one file completely before starting the next.'),
+        ('h3', '2.7.5  Organizational Skills'),
+        ('p', 'Maintaining client-wise folders, naming downloaded statements '
+              'consistently and keeping a written list of pending clarifications '
+              'improved the way I organise my own work.'),
+        ('h3', '2.7.6  Teamwork'),
+        ('p', 'Working under Ms. A. Lakshmi and alongside Ms. Aruna taught me how '
+              'a small professional team divides work, reviews it and covers for '
+              'each other during deadline periods.'),
+        ('h3', '2.7.7  Confidentiality'),
+        ('p', 'Handling client bank statements, portal credentials and digital '
+              'signature tokens taught me that discretion is part of the job and '
+              'not an optional courtesy.'),
+        ('h3', '2.7.8  Adaptability'),
+        ('p', 'I learned to pick up an unfamiliar process by watching it once, '
+              'noting the steps, attempting it under supervision and then '
+              'performing it independently.'),
+
+        ('h2', '2.8  KEY OBSERVATIONS FROM THE JOB'),
+        ('p', 'The clearest observation from the internship is that compliance '
+              'work rests on the quality of the underlying records. Where a '
+              'client maintained proper books and gave prompt clarifications, a '
+              'return could be prepared and filed quickly; where records were '
+              'incomplete, most of the effort went into establishing what had '
+              'actually happened before any computation could begin.'),
+        ('p', 'A second observation is that the tax administration now holds a '
+              'great deal of information independently of the assessee. Form '
+              '26AS, the Annual Information Statement, the Taxpayer Information '
+              'Summary and GSTR-2B all arrive before the return is filed, which '
+              'means the professional’s task is to reconcile and explain rather '
+              'than merely to report.'),
+        ('p', 'A third observation concerns interdependence. A deduction reported '
+              'incorrectly by a deductor becomes a missing credit for a client of '
+              'the firm; an input tax credit depends on a supplier’s own filing. '
+              'Much of the work therefore involves chasing information that sits '
+              'outside the firm’s control.'),
+        ('p', 'Finally, I observed that a professional office runs on review. No '
+              'figure leaves the firm on the strength of one person’s work, and '
+              'that discipline, rather than individual brilliance, is what keeps '
+              'the error rate low.'),
+
+        ('h2', '2.9  CHALLENGES ENCOUNTERED DURING THE INTERNSHIP'),
+        ('p', 'The internship was demanding in ways that had little to do with '
+              'accounting, and it would be dishonest to present it otherwise. '
+              'Each of the following difficulties contributed something to the '
+              'experience.'),
+        ('h3', '2.9.1  Daily Travel'),
+        ('p', 'The internship was on-site at the firm’s Mylapore office and I '
+              'commuted by bus for about an hour each way, in crowded conditions, '
+              'every working day for a little over two months. The first '
+              'fortnight was genuinely tiring. I managed it by leaving early '
+              'enough to avoid the worst of the rush and by treating the journey '
+              'as fixed personal time rather than lost time. By the second month '
+              'the routine had become normal, and punctuality became a matter of '
+              'professional commitment rather than effort.'),
+        ('h3', '2.9.2  Screen Fatigue'),
+        ('p', 'The work is almost entirely computer-based, and after long '
+              'stretches of classifying entries and reading statements my eyes '
+              'would burn by the end of the day. I learned to alternate between '
+              'on-screen data entry and paper-based verification, to look away '
+              'periodically, and to schedule the most detailed reconciliation '
+              'work for the earlier part of the day when concentration was '
+              'highest.'),
+        ('h3', '2.9.3  Repetitive Work and Monotony'),
+        ('p', 'A compliance practice involves performing the same process across '
+              'many client files, and there were days when the repetition became '
+              'tiring and my interest dipped. What helped was changing my frame '
+              'of reference: instead of counting files, I treated each client as '
+              'a different set of facts, looked for what was unusual in that '
+              'particular statement and tried to reduce the time I took per file. '
+              'Setting small internal targets made the routine much easier to '
+              'sustain, and I came to see that accuracy maintained through '
+              'monotony is itself a professional skill.'),
+        ('h3', '2.9.4  Unfamiliar Statutory Processes'),
+        ('p', 'Conso files, the Return Preparation Utility, quarterly TDS '
+              'statements and the mechanics of GST authentication were entirely '
+              'new to me and are not covered in detail in coursework. Repetition '
+              'under supervision, and written notes taken immediately after each '
+              'demonstration, were what eventually made them routine.'),
+        ('h3', '2.9.5  Incomplete Client Information'),
+        ('p', 'Bank statements frequently contained entries with no usable '
+              'narration, and the correct treatment could not be settled without '
+              'the client’s explanation. I learned to list such items for '
+              'clarification instead of deciding them myself, which was the single '
+              'most useful correction I received during the internship.'),
+
+        ('h2', '2.10  OVERALL JOB EXPERIENCE'),
+        ('p', 'Taken as a whole, the internship gave me exposure across the full '
+              'width of a compliance practice rather than depth in a single task. '
+              'I worked on bank statement analysis, accounting in Tally, GST '
+              'returns, TDS statements, Securities Transaction Tax data, the '
+              'Statement of Total Income, return filing and audit documentation, '
+              'and I could see how each of these fed into the others.'),
+        ('p', 'The experience also changed how I understand finance as a career. '
+              'Before the internship I thought of accounting largely as '
+              'record-keeping and of taxation as a set of rules to be learned. '
+              'The work showed me that both are exercises in evidence: the figure '
+              'matters less than the ability to demonstrate where it came from. '
+              'That shift in perspective is probably the most durable thing I '
+              'take away from the two months.'),
+        ('p', 'The progression from observation to independent filing within ten '
+              'weeks was possible only because responsibility was handed over '
+              'gradually and every piece of work was reviewed. By the final week '
+              'I was completing filings end to end, which gave me a realistic '
+              'sense of what an entry-level role in a practice actually involves.'),
+
+        ('h2', '2.11  SUMMARY OF RESPONSIBILITIES'),
+        ('p', 'The responsibilities handled during the internship are summarised '
+              'below.'),
+        ('table', {'rows': [
+            ['S. No.', 'Area of Work', 'Major Responsibility'],
+            ['1', 'Bank Statement Analysis',
+             'Classification of individual and corporate bank entries into '
+             'income, expenditure, drawings and transfers'],
+            ['2', 'Real-Time Accounting',
+             'Recording client transactions in Tally with correct ledgers and '
+             'narrations'],
+            ['3', 'Portal Downloads',
+             'Retrieval of Form 26AS, AIS and TIS through Winman CA-ERP'],
+            ['4', 'GST Compliance',
+             'GSTR-1, GSTR-2B and GSTR-3B support, acknowledgements, file '
+             'requests and DSC authentication'],
+            ['5', 'GST Reconciliation',
+             'Matching books maintained in Tally with the GST returns filed'],
+            ['6', 'TDS Compliance',
+             'Conso files from TRACES and quarter-wise data entry through the '
+             'Return Preparation Utility'],
+            ['7', 'Securities Transaction Tax',
+             'Tracing securities transactions and STT from AIS and broker '
+             'statements into the computation'],
+            ['8', 'Bank Account Abstract',
+             'Preparation of bank abstracts as working papers for computation'],
+            ['9', 'Statement of Total Income',
+             'Computation of total income and verification of taxes paid against '
+             'taxes payable'],
+            ['10', 'Return Filing',
+             'Preparation and upload of income tax returns, including three '
+             'filings completed independently'],
+            ['11', 'Audit Documentation',
+             'Assembly of ledgers, reconciliations and portal statements for '
+             'statutory audit assignments'],
+            ['12', 'Reporting',
+             'Client reports prepared for the Manager’s verification and approval'],
+        ], 'widths': [1, 3, 6], 'col_bold': [True, True, False],
+            'col_align': ['center', 'left', 'left']}),
+        ('p', 'These responsibilities provided exposure to several connected '
+              'compliance processes and made their interdependence visible.'),
+
+        ('h2', '2.12  CONCLUSION OF JOB / TASK DESCRIPTION'),
+        ('p', 'The work described in this chapter covered the entire sequence of '
+              'a compliance assignment in a chartered accountancy practice: '
+              'collection of records and portal data, classification and '
+              'recording, reconciliation against departmental information, '
+              'computation, review and filing.'),
+        ('p', 'It also allowed me to apply concepts from financial accounting, '
+              'direct taxation, indirect taxation, accounting systems and '
+              'financial reporting to live client files, and to learn the '
+              'software on which Indian practice actually runs. The tasks were '
+              'routine in form but consequential in effect, since each one ended '
+              'in a filing that carried a statutory deadline and a client’s '
+              'liability.'),
+        ('p', 'Most importantly, the chapter reflects a progression. The work I '
+              'was given in the first week required supervision at every step; '
+              'the work I completed in the last week was carried out '
+              'independently and was approved with only minor observations. That '
+              'progression is the clearest measure of what the internship '
+              'achieved.'),
     ],
 }
 
@@ -1087,7 +1278,8 @@ CH2 = {
 CH3 = {
     'num': 3,
     'title': 'ANALYSIS OF JOB PERFORMANCE',
-    'header': ['CHAPTER 3', 'ANALYSIS OF JOB PERFORMANCE'],
+    'header_left': 'CHAPTER 3',
+    'header_right': 'ANALYSIS OF JOB PERFORMANCE',
     'blocks': [
         ('h1', '3. ANALYSIS OF JOB PERFORMANCE'),
         ('p', 'This chapter is an honest assessment of how I performed during the '
@@ -1097,7 +1289,7 @@ CH3 = {
               'found difficult.'),
 
         ('h2', '3.1  QUALITY OF WORK'),
-        ('p', 'In a chartered accountancy practice, the quality of an '
+        ('p_indent', 'In a chartered accountancy practice, the quality of an '
               'intern’s work is measured in a very direct way: how much of it '
               'survives review unchanged. By that measure my output improved '
               'substantially over the course of the internship. In the first two '
@@ -1197,44 +1389,7 @@ CH3 = {
             'without absence.',
         ]),
 
-        ('h2', '3.6  CHALLENGES FACED AND HOW THEY WERE MANAGED'),
-        ('p', 'The internship was demanding in ways that had nothing to do with '
-              'accounting, and it would be dishonest to present it otherwise. '
-              'Three challenges stand out.'),
-        ('bullets', [
-            '**Daily travel:** the internship was on-site at the firm’s Mylapore '
-            'office, and I commuted by bus for about an hour each way, in crowded '
-            'conditions, every working day for a little over two months. In the '
-            'first fortnight this was genuinely difficult and left me tired '
-            'before the working day began. I managed it by leaving early enough '
-            'to avoid the worst of the rush, treating the journey as fixed '
-            'personal time rather than lost time, and accepting that punctuality '
-            'was part of the professional commitment I had made. By the second '
-            'month the routine had become normal.',
-            '**Screen fatigue:** the work is almost entirely computer-based, and '
-            'after long stretches of classifying entries and reading statements my '
-            'eyes burned by the end of the day. I learned to break up screen work '
-            'by alternating between data entry and paper-based verification, to '
-            'look away periodically, and to schedule the most detailed '
-            'reconciliation work for the earlier part of the day when '
-            'concentration was highest.',
-            '**Monotony and fatigue with repetitive work:** a compliance practice '
-            'involves doing the same process across many client files, and there '
-            'were days when the repetition became tiring and my interest dipped. '
-            'What helped was changing my frame of reference: instead of counting '
-            'files, I began treating each client as a different set of facts, '
-            'looking for what was unusual in that particular statement, and '
-            'trying to reduce the time I took per file. Setting small internal '
-            'targets and finishing a file completely before starting the next one '
-            'made the routine considerably easier to sustain.',
-        ]),
-        ('p', 'These difficulties turned out to be part of the learning. '
-              'Professional compliance work is repetitive by nature and is done '
-              'to deadlines regardless of how one feels on a particular day, and '
-              'discovering that I could maintain accuracy through that routine '
-              'was as valuable as any technical skill I acquired.'),
-
-        ('h2', '3.7  AREAS FOR IMPROVEMENT'),
+        ('h2', '3.6  AREAS FOR IMPROVEMENT'),
         ('bullets', [
             '**Speed alongside accuracy:** my accuracy became reliable, but I was '
             'slower than an experienced assistant on the same file. Speed in this '
@@ -1255,6 +1410,28 @@ CH3 = {
             'is something I improved during the internship but have not yet '
             'mastered.',
         ]),
+
+        ('h2', '3.7  OVERALL PERFORMANCE'),
+        ('p', 'Overall, I consider the internship to have been performed to the '
+              'standard the firm expected of an intern, and in the closing weeks '
+              'slightly beyond it. Work on bank statement analysis, accounting in '
+              'Tally, GST returns, TDS statements, Securities Transaction Tax '
+              'data, the Statement of Total Income and audit documentation was '
+              'completed and accepted, the client reports I prepared were '
+              'verified and approved by my Manager, and three returns were filed '
+              'independently after review.'),
+        ('p', 'The clearest evidence of progress is the fall in corrections. In '
+              'the first fortnight my classification of bank entries was '
+              'frequently amended; by the final phase computations were approved '
+              'with only minor observations. I also maintained full attendance '
+              'and met every deadline given to me, which in a filing season '
+              'matters as much as technical accuracy.'),
+        ('p', 'Where I fell short was speed and statutory depth, and both are '
+              'addressed in the previous section. Taken together, the performance '
+              'gave me a realistic picture of what a practice expects: consistent '
+              'accuracy, honest reporting of what is pending, and the willingness '
+              'to be corrected. The internship has provided a solid foundation '
+              'for further development in accounting, taxation and audit work.'),
     ],
 }
 
@@ -1264,7 +1441,8 @@ CH3 = {
 CH4 = {
     'num': 4,
     'title': 'LEARNING OUTCOMES',
-    'header': ['CHAPTER 4', 'LEARNING OUTCOMES'],
+    'header_left': 'CHAPTER 4',
+    'header_right': 'LEARNING OUTCOMES',
     'blocks': [
         ('h1', '4. LEARNING OUTCOMES'),
         ('p', 'This chapter sets out what I actually took away from the '
@@ -1365,6 +1543,34 @@ CH4 = {
         ]),
 
         ('h2', '4.5  ALIGNMENT WITH ACADEMIC LEARNING'),
+        ('p', 'The internship served as a practical extension of the subjects '
+              'studied in the MBA programme. The table below maps each subject to '
+              'the work in which it was applied.'),
+        ('table', {'rows': [
+            ['Academic Subject', 'Internship Application'],
+            ['Financial Accounting',
+             'Ledger classification, voucher entry and recording of client '
+             'transactions in Tally'],
+            ['Direct Taxation',
+             'Heads of income, Statement of Total Income, TDS provisions, '
+             'Securities Transaction Tax and return filing'],
+            ['Indirect Taxation (GST)',
+             'GSTR-1, GSTR-2B and GSTR-3B filings and reconciliation of books '
+             'with returns'],
+            ['Auditing and Assurance',
+             'Documentation for statutory audit assignments and verification of '
+             '26AS, AIS and TIS against the books'],
+            ['Financial Reporting and Analysis',
+             'Assistance in balance sheet preparation and interpretation of '
+             'income and expenditure patterns'],
+            ['Accounting Systems and ERP',
+             'Practical work in Tally and Winman CA-ERP, including master data '
+             'and ledger structure'],
+            ['Business Communication',
+             'Working papers, client reports for the Manager’s approval and '
+             'internal queries on pending clarifications'],
+        ], 'widths': [3, 6], 'col_bold': [True, False],
+            'col_align': ['center', 'left'], 'row_height': 500}),
         ('p', 'The internship aligned closely with the first-year MBA (Finance) '
               'curriculum, and in several places it inverted the order in which I '
               'had learned things, which turned out to be instructive. Financial '
@@ -1446,12 +1652,13 @@ CH4 = {
 CH5 = {
     'num': 5,
     'title': 'SUMMARY AND CONCLUSION',
-    'header': ['CHAPTER 5', 'SUMMARY AND CONCLUSION'],
+    'header_left': 'CHAPTER 5',
+    'header_right': 'SUMMARY AND CONCLUSION',
     'blocks': [
         ('h1', '5. SUMMARY AND CONCLUSION'),
 
-        ('h2', '5.1  SUMMARY OF THE INTERNSHIP'),
-        ('p', 'The Summer Internship Programme was carried out at '
+        ('h2', '5.1  SUMMARY OF INTERNSHIP EXPERIENCE'),
+        ('p_indent', 'The Summer Internship Programme was carried out at '
               'M/s S. Ravi & Associates, Chartered Accountants, Mylapore, '
               'Chennai, from 12 May 2026 to 17 July 2026, on-site, in the domain '
               'of Accounting and Finance, under the guidance of Ms. A. Lakshmi, '
@@ -1591,7 +1798,8 @@ CH5 = {
 CH6 = {
     'num': 6,
     'title': 'REFERENCES',
-    'header': ['REFERENCES', ''],
+    'header_left': '',
+    'header_right': 'REFERENCES',
     'divider_title': 'REFERENCES',
     'blocks': [
         ('h1', 'REFERENCES'),
