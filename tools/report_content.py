@@ -120,7 +120,7 @@ FRONT = [
           'of people, and I would like to place on record my sincere gratitude '
           'to each of them.'),
     ('p', 'I would like to express my sincere gratitude to our respected '
-          'Chairman, Mr. KATHIR VEL GANAPATHIAPPAN, for providing us with the '
+          'Chairman, Mr. KATHIRVEL GANAPATHIAPPAN, for providing us with the '
           'valuable opportunity to carry out and complete this project.'),
     ('p', 'I express my heartfelt thanks to our visionary, dedicated and '
           'empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, '

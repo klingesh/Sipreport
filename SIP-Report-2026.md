@@ -67,7 +67,7 @@ Date:
 
 The completion of this internship has been possible only because of the guidance, patience and encouragement extended to me by a number of people, and I would like to place on record my sincere gratitude to each of them.
 
-I would like to express my sincere gratitude to our respected Chairman, Mr. KATHIR VEL GANAPATHIAPPAN, for providing us with the valuable opportunity to carry out and complete this project.
+I would like to express my sincere gratitude to our respected Chairman, Mr. KATHIRVEL GANAPATHIAPPAN, for providing us with the valuable opportunity to carry out and complete this project.
 
 I express my heartfelt thanks to our visionary, dedicated and empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, for her continuous support and meaningful guidance, which played a key role in our progress.
 
