@@ -29,7 +29,7 @@ This is to certify that the Summer Internship Project Report is an authentic rec
 
 The project was completed under the guidance of Ms. Arezoo Karimaghaei, Senior Affiliate Manager, ACTC Studio Pvt. Ltd., during the period from May 11th to July 10th, 2026.
 
-Dr. Kavitha Manikandan
+**Mrs.Kavitha Manikandan**
 
 Academic Head
 
@@ -67,11 +67,11 @@ Date:
 
 I have undergone extensive training to complete this internship. However, it would not have been possible without the kind support and help of many individuals. I am using this opportunity to express my gratitude to everyone who supported me throughout this internship period.
 
-I would like to express my sincere gratitude to our respected Chairman, Mr. KATHIRVEL GANAPATHIAPPAN, for providing us with the valuable opportunity to carry out and complete this project.
+I would like to express my sincere gratitude to our respected Chairman, **Mr. KATHIRVEL GANAPATHIAPPAN**, for providing us with the valuable opportunity to carry out and complete this project.
 
 I express my heartfelt thanks to our visionary, dedicated and empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, for her continuous support and meaningful guidance, which played a key role in our progress.
 
-I am highly indebted to our Academic Head, Dr. KAVITHA MANIKANDAN, for her guidance and constant supervision, for providing the necessary information regarding the project and for her support in completing it.
+I am highly indebted to our Academic Head, **Dr. KAVITHA MANIKANDAN**, for her guidance and constant supervision, for providing the necessary information regarding the project and for her support in completing it.
 
 I would also like to thank all the faculty members and staff of ISSM Business School who provided me with the facilities and the conducive conditions that were required for this project.
 

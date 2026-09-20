@@ -29,7 +29,7 @@ This is to certify that the Summer Internship Project Report is an authentic rec
 
 The project was completed under the guidance of Ms. A. Lakshmi, Manager, S. Ravi & Associates, Chartered Accountants, during the period from May 12th to July 17th, 2026.
 
-Dr. Kavitha Manikandan
+**Mrs.Kavitha Manikandan**
 
 Academic Head
 
@@ -67,11 +67,11 @@ Date:
 
 The completion of this internship has been possible only because of the guidance, patience and encouragement extended to me by a number of people, and I would like to place on record my sincere gratitude to each of them.
 
-I would like to express my sincere gratitude to our respected Chairman, Mr. KATHIRVEL GANAPATHIAPPAN, for providing us with the valuable opportunity to carry out and complete this project.
+I would like to express my sincere gratitude to our respected Chairman, **Mr. KATHIRVEL GANAPATHIAPPAN**, for providing us with the valuable opportunity to carry out and complete this project.
 
 I express my heartfelt thanks to our visionary, dedicated and empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, for her continuous support and meaningful guidance, which played a key role in our progress.
 
-I am highly indebted to our Academic Head, Dr. KAVITHA MANIKANDAN, for her guidance and constant supervision, for providing the necessary information regarding the project and for her support in completing it.
+I am highly indebted to our Academic Head, **Dr. KAVITHA MANIKANDAN**, for her guidance and constant supervision, for providing the necessary information regarding the project and for her support in completing it.
 
 I would also like to thank all the faculty members and staff of ISSM Business School who provided me with the facilities and the conducive conditions that were required for this project.
 

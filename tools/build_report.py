@@ -155,7 +155,8 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
             sec.add(para(run(payload, bold=True, size=12), jc='left',
                          before=180, after=100, line=BODY_LINE, keep_next=True))
         elif kind == 'p':
-            sec.add(para(rich(payload), jc='both', after=140, line=BODY_LINE))
+            sec.add(para(rich(payload, size=size) if size else rich(payload),
+                         jc='both', after=140, line=BODY_LINE))
         elif kind == 'p_indent':                 # opening paragraph of a chapter
             sec.add(para(rich(payload), jc='both', after=140, line=BODY_LINE,
                          ind_first_line=720))
@@ -180,9 +181,10 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
             sec.add(page_break())
         elif kind == 'sign':
             left, right = payload
-            sec.add(para(run(left, bold=False)
+            bold = bool(block[2]) if len(block) > 2 else False
+            sec.add(para(run(left, bold=bold)
                          + ('<w:r><w:tab/></w:r>' if right else '')
-                         + (run(right) if right else ''),
+                         + (run(right, bold=bold) if right else ''),
                          jc='left', after=140, line=BODY_LINE,
                          tabs=[('right', width)]))
         elif kind == 'box':
@@ -335,7 +337,9 @@ def _height(block, width=TEXT_WIDTH_TWIPS):
     payload = block[1] if len(block) > 1 else None
     body = LINE_IN[12]
     if kind in ('p', 'center', 'p_indent'):
-        return _wrapped(payload, CHARS_PER_LINE) * body + 140 / 1440
+        pt = block[2] if len(block) > 2 and isinstance(block[2], int) else 12
+        cpl = int(CHARS_PER_LINE * 12 / pt)
+        return _wrapped(payload, cpl) * LINE_IN.get(pt, body) + 140 / 1440
     if kind in ('cbold', 'cbi'):
         pt = block[2] if len(block) > 2 else 12
         lines = _wrapped(payload, int(CHARS_PER_LINE * 12 / pt))
