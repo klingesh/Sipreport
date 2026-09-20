@@ -26,15 +26,15 @@ EMBED_CERTIFICATE = False
 # ---------------------------------------------------------------------------
 FRONT = [
     # ---- title page ----
-    ('gap', 4),
-    ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026'),
+    ('gap', 2),
+    ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026', 16),
     ('gap', 2),
     ('cbi', 'Summer Internship Project Report submitted to the Malaysia '
             'University of Science and Technology, in partial fulfilment of '
-            'the requirements to award the degree of'),
+            'the requirements to award the degree of', 14),
     ('gap', 2),
-    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION'),
-    ('gap', 3),
+    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION', 14),
+    ('gap', 2),
     ('center', 'SUBMITTED BY'),
     ('gap', 1),
     ('cbold', STUDENT),
@@ -42,8 +42,8 @@ FRONT = [
     ('gap', 3),
     ('logo',),
     ('gap', 2),
-    ('cbold', 'Indian School of Science and Management'),
-    ('cbold', 'Chennai'),
+    ('cbold', 'Indian School of Science and Management', 14),
+    ('cbold', 'Chennai', 14),
     ('pagebreak',),
 
     # ---- certificate ----
@@ -70,7 +70,7 @@ FRONT = [
 
     # ---- internship certificate ----
     ('gap', 12),
-    ('big', 'INTERNSHIP CERTIFICATE'),
+    ('big', 'INTERNSHIP CERTIFICATE', 26),
     *([('gap', 1), ('certificate_image',)] if EMBED_CERTIFICATE else []),
     ('pagebreak',),
 
@@ -131,7 +131,7 @@ FRONT = [
 
     # ---- executive summary ----
     ('gap', 1),
-    ('big', 'The Executive Summary'),
+    ('big', 'The Executive Summary', 12),
     ('gap', 1),
     ('p', 'This report presents the work carried out during my Summer '
           'Internship Programme at ACTC Studio Pvt. Ltd., a Chennai based '
