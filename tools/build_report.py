@@ -109,16 +109,20 @@ def certificate_block(doc, sec, content_width_twips):
 
 
 def toc_table(width, estimates):
-    """Table of contents whose page numbers are live Word cross-references."""
+    """Table of contents whose page numbers are live Word cross-references,
+    laid out like the sample reports: every cell bold and centred, tall rows."""
     rows = [['SL.NO', 'CHAPTER', 'PAGE NO.']]
     for ch in rc.CHAPTERS:
         n = ch['num']
         start, end = estimates.get(n, ('', ''))
         rows.append([
             str(n), ch['title'],
-            f'{{{{PAGEREF ch{n}_start|{start}}}}} - '
+            f'{{{{PAGEREF ch{n}_start|{start}}}}}-'
             f'{{{{PAGEREF ch{n}_end|{end}}}}}'])
-    return table(rows, widths=[1, 5, 2], page_width=width, align='center')
+    return table(rows, widths=[2, 7, 2], page_width=width, align='center',
+                 font_size=12, shade=None, row_height=640,
+                 col_bold=[True, True, True],
+                 col_align=['center', 'center', 'center'])
 
 
 def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
@@ -127,11 +131,14 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
         payload = block[1] if len(block) > 1 else None
 
         if kind == 'big':
-            sec.add(para(run(payload, bold=True, size=16), jc='center',
+            sec.add(para(run(payload, bold=True, size=14), jc='center',
                          after=200, line=BODY_LINE))
         elif kind == 'cbold':
             sec.add(para(run(payload, bold=True), jc='center', after=40,
                          line=BODY_LINE))
+        elif kind == 'cbi':                      # centred bold italic
+            sec.add(para(run(payload, bold=True, italic=True), jc='center',
+                         after=40, line=BODY_LINE))
         elif kind == 'center':
             sec.add(para(rich(payload), jc='center', after=40, line=BODY_LINE))
         elif kind == 'h1':
@@ -145,6 +152,9 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
                          before=180, after=100, line=BODY_LINE, keep_next=True))
         elif kind == 'p':
             sec.add(para(rich(payload), jc='both', after=140, line=BODY_LINE))
+        elif kind == 'p_indent':                 # opening paragraph of a chapter
+            sec.add(para(rich(payload), jc='both', after=140, line=BODY_LINE,
+                         ind_first_line=720))
         elif kind == 'bullets':
             justify = 'left' if (chapter and chapter.get('num') == 6) else 'both'
             for item in payload:
@@ -152,10 +162,12 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
                              line=BODY_LINE))
             sec.add(para('', after=60, line=120))
         elif kind == 'table':
-            rows = payload['rows']
-            widths = payload.get('widths')
-            sec.add(table(rows, widths=widths, page_width=width,
-                          align='center' if payload.get('center') else 'left'))
+            sec.add(table(payload['rows'], widths=payload.get('widths'),
+                          page_width=width,
+                          align='center' if payload.get('center') else 'left',
+                          col_bold=payload.get('col_bold'),
+                          col_align=payload.get('col_align'),
+                          row_height=payload.get('row_height')))
             sec.add(para('', after=120, line=200))
         elif kind == 'gap':
             for _ in range(payload):
@@ -183,18 +195,19 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
 
 
 def divider_page(sec, chapter, bid):
-    """Chapter divider page; carries the chapter's start bookmark."""
+    """Chapter divider page, laid out like the samples: 'CHAPTER n' over the
+    chapter title, bold and centred, a little under halfway down the page."""
     mark = bookmark(f'ch{chapter["num"]}_start', bid)
-    for i in range(8):
+    for i in range(13):
         sec.add(para(mark if i == 0 else '', after=0, line=BODY_LINE))
     title = chapter.get('divider_title')
     if title:
-        sec.add(para(run(title, bold=True, size=20), jc='center', after=200,
+        sec.add(para(run(title, bold=True, size=14), jc='center', after=200,
                      line=BODY_LINE))
     else:
-        sec.add(para(run(f'CHAPTER {chapter["num"]}', bold=True, size=20),
-                     jc='center', after=200, line=BODY_LINE))
-        sec.add(para(run(chapter['title'], bold=True, size=16), jc='center',
+        sec.add(para(run(f'CHAPTER  {chapter["num"]}', bold=True, size=14),
+                     jc='center', after=240, line=BODY_LINE))
+        sec.add(para(run(chapter['title'], bold=True, size=14), jc='center',
                      after=0, line=BODY_LINE))
     sec.add(page_break())
 
@@ -209,8 +222,9 @@ def build_docx(out_path):
 
     bid = 100
     for i, chapter in enumerate(rc.CHAPTERS):
-        sec = doc.section(header_left=chapter['header'],
-                          header_right=['SUMMER INTERNSHIP', 'PROJECT'],
+        sec = doc.section(header_left=chapter.get('header_left', ''),
+                          header_right=chapter.get('header_right', ''),
+                          footer_left='SUMMER INTERNSHIP PROJECT',
                           page_numbers=True,
                           restart_at=1 if i == 0 else None)
         divider_page(sec, chapter, bid)
@@ -234,6 +248,10 @@ def md_blocks(blocks, out):
         payload = block[1] if len(block) > 1 else None
         if kind in ('big', 'h1'):
             out.append(f'\n## {payload}\n')
+        elif kind == 'cbi':
+            out.append(f'*{payload}*\n')
+        elif kind == 'p_indent':
+            out.append(payload + '\n')
         elif kind == 'h2':
             out.append(f'\n### {payload}\n')
         elif kind == 'h3':
@@ -312,12 +330,12 @@ def _height(block, width=TEXT_WIDTH_TWIPS):
     kind = block[0]
     payload = block[1] if len(block) > 1 else None
     body = LINE_IN[12]
-    if kind in ('p', 'center'):
+    if kind in ('p', 'center', 'p_indent'):
         return _wrapped(payload, CHARS_PER_LINE) * body + 140 / 1440
-    if kind == 'cbold':
+    if kind in ('cbold', 'cbi'):
         return body + 40 / 1440
     if kind == 'big':
-        return LINE_IN[16] + 200 / 1440
+        return LINE_IN[14] + 200 / 1440
     if kind == 'h1':
         return LINE_IN[14] + 240 / 1440
     if kind == 'h2':
@@ -344,7 +362,7 @@ def _height(block, width=TEXT_WIDTH_TWIPS):
     if kind == 'gap':
         return payload * body
     if kind == 'toc':
-        return _height(('table', {'rows': [['x'] * 3] * 7, 'widths': [1, 5, 2]}))
+        return 7 * 640 / 1440 + 0.3          # seven rows at 640 twips
     if kind == 'sign':
         return body + 140 / 1440
     if kind == 'certificate_image':
