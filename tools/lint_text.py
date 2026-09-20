@@ -3,7 +3,8 @@
 Proof-reading pass over the report content: catches the small typographic
 faults that show up in a printed, justified document.
 
-    python3 tools/lint_text.py
+    python3 tools/lint_text.py                 # checks every report
+    python3 tools/lint_text.py report_content  # checks one content module
 """
 import os
 import re
@@ -11,7 +12,9 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import report_content as rc
+import importlib
+
+rc = None          # content module being checked
 
 CHECKS = [
     (r'  +', 'double space'),
@@ -92,5 +95,15 @@ def main():
     return 0
 
 
+MODULES = ['report_content', 'content_prahadhesvaryaa']
+
+
 if __name__ == '__main__':
-    sys.exit(main())
+    wanted = [a for a in sys.argv[1:] if not a.startswith('-')] or MODULES
+    status = 0
+    for name in wanted:
+        rc = importlib.import_module(name)
+        print(f'=== {name} ===')
+        status |= main()
+        print()
+    sys.exit(status)

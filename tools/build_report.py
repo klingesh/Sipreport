@@ -3,11 +3,11 @@
 Render the SIP report content into a Word document (.docx) and a Markdown
 copy for quick review on GitHub.
 
-    python3 tools/build_report.py
+    python3 tools/build_report.py            # builds every report below
+    python3 tools/build_report.py lingesh    # builds one of them
 
-Outputs (relative to the repository root):
-    Lingesh K - SIP Report 2026.docx
-    SIP-Report-2026.md
+Reports are declared in REPORTS: each entry names the content module and the
+.docx / .md files it produces.
 
 If a scan of the internship certificate is placed at
 assets/internship-certificate.jpg (or .png), it is embedded automatically on
@@ -23,7 +23,9 @@ sys.path.insert(0, HERE)
 
 from docx_writer import (Document, bookmark, drawing, esc, image_size,
                          page_break, para, rich, run, table, EMU_PER_INCH)
-import report_content as rc
+import importlib
+
+rc = None          # content module of the report being built
 
 # Scan of the internship completion certificate, searched in this order.
 CERT_CANDIDATES = ['assets/internship-certificate.jpg',
@@ -443,18 +445,44 @@ def estimate_pages(verbose=False):
     return out
 
 
-if __name__ == '__main__':
-    docx_path = build_docx(os.path.join(ROOT, 'Lingesh K - SIP Report 2026.docx'))
-    md_path = build_md(os.path.join(ROOT, 'SIP-Report-2026.md'))
+REPORTS = {
+    'lingesh': {
+        'module': 'report_content',
+        'docx': 'Lingesh K - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026.md',
+    },
+    'prahadhesvaryaa': {
+        'module': 'content_prahadhesvaryaa',
+        'docx': 'Prahadhesvaryaa K S - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Prahadhesvaryaa.md',
+    },
+}
+
+
+def build(name):
+    """Build one report; returns the paths written."""
+    global rc
+    spec = REPORTS[name]
+    rc = importlib.import_module(spec['module'])
+    docx_path = build_docx(os.path.join(ROOT, spec['docx']))
+    md_path = build_md(os.path.join(ROOT, spec['md']))
+    print(f'=== {name} ===')
     print('wrote', os.path.relpath(docx_path, ROOT))
     print('wrote', os.path.relpath(md_path, ROOT))
     print()
     estimate_pages(verbose=True)
     print()
     issues = check_front_pages()
-    print()
     cert, logo = find_certificate(), find_logo()
-    print(f'certificate scan : {os.path.relpath(cert, ROOT) if cert else "MISSING"}')
-    print(f'title page logo  : {os.path.relpath(logo, ROOT) if logo else "MISSING"}')
+    print(f'\ntitle page logo  : '
+          f'{os.path.relpath(logo, ROOT) if logo else "MISSING"}')
     if issues:
-        print(f'\nreview these pages: {", ".join(issues)}')
+        print(f'review these pages: {", ".join(issues)}')
+    print()
+    return docx_path, md_path
+
+
+if __name__ == '__main__':
+    wanted = [a for a in sys.argv[1:] if not a.startswith('-')] or list(REPORTS)
+    for name in wanted:
+        build(name)
