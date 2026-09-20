@@ -59,13 +59,13 @@ FRONT = [
           'Chartered Accountant, Internal Audit, Neuberg Diagnostics Private '
           'Limited, during the period from May 11th to July 30th, 2026.'),
     ('gap', 4),
-    ('p', 'Dr. Kavitha Manikandan'),
-    ('p', 'Academic Head'),
+    ('p', '**Mrs.Kavitha Manikandan**', 14),
+    ('p', 'Academic Head', 14),
     ('p', 'ISSM Business School'),
     ('gap', 2),
     ('p', 'Viva Voce Examination Conducted on:'),
     ('gap', 4),
-    ('sign', ('Internal Examiner', 'External Examiner')),
+    ('sign', ('Internal Examiner', 'External Examiner'), True),
     ('pagebreak',),
 
     # ---- internship certificate ----
@@ -106,13 +106,15 @@ FRONT = [
           'gratitude to everyone who supported me throughout this internship '
           'period.'),
     ('p', 'I would like to express my sincere gratitude to our respected '
-          'Chairman, Mr. KATHIRVEL GANAPATHIAPPAN, for providing us with the '
+          'Chairman, **Mr. KATHIRVEL GANAPATHIAPPAN**, for providing us with '
+          'the '
           'valuable opportunity to carry out and complete this project.'),
     ('p', 'I express my heartfelt thanks to our visionary, dedicated and '
           'empowering Founder and Managing Director, Dr. PARKAVI MAHALINGAM, '
           'for her continuous support and meaningful guidance, which played a '
           'key role in our progress.'),
-    ('p', 'I am highly indebted to our Academic Head, Dr. KAVITHA MANIKANDAN, '
+    ('p', 'I am highly indebted to our Academic Head, **Dr. KAVITHA '
+          'MANIKANDAN**, '
           'for her guidance and constant supervision, for providing the '
           'necessary information regarding the project and for her support in '
           'completing it.'),
