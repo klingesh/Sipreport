@@ -168,7 +168,7 @@ def page_field():
 # --------------------------------------------------------------------------
 # tables
 # --------------------------------------------------------------------------
-def table(rows, widths=None, header=True, font_size=11, align='left',
+def table(rows, widths=None, header=True, font_size=12, align='left',
           shade='D9D9D9', page_width=9360, row_height=None, col_bold=None,
           col_align=None, cell_line=240):
     """rows: list of list of cell strings. widths: list of relative ints.
@@ -349,9 +349,9 @@ class Document:
         with a rule underneath."""
         width = self.content_width
         body = para(
-            run(sec.header_left or '', bold=True, size=11)
+            run(sec.header_left or '', bold=True, size=12)
             + '<w:r><w:tab/></w:r>'
-            + run(sec.header_right or '', bold=True, size=11),
+            + run(sec.header_right or '', bold=True, size=12),
             jc='left', line=240, after=0, tabs=[('right', width)],
             border_bottom=True, border_color=self.RULE_COLOR, border_size=6)
         return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
@@ -363,7 +363,7 @@ class Document:
         with a rule above."""
         width = self.content_width
         body = para(
-            run(sec.footer_left or '', size=11)
+            run(sec.footer_left or '', size=12)
             + '<w:r><w:tab/></w:r>'
             + (page_field() if sec.page_numbers else ''),
             jc='left', line=240, after=0, tabs=[('right', width)],

@@ -41,7 +41,8 @@ DOC_TITLE = 'Summer Internship Project Report 2026 - Lingesh K'
 # --- page geometry, used by the layout checker -----------------------------
 PAGE_H_IN = 11.69                       # A4
 TEXT_H_IN = PAGE_H_IN - 2.0             # 1" top and bottom margins
-LINE_IN = {12: 0.2875, 13: 0.312, 14: 0.335, 16: 0.383, 20: 0.479}
+LINE_IN = {12: 0.2875, 13: 0.312, 14: 0.335, 16: 0.383, 20: 0.479,
+           26: 0.622}
 
 
 # ---------------------------------------------------------------------------
@@ -122,7 +123,7 @@ def toc_table(width, estimates):
             f'{{{{PAGEREF ch{n}_start|{start}}}}}-'
             f'{{{{PAGEREF ch{n}_end|{end}}}}}'])
     return table(rows, widths=[2, 7, 2], page_width=width, align='center',
-                 font_size=12, shade=None, row_height=640,
+                 font_size=14, shade=None, row_height=640,
                  col_bold=[True, True, True],
                  col_align=['center', 'center', 'center'])
 
@@ -132,22 +133,23 @@ def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
         kind = block[0]
         payload = block[1] if len(block) > 1 else None
 
+        size = block[2] if len(block) > 2 else None
         if kind == 'big':
-            sec.add(para(run(payload, bold=True, size=14), jc='center',
+            sec.add(para(run(payload, bold=True, size=size or 14), jc='center',
                          after=200, line=BODY_LINE))
         elif kind == 'cbold':
-            sec.add(para(run(payload, bold=True), jc='center', after=40,
-                         line=BODY_LINE))
-        elif kind == 'cbi':                      # centred bold italic
-            sec.add(para(run(payload, bold=True, italic=True), jc='center',
+            sec.add(para(run(payload, bold=True, size=size or 12), jc='center',
                          after=40, line=BODY_LINE))
+        elif kind == 'cbi':                      # centred bold italic
+            sec.add(para(run(payload, bold=True, italic=True, size=size or 12),
+                         jc='center', after=40, line=BODY_LINE))
         elif kind == 'center':
             sec.add(para(rich(payload), jc='center', after=40, line=BODY_LINE))
         elif kind == 'h1':
             sec.add(para(run(payload, bold=True, size=14), jc='center',
                          before=0, after=240, line=BODY_LINE, keep_next=True))
         elif kind == 'h2':
-            sec.add(para(run(payload, bold=True, size=13), jc='left',
+            sec.add(para(run(payload, bold=True, size=14), jc='left',
                          before=240, after=120, line=BODY_LINE, keep_next=True))
         elif kind == 'h3':
             sec.add(para(run(payload, bold=True, size=12), jc='left',
@@ -204,12 +206,12 @@ def divider_page(sec, chapter, bid):
         sec.add(para(mark if i == 0 else '', after=0, line=BODY_LINE))
     title = chapter.get('divider_title')
     if title:
-        sec.add(para(run(title, bold=True, size=14), jc='center', after=200,
+        sec.add(para(run(title, bold=True, size=16), jc='center', after=200,
                      line=BODY_LINE))
     else:
-        sec.add(para(run(f'CHAPTER  {chapter["num"]}', bold=True, size=14),
+        sec.add(para(run(f'CHAPTER  {chapter["num"]}', bold=True, size=16),
                      jc='center', after=240, line=BODY_LINE))
-        sec.add(para(run(chapter['title'], bold=True, size=14), jc='center',
+        sec.add(para(run(chapter['title'], bold=True, size=16), jc='center',
                      after=0, line=BODY_LINE))
     sec.add(page_break())
 
@@ -335,13 +337,16 @@ def _height(block, width=TEXT_WIDTH_TWIPS):
     if kind in ('p', 'center', 'p_indent'):
         return _wrapped(payload, CHARS_PER_LINE) * body + 140 / 1440
     if kind in ('cbold', 'cbi'):
-        return body + 40 / 1440
+        pt = block[2] if len(block) > 2 else 12
+        lines = _wrapped(payload, int(CHARS_PER_LINE * 12 / pt))
+        return lines * LINE_IN.get(pt, body) + 40 / 1440
     if kind == 'big':
-        return LINE_IN[14] + 200 / 1440
+        pt = block[2] if len(block) > 2 else 14
+        return LINE_IN.get(pt, LINE_IN[14]) + 200 / 1440
     if kind == 'h1':
         return LINE_IN[14] + 240 / 1440
     if kind == 'h2':
-        return LINE_IN[13] + (240 + 120) / 1440
+        return LINE_IN[14] + (240 + 120) / 1440
     if kind == 'h3':
         return _wrapped(payload, CHARS_PER_LINE) * body + (180 + 100) / 1440
     if kind == 'bullets':

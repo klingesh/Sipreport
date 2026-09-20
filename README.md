@@ -24,6 +24,7 @@ this repository.
 | `tools/verify_docx.py` | Structural check of a generated `.docx`. |
 | `tools/lint_text.py` | Proof-reading pass over the report text. |
 | `tools/compare_docx.py` | Checks that two generated reports share the same formatting and structure. |
+| `tools/audit_fonts.py` | Checks every font size and weight against the sample report's measured specification. |
 
 ## Rebuilding after an edit
 

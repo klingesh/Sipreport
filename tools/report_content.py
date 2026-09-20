@@ -39,15 +39,15 @@ EMBED_CERTIFICATE = False
 # ---------------------------------------------------------------------------
 FRONT = [
     # ---- title page ----
-    ('gap', 4),
-    ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026'),
+    ('gap', 2),
+    ('big', 'SUMMER INTERNSHIP PROJECT (SIP) – 2026', 16),
     ('gap', 2),
     ('cbi', 'Summer Internship Project Report submitted to the Malaysia '
             'University of Science and Technology, in partial fulfilment of '
-            'the requirements to award the degree of'),
+            'the requirements to award the degree of', 14),
     ('gap', 2),
-    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION'),
-    ('gap', 3),
+    ('cbold', 'MASTER OF BUSINESS ADMINISTRATION', 14),
+    ('gap', 2),
     ('center', 'SUBMITTED BY'),
     ('gap', 1),
     ('cbold', STUDENT),
@@ -55,8 +55,8 @@ FRONT = [
     ('gap', 3),
     ('logo',),                      # MUST + ISSM Business School banner
     ('gap', 2),
-    ('cbold', 'Indian School of Science and Management'),
-    ('cbold', 'Chennai'),
+    ('cbold', 'Indian School of Science and Management', 14),
+    ('cbold', 'Chennai', 14),
     ('pagebreak',),
 
     # ---- certificate ----
@@ -86,7 +86,7 @@ FRONT = [
     # separate sheet rather than printed into the document. Flip
     # EMBED_CERTIFICATE to True to have the scan placed on this page instead.
     ('gap', 12),
-    ('big', 'INTERNSHIP CERTIFICATE'),
+    ('big', 'INTERNSHIP CERTIFICATE', 26),
     *([('gap', 1), ('certificate_image',)] if EMBED_CERTIFICATE else []),
     ('pagebreak',),
 
@@ -146,7 +146,7 @@ FRONT = [
 
     # ---- executive summary ----
     ('gap', 1),
-    ('big', 'The Executive Summary'),
+    ('big', 'The Executive Summary', 12),
     ('gap', 1),
     ('p', 'This report presents the work carried out during my Summer '
           'Internship Programme at M/s S. Ravi & Associates, Chartered '
