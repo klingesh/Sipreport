@@ -92,7 +92,7 @@ FRONT = [
           'the award of any other degree or diploma.'),
     ('gap', 6),
     ('sign', ('Place: Chennai', 'Signature')),
-    ('sign', ('Date: 10th July 2026', '')),
+    ('sign', ('Date:', '')),
     ('pagebreak',),
 
     # ---- acknowledgement ----
