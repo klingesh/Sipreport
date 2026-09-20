@@ -45,8 +45,6 @@ Internal Examiner  External Examiner
 
 ## INTERNSHIP CERTIFICATE
 
-![Internship Completion Certificate](Internship Certificate.png)
-
 
 ---
 

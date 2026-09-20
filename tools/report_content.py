@@ -30,6 +30,10 @@ MENTOR = 'Ms. A. Lakshmi'
 MENTOR_ROLE = 'Manager'
 PERIOD = '12th May 2026 to 17th July 2026'
 
+# The INTERNSHIP CERTIFICATE page carries the heading only, matching both
+# sample reports. Set this to True to print the scanned certificate on it.
+EMBED_CERTIFICATE = False
+
 # ---------------------------------------------------------------------------
 # FRONT MATTER
 # ---------------------------------------------------------------------------
@@ -77,11 +81,13 @@ FRONT = [
     ('sign', ('Internal Examiner', 'External Examiner')),
     ('pagebreak',),
 
-    # ---- internship certificate (scanned image) ----
+    # ---- internship certificate ----
+    # Heading only, as in both sample reports: the certificate is attached as a
+    # separate sheet rather than printed into the document. Flip
+    # EMBED_CERTIFICATE to True to have the scan placed on this page instead.
     ('gap', 1),
     ('big', 'INTERNSHIP CERTIFICATE'),
-    ('gap', 1),
-    ('certificate_image',),
+    *([('gap', 1), ('certificate_image',)] if EMBED_CERTIFICATE else []),
     ('pagebreak',),
 
     # ---- declaration ----
