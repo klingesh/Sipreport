@@ -278,15 +278,9 @@ def md_blocks(blocks, out):
 
 
 def build_md(out_path):
-    out = [f'# Summer Internship Project (SIP) – 2026',
-           '',
-           f'**{rc.STUDENT}** ({rc.REG_NO}) · MBA (Finance) · '
-           'Indian School of Science and Management, Chennai',
-           '',
-           f'Internship: {rc.FIRM}, Mylapore, Chennai · '
-           f'{rc.PERIOD} · Guide: {rc.MENTOR}, {rc.MENTOR_ROLE}',
-           '',
-           '> Markdown copy of the report text, generated from '
+    # No summary block of personal details here: the report text below starts
+    # at the title page, exactly as in the .docx.
+    out = ['> Markdown copy of the report text, generated from '
            '`tools/report_content.py` for easy reading. The submission copy is '
            'the .docx file.',
            '']
