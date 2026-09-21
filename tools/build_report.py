@@ -475,6 +475,11 @@ REPORTS = {
         'docx': 'Haameed Abdur Rahman SK - SIP Report 2026.docx',
         'md': 'SIP-Report-2026-Haameed.md',
     },
+    'ganesh': {
+        'module': 'content_ganesh',
+        'docx': 'Ganeshkumar S - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Ganesh.md',
+    },
 }
 
 
