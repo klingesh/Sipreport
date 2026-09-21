@@ -1,6 +1,6 @@
 # SIP Reports
 
-Four Summer Internship Project reports, all built to the format of the sample reports in
+Five Summer Internship Project reports, all built to the format of the sample reports in
 this repository.
 
 | Report | Submission copy | Text for review |
@@ -9,6 +9,12 @@ this repository.
 | Prahadhesvaryaa K. S. (OSI2509093) — Neuberg Diagnostics Private Limited, Internal Audit | `Prahadhesvaryaa K S - SIP Report 2026.docx` | `SIP-Report-2026-Prahadhesvaryaa.md` |
 | Senthamil Selvan V (OSI2509099) — ACTC Studio Pvt. Ltd., Business Development & Events | `Senthamil Selvan V - SIP Report 2026.docx` | `SIP-Report-2026-Senthamil.md` |
 | Haameed Abdur Rahman SK (OSI2509017) — Q-Up Private Limited, Business Development & Operations | `Haameed Abdur Rahman SK - SIP Report 2026.docx` | `SIP-Report-2026-Haameed.md` |
+| Ganeshkumar S — Doodleblue Innovations Private Limited, Digital Marketing | `Ganeshkumar S - SIP Report 2026.docx` | `SIP-Report-2026-Ganesh.md` |
+
+> **Ganeshkumar's report still has four blanks to fill in** — register number, the two
+> internship certificate dates and the industry mentor's name. They appear as
+> `[REGISTER NUMBER]`, `[START DATE]`, `[END DATE]` and `[NAME OF INDUSTRY MENTOR]` in
+> `tools/content_ganesh.py`; replace them there and rebuild.
 
 ## Other files
 
@@ -21,6 +27,8 @@ this repository.
 | `tools/content_prahadhesvaryaa.py` | All of Prahadhesvaryaa's report text. |
 | `tools/content_senthamil.py` | All of Senthamil's report text. |
 | `tools/content_haameed.py` | All of Haameed's report text. |
+| `tools/content_ganesh.py` | All of Ganeshkumar's report text. |
+| `Ganesh chapther 1.docx` | Ganeshkumar's original five-chapter draft, kept as the source for his report. |
 | `tools/build_report.py` | Renders a content module into a `.docx` and a `.md`. |
 | `tools/docx_writer.py` | Minimal OOXML writer (no external packages needed). |
 | `tools/verify_docx.py` | Structural check of a generated `.docx`. |
@@ -31,7 +39,7 @@ this repository.
 ## Rebuilding after an edit
 
 ```sh
-python3 tools/build_report.py                   # all four reports
+python3 tools/build_report.py                   # all five reports
 python3 tools/build_report.py prahadhesvaryaa   # just one
 python3 tools/verify_docx.py "Prahadhesvaryaa K S - SIP Report 2026.docx"
 python3 tools/lint_text.py
