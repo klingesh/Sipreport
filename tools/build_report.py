@@ -470,6 +470,11 @@ REPORTS = {
         'docx': 'Senthamil Selvan V - SIP Report 2026.docx',
         'md': 'SIP-Report-2026-Senthamil.md',
     },
+    'haameed': {
+        'module': 'content_haameed',
+        'docx': 'Haameed Abdur Rahman SK - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Haameed.md',
+    },
 }
 
 
