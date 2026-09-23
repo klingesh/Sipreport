@@ -480,6 +480,11 @@ REPORTS = {
         'docx': 'Ganeshkumar S - SIP Report 2026.docx',
         'md': 'SIP-Report-2026-Ganesh.md',
     },
+    'jayasubha': {
+        'module': 'content_jayasubha',
+        'docx': 'Jayasubha S - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Jayasubha.md',
+    },
 }
 
 
