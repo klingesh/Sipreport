@@ -152,21 +152,18 @@ FRONT = [
     ('p', 'The internship was located in a part of the business that '
           'students rarely see from the inside. A diagnostics chain earns '
           'its revenue through a very large number of small transactions '
-          'spread across branches, collection centres, walk-in patients '
-          'and corporate clients, and each of those can be discounted, '
-          'cancelled, amended or billed on credit. Internal audit exists '
-          'to test whether those events happened within the '
-          'organisation’s own rules, and that testing is what I was given '
-          'to do.'),
+          'across branches, collection centres, walk-in patients and '
+          'corporate clients, each of which can be discounted, cancelled, '
+          'amended or billed on credit. Internal audit exists to test '
+          'whether those events happened within the organisation’s own '
+          'rules, and that testing is what I was given to do.'),
     ('p', 'The work covered seven connected areas. I verified '
           'business-to-business KYC documents so that only eligible '
           'corporate customers received corporate benefits, and checked '
-          'Test Requisition Forms from branches for the laboratory seal. '
-          'Two further areas concerned pricing: deep discount '
-          'verification, identifying walk-in customers discounted above '
-          'thirty per cent and cross-checking them against policy, and '
-          'free of cost verification, tracing cases billed at a full '
-          'discount.'),
+          'Test Requisition Forms for the laboratory seal. Two areas '
+          'concerned pricing: deep discount verification, identifying '
+          'walk-in customers discounted above thirty per cent, and free '
+          'of cost verification, tracing cases billed at a full discount.'),
     ('p', 'The remaining areas were cash due monitoring, where I '
           'calculated the ageing of outstanding payments; service '
           'deletion verification, where I examined tests booked and later '
@@ -178,13 +175,11 @@ FRONT = [
     ('p', 'Professionally, the internship gave me three things a '
           'classroom cannot. First, an understanding of internal control '
           'as something tested rather than described, since a discount '
-          'policy means very little until somebody verifies transactions '
+          'policy means little until somebody verifies transactions '
           'against it. Second, an appreciation of documentation as '
-          'evidence, because an observation carries weight only when the '
-          'supporting record is attached to it. Third, the professional '
-          'skill of following up with people who are busy with their own '
-          'work, which is what closing an audit observation actually '
-          'requires.'),
+          'evidence. Third, the professional skill of following up with '
+          'people busy with their own work, which is what closing an '
+          'audit observation actually requires.'),
     ('pagebreak',),
 
     # ---- table of contents ----
@@ -593,12 +588,6 @@ CH1 = {
               'because the audit work I performed depended on system records of '
               'bookings, discounts, deletions and receipts being available and '
               'attributable.'),
-        ('p', 'A fourth stage has been the consideration of public listing, with '
-              'reports in 2022 that the group was evaluating an initial public '
-              'offering (Economic Times, 2022). Whether or not such a step is '
-              'taken, preparing for it raises the standard expected of internal '
-              'control and disclosure, and that expectation is visible in the '
-              'way commercial transactions are documented and reviewed.'),
         ('p', 'For a student of finance, the useful lesson in this history is '
               'that growth by consolidation creates a control agenda of its own. '
               'Each laboratory that joins a network brings its own practices, '
@@ -641,18 +630,6 @@ CH1 = {
               'limited to the fields a test required, certain identifiers were '
               'masked, and I worked with billing and service records rather '
               'than clinical results.'),
-        ('p', 'Taken together, these three frameworks explain why the '
-              'organisation maintains an internal audit function of real '
-              'substance rather than a token one. The cost of a control '
-              'failure in this industry is not confined to revenue leakage; it '
-              'extends to accreditation, to licensing and to patient trust, '
-              'and those consequences are considerably harder to reverse than '
-              'a financial one.'),
-
-        ('p', 'For a student, the value of understanding this framework is that '
-              'it explains why internal audit in this industry is a substantive '
-              'function rather than a formality, and why the records it tests '
-              'are required to exist in the first place.'),
     ],
 }
 
@@ -1248,14 +1225,6 @@ CH2 = {
               'the evidence supported, and to leave the conclusion to the '
               'person with the authority to draw it, was among the more '
               'valuable things the twelve weeks taught me.'),
-        ('p', 'Version discipline mattered for the same reason. Verification '
-              'sheets were saved with dates so that the state of a listing at '
-              'the time it was reported could be reconstructed, and closed '
-              'observations retained the evidence that had closed them. An '
-              'audit file, I came to understand, is a record of what was known '
-              'when, and its value depends entirely on that being '
-              'reconstructible.'),
-
         ('h2', '2.13  CONFIDENTIALITY AND DATA HANDLING'),
         ('p', 'Working with live records in a healthcare organisation brought '
               'obligations no academic exercise had imposed on me. The data I '
@@ -1263,23 +1232,6 @@ CH2 = {
               'diagnostics business even a test name attached to a name is '
               'sensitive information. The organisation’s expectations were '
               'stated at the outset and were not treated as a formality.'),
-        ('p', 'In practical terms, my system access was read-only and confined '
-              'to the modules my tests required. Extracts were limited to the '
-              'fields necessary for the verification in hand, and where a test '
-              'could be performed on aggregated data it was. Working files '
-              'stayed within the organisation’s systems, and exception '
-              'listings identified transactions by reference rather than by '
-              'reproducing patient particulars unnecessarily.'),
-        ('p', 'Conduct extended beyond data. Internal audit occupies an '
-              'awkward position in any organisation, because its work involves '
-              'telling colleagues that something in their area does not match '
-              'the rule. I learned that the way an observation is raised '
-              'determines whether it is answered or resisted, and that '
-              'accuracy and neutrality of language are not politeness but '
-              'method. I also learned that a finding is never shared outside '
-              'the audit team before it has been through review, because a '
-              'half-verified exception circulating in an organisation does '
-              'damage that a corrected version cannot repair.'),
         ('h2', '2.14  CONCLUSION OF JOB / TASK DESCRIPTION'),
         ('p', 'The work described in this chapter covered the revenue-side '
               'control cycle of a diagnostics network: establishing that a client '
@@ -1319,15 +1271,6 @@ CH2 = {
               'the difference between performing an audit step and '
               'understanding one.'),
 
-        ('p', 'What I carry forward from the chapter is less the list of '
-              'verifications than the habit of mind behind them: establish the '
-              'rule first, define the population second, and let the comparison '
-              'rather than the impression produce the finding. That order of '
-              'work is what distinguishes an audit from a review, and it is '
-              'transferable to any control I am asked to test in future.'),
-
-        ('p', 'The next chapter turns from what the work was to how well I '
-              'performed it.'),
     ],
 }
 
@@ -1527,20 +1470,6 @@ CH3 = {
               'statement, honest reporting of what is pending and the persistence '
               'to see an observation through to closure.'),
 
-        ('p', 'Measured against what a first-year assistant in an internal '
-              'audit function would be expected to handle, the comparison is '
-              'reasonably close on the testing side. Eligibility verification, '
-              'documentation checks, discount and concession testing, ageing '
-              'analysis, deletion review and follow-up of action taken reports '
-              'are all tasks an assistant performs, and by the closing weeks I '
-              'was performing them to a standard that passed review without '
-              'substantial correction. My exposure fell short of that benchmark '
-              'in three respects: I did not participate in risk assessment or '
-              'audit planning, I did not work on the expenditure side of the '
-              'business, and I did not attend the discussions at which findings '
-              'were presented to management. Those are the areas in which I '
-              'have method without practice, and identifying them precisely is '
-              'one of the more useful outcomes of the twelve weeks.'),
     ],
 }
 
@@ -1668,7 +1597,7 @@ CH4 = {
              'Understanding of the branch-level processes through which a test is '
              'booked, collected, reported and billed'],
         ], 'widths': [3, 6], 'col_bold': [True, False],
-            'col_align': ['center', 'left'], 'row_height': 500}),
+            'col_align': ['center', 'left']}),
         ('p', 'The internship also exposed the limits of purely academic '
               'preparation. Coursework describes internal control in general '
               'terms; practice required me to know which field in a system '
@@ -1728,22 +1657,6 @@ CH4 = {
               'now know both that I can perform it and that I want to. That is '
               'a more useful outcome than the general interest in finance I had '
               'before.'),
-        ('p', 'The transferable part is not the specific tests but the habits '
-              'behind them: reading the policy before the data, documenting the '
-              'basis of an exception, distinguishing a control failure from a '
-              'recording gap, and following an observation through to closure. '
-              'Those habits apply to any control environment, and they are what '
-              'a first professional role would expect from the outset. '
-              'Familiarity with a laboratory information system also means I '
-              'would approach an unfamiliar operational system with a clearer '
-              'idea of what to look for.'),
-        ('p', 'What I still need is equally clear. Risk assessment and audit '
-              'planning, the expenditure and procurement side of a business, '
-              'statutory audit methodology and the use of analytics on full '
-              'populations rather than extracts are all areas where I have '
-              'knowledge without practice. Those gaps are why I intend to '
-              'pursue further professional study alongside employment.'),
-
         ('h2', '4.9  UNDERSTANDING OF THE DIAGNOSTICS BUSINESS'),
         ('p', 'A less obvious outcome was a working understanding of how a '
               'diagnostics business actually earns and loses money, which I did '
@@ -1761,11 +1674,6 @@ CH4 = {
               'keeps credit from quietly becoming a bad debt. Each control '
               'answers a specific way in which revenue can be lost without '
               'anybody intending it.'),
-        ('p', 'Understanding the business in those terms changed how I read my '
-              'own findings. An exception stopped being a rule that had been '
-              'broken and became a place where the organisation was exposed, '
-              'which is a considerably more useful way for an auditor to think '
-              'about the work.'),
     ],
 }
 
@@ -1972,20 +1880,6 @@ CH5 = {
               'difference sounds small and is not: the first question can be '
               'answered by a formula, while the second requires knowing the '
               'policy, the business reason and the person who authorised it.'),
-        ('p', 'The work also asked for a kind of composure I had not needed '
-              'before. Raising an exception means telling a colleague, '
-              'sometimes a senior one, that something in their branch does not '
-              'match the rule. Learning to do that in a way that is factual, '
-              'documented and free of accusation was among the most valuable '
-              'things the twelve weeks taught me, and it took most of them to '
-              'learn.'),
-        ('p', 'I discovered too that I am suited to this work. I had wondered '
-              'whether detailed verification would become tedious, and found '
-              'instead that I took real satisfaction in a clean reconciliation '
-              'and in an exception list that held up under review. That is '
-              'worth knowing before choosing a career rather than after, and '
-              'it has turned a general interest in finance into a specific '
-              'intention to qualify in audit and assurance.'),
         ('h2', '5.6  CONCLUSION'),
         ('p', 'The internship at Neuberg Diagnostics Private Limited was the '
               'point at which my study of finance became practical. Over twelve '
@@ -2024,14 +1918,6 @@ CH5 = {
               'I leave the organisation with both the competence and the '
               'confidence to contribute to a professional finance or audit team.'),
 
-        ('p', 'I leave the organisation with an accurate rather than an '
-              'inflated sense of what I can do, a specific list of what I still '
-              'need to learn, and the settled intention to qualify and build my '
-              'career in audit and assurance.'),
-
-        ('p', 'I am grateful to the department for giving a trainee real tests '
-              'to perform rather than a constructed exercise, and for reviewing '
-              'the results as they would a colleague’s.'),
     ],
 }
 
@@ -2119,14 +2005,6 @@ CH6 = {
             'medical laboratories. Retrieved September 2026, from '
             'https://nabl-india.org/',
 
-            'Committee of Sponsoring Organizations of the Treadway Commission. '
-            '(n.d.). Internal control: integrated framework. Retrieved '
-            'September 2026, from https://www.coso.org/',
-
-            'Reserve Bank of India. (n.d.). Master direction on know your '
-            'customer requirements. Retrieved September 2026, from '
-            'https://www.rbi.org.in/',
-
             'Ministry of Health and Family Welfare, Government of India. '
             '(n.d.). Clinical Establishments (Registration and Regulation) '
             'Act: standards for diagnostic laboratories. Retrieved September '
@@ -2145,9 +2023,6 @@ CH6 = {
         ]),
 
         ('bullets', [
-            'International Organization for Standardization. (n.d.). ISO 15189: '
-            'medical laboratories, requirements for quality and competence. '
-            'Retrieved September 2026, from https://www.iso.org/',
         ]),
     ],
 }

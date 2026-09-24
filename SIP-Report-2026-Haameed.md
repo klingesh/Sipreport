@@ -89,9 +89,9 @@ This report presents the work carried out during my Summer Internship Programme 
 
 The internship was located at the point where an e-commerce platform actually earns its living: supply. A marketplace is only as good as the sellers listed on it, the accuracy of the catalogue it shows and the competitiveness of the prices it quotes. My work ran along all three of those lines, in the fast-moving consumer goods category, and it combined desk research with field visits to sellers and distributors.
 
-The work covered eight areas. I identified and finalised the FMCG categories to be taken up for research and onboarding; compared prices across retail outlets and competing e-commerce platforms so that the platform’s own pricing could be positioned sensibly; prepared and later updated product listings; and converted raw product and market findings into structured project reports. A fifth area was data collection and validation, checking the accuracy of product data before it was used for onboarding decisions.
+The work covered eight areas. I identified and finalised the FMCG categories to be taken up for research and onboarding; compared prices across retail outlets and competing platforms so that our own pricing could be positioned sensibly; prepared and updated product listings; and converted raw findings into structured project reports. A fifth area was data collection and validation, checking product data before it was used for onboarding decisions.
 
-The remaining areas took me into the field. I researched prospective FMCG sellers and distributors, made field visits, attended vendor meetings and took part in partnership discussions; drafted business proposals by email and followed prospective clients through to onboarding; and supported marketing and platform improvement through promotional creatives, a promotional video shoot and the reporting of website defects to the development team. A planned break at the end of May covered my college semester examinations.
+The remaining areas took me into the field. I researched prospective FMCG sellers and distributors, made field visits, attended vendor meetings and took part in partnership discussions; drafted business proposals by email and followed prospects through to onboarding; and supported marketing and platform improvement through promotional creatives, a video shoot and the reporting of website defects. A planned break at the end of May covered my semester examinations.
 
 Professionally, the internship gave me three things a classroom cannot. First, an understanding that a marketplace grows supply one seller at a time, and that each seller has to be found, approached, convinced and onboarded. Second, the discipline of data accuracy, because a wrong price or an incomplete listing is visible to every customer and damages trust immediately. Third, practical experience of cross-team working, since a single listing problem can involve business development, marketing and the developers at the same time.
 
@@ -289,9 +289,7 @@ The foundational distinction comes from foreign investment policy, which permits
 
 A second layer governs conduct towards customers. The consumer protection rules for electronic commerce place duties on marketplace entities covering the disclosure of seller particulars, accuracy of product information, grievance handling and the prohibition of unfair trade practices (Ministry of Consumer Affairs, n.d.). Read alongside the packaged commodities rules, which require declarations of quantity, manufacturer and retail price on pre-packaged goods (Legal Metrology Division, n.d.), this explains why catalogue accuracy is a compliance matter and not merely a matter of presentation. A listing that misstates a pack size or omits a mandatory declaration is a regulatory exposure as well as a customer disappointment.
 
-Category-specific licensing adds a further requirement. Food businesses selling online must hold the appropriate licence or registration, and platforms are expected to verify that their food sellers do (Food Safety and Standards Authority of India, n.d.), which is directly relevant to onboarding in the fast-moving consumer goods categories I worked on. Tax obligations also fall on the operator rather than only on the seller, since a platform is required to collect tax at source on the consideration it handles (Goods and Services Tax Network, n.d.).
-
-Finally, the policy environment is actively encouraging open digital commerce, through a network intended to let buyers and sellers transact across platforms rather than within a single one (Open Network for Digital Commerce, n.d.). For a smaller platform this cuts both ways: it lowers the cost of reaching buyers, and it weakens the advantage of having recruited a seller exclusively. Either way it reinforces the lesson of the internship, that a marketplace competes on the quality of its supply relationships rather than on the existence of its website.
+For a supply-side team the practical upshot is that the regulatory position is part of the pitch: a seller is being asked to place his goods on a platform that carries duties of its own.
 
 
 ---
@@ -668,8 +666,6 @@ A theme that ran through every assignment, and one I had not expected to matter 
 
 For price benchmarking it meant recording, against every observation, where the price had been seen, on what date and for what pack size. In a category where rates move weekly, an unsourced price is worthless a fortnight later, and I discovered this by having to repeat work I had already done. For product data it meant validating a specification against the seller’s own material rather than inferring it, and correcting at source rather than filling a gap by assumption.
 
-For seller outreach it meant keeping a record of what each party had actually undertaken and when the next contact was due. This mattered most across the examination break, when work I had left had to be resumed weeks later, and it was the clearest demonstration I received that documentation is a courtesy to colleagues rather than an administrative imposition.
-
 
 ### 2.13  CONDUCT IN THE FIELD
 
@@ -677,16 +673,12 @@ Representing a platform in person to sellers and distributors brought obligation
 
 The rule I was given, and came to appreciate, was to promise nothing I could not confirm. Where a seller asked about terms I was not authorised to settle, the correct answer was that I would have it confirmed and come back, which is less impressive in the moment and considerably better afterwards. I also learned to be accurate about what the platform could not yet do, since a seller who discovers a limitation after onboarding is harder to retain than one who was told about it in advance.
 
-Conduct also meant respecting the seller’s time and circumstances. A distributor running a counter has customers ahead of a visitor with a proposition, and learning to read when to wait, when to leave material and when to return was a practical skill rather than a courtesy. Commercial information shared in confidence, such as a seller’s margins or his terms with another platform, stayed within the team.
-
 
 ### 2.14  COORDINATION ACROSS TEAMS
 
 A single piece of supply-side work frequently involved three teams, and learning to move between them was part of the job. A listing problem could require the business development team to obtain corrected data from the seller, the marketing team to revise a creative, and the developers to fix a defect that prevented a field from saving correctly.
 
 The practical lesson was about translation. A seller describes a problem in commercial terms, a developer needs it in reproducible terms, and a marketing colleague needs to know only what changes on the customer-facing side. Writing a defect report that stated what I did, what happened and what should have happened saved a round of questions, and I learned to do that after several reports that did not.
-
-The second lesson was about sequence. In a small organisation people are shared rather than dedicated, so a request that arrives without context waits. Explaining why a correction mattered, and what it unblocked, consistently produced faster help than a bare request did. That is an unglamorous observation, and it was one of the more useful ones I took from the twelve weeks.
 
 
 ### 2.15  CONCLUSION OF JOB / TASK DESCRIPTION
@@ -698,14 +690,6 @@ It also allowed me to apply concepts from marketing management, market research,
 Most importantly, the chapter reflects a progression. The work I was given in the first week was research under close supervision; by the closing weeks I was drafting proposals, managing partner correspondence and following onboarding conversations through to closure. That progression is the clearest measure of what the internship achieved.
 
 One further observation belongs here, because it shaped how I understood the whole assignment. Every task I was given served one of three ends: deciding where supply effort should be spent, making the platform’s offer credible to a seller, or making the catalogue trustworthy to a customer. Category research and benchmarking served the first, outreach and proposals the second, and data validation, listing discipline and defect reporting the third. Recognising that structure was what turned eight apparently separate work areas into a single understanding of the business, and it is the reason I could see, by the closing weeks, why a correction to a pack size mattered as much as a meeting with a distributor.
-
-Taken together, the twelve weeks moved from researching a category on a spreadsheet to persuading a distributor in his own shop and then listing his products accurately enough for a stranger to buy them with confidence. That sequence, from analysis through persuasion to execution, is the supply side of a marketplace in miniature, and performing all three parts of it is what the internship taught me that no case study had.
-
-What I carry forward from the chapter is less the list of tasks than the judgement that sat behind them: which category is worth the effort, which seller is worth a third visit, and which detail in a listing a customer will actually notice. Those are decisions rather than procedures, and learning to make them is what separated the last fortnight of the internship from the first.
-
-The next chapter turns from what the work was to how well I performed it, assessed against the standards the team applied to my output rather than against my own impression of it.
-
-That assessment is necessarily a mixture of what I was told in review and what I could see for myself in the quality of the work I produced.
 
 
 ---
@@ -742,8 +726,6 @@ Business development work has few external deadlines but a great deal of drift r
 - Repeated price benchmarking through the internship instead of treating the first exercise as final.
 - Followed defect reports through to the development team rather than assuming that reporting was the end of the task.
 
-Task ownership developed over the period. Early on I treated a task as complete when I had done my part; by the end I treated it as complete only when the data was validated, the record was updated and the next step was either taken or clearly noted for somebody else.
-
 
 ### 3.3  ADAPTABILITY AND LEARNING CURVE
 
@@ -756,8 +738,6 @@ The internship required adaptation on several fronts at once: an unfamiliar indu
 - Adjusted to switching between research, field work, creative work and platform feedback within the same week.
 - Resumed work smoothly after the examination break by keeping my records current before leaving.
 
-What made the adaptation possible was the organisation’s practice of explaining why a task mattered to the platform’s growth, together with the internal team meetings at which progress and forthcoming work were reviewed. I also formed the habit of writing down a process immediately after it was explained, which is what I relied on when the same task recurred for a new category.
-
 
 ### 3.4  COMMUNICATION AND COLLABORATION
 
@@ -768,8 +748,6 @@ This internship involved a great deal of communication outside the organisation,
 - **Written proposals:** drafted professional emails for business proposals and managed the correspondence with prospective partners.
 - **Follow-up:** pursued prospective clients after visits and, in the closing weeks, specifically on onboarding, keeping a record of what each party had undertaken.
 - **Internal coordination:** shared research findings in project reports, raised platform defects with the development team and reported progress in team meetings.
-
-The specific lesson I take from this is that business development is conducted through many small, courteous, well-recorded interactions rather than through a single persuasive conversation. The sellers who eventually onboarded were generally those who had been visited, then emailed, then followed up, with each step adding a little confidence.
 
 
 ### 3.5  STRENGTHS DEMONSTRATED
@@ -802,7 +780,7 @@ Where I fell short was in negotiation, analytical depth, spreadsheet technique a
 
 Measured against what a first-year business development associate would ordinarily handle, the comparison is reasonably close on the supply side. Category research, price benchmarking, catalogue preparation, prospect research, field visits, proposal drafting and follow-up to onboarding are all tasks an associate performs, and by the closing weeks I was performing them with limited supervision. My exposure fell short in three respects: I did not negotiate commercial terms, I had no visibility of platform traffic, conversion or unit economics, and I saw nothing of warehousing and fulfilment. Those are the areas where I have method without practice, and naming them precisely is one of the more useful outcomes of the twelve weeks.
 
-On balance the internship met the standard I would set for a first placement: the work was real, it was reviewed, and by the end of it I was trusted to do it with limited supervision.
+The fairest summary is that the work was real, it was reviewed, and by the closing weeks I was trusted to do it with limited supervision.
 
 
 ---
@@ -828,8 +806,6 @@ This chapter sets out what I took away from the internship, separating the techn
 
 
 ### 4.2  PRACTICAL EXPOSURE TO BUSINESS PROCESSES
-
-The internship gave me a working map of how an online selling platform operates that I did not have before. I now understand, from having worked on it, how a category moves from selection through price benchmarking, seller identification, field outreach, partnership discussion, data collection and validation, listing, promotion and finally platform support.
 
 More importantly, I understood the commercial architecture behind that sequence. A marketplace makes money by facilitating transactions, so its growth depends on two things it does not directly control: whether sellers will list and whether customers will trust the listings. Everything I did during the internship served one of those two ends. Category research and price benchmarking make listings attractive and credible; field outreach and proposals bring sellers on; data validation and defect reporting protect trust; marketing creates visibility. Once I saw the work in those terms, the reasoning behind my assignments became obvious.
 
@@ -889,10 +865,6 @@ The third concerns my own career direction. Before the internship my interest in
 
 The internship has a direct bearing on the path I intend to follow. The work I performed is the work of the early years of a career in business development and e-commerce operations, and having done it in the field rather than in a case study I now know both that I can do it and that I enjoy it. That is a more useful conclusion than the general interest in marketing I had before.
 
-The transferable part is not the FMCG categories but the method: researching a market before approaching it, benchmarking with the source and date recorded, preparing data that somebody else will rely on, making a proposition in person, and following a conversation through to a decision. Those apply in any supply-side or sales role, and they are what a first professional position would expect from the outset.
-
-What I still need is equally clear. Negotiating commercial terms, reading platform analytics, understanding the unit economics of an order, and the warehousing and logistics side of fulfilment are all areas where I have observation without practice. Those gaps are why I intend to seek a first role that exposes me to the commercial and analytical side of a marketplace rather than to supply alone.
-
 
 ### 4.9  UNDERSTANDING OF THE MARKETPLACE BUSINESS
 
@@ -900,11 +872,7 @@ A less obvious outcome was a working understanding of how a marketplace actually
 
 That structure explains why the work I was given took the form it did. Category research decides where supply effort is spent, because a platform cannot recruit sellers in every category at once. Price benchmarking exists because a customer can compare in seconds, so a price that is out of line is not a lost margin but a lost visit. Catalogue accuracy matters because a listing is the only thing a customer sees, and an error in it is visible to everyone who searches. Seller outreach exists because none of the preceding work has any value until somebody agrees to list.
 
-Seeing the business in those terms changed how I read my own tasks. Correcting a pack size stopped being data entry and became the removal of a reason for a customer to distrust the platform, which is a considerably more useful way to think about the work.
-
 The broader realisation is that an e-commerce platform is a business development operation with a technology interface attached, rather than a technology business that happens to sell things. Everything in the catalogue is there because somebody found a seller, earned a meeting, corrected the data and followed the conversation through to a listing. Having done each of those things myself, I now read a product page as the end of a process rather than as a page.
-
-That change of perspective is, I think, the most durable thing the internship gave me.
 
 
 ---
@@ -924,8 +892,6 @@ The internship began with product category research, in which I identified and f
 The middle weeks concentrated on supply. After a planned break at the end of May for the college semester examinations, I resumed product data collection and took part in internal reviews of project progress. I then researched potential FMCG sellers and distributors, conducted field visits to approach them, attended vendor meetings and partnership discussions, and drafted professional emails for business proposals while following up with prospective clients.
 
 The later weeks combined marketing with platform work. I carried out additional price benchmarking and market analysis, designed promotional posters and marketing creatives, identified and reported website defects to the development team, conducted field research on customer and seller needs, updated product listings, and in the closing weeks followed up with clients through to seller onboarding while managing the correspondence with prospective partners.
-
-The work was carried out on the Q-Up platform itself, with spreadsheets for category research, product data and price comparison, design software for promotional creatives, and email for business correspondence, supported by the organisation’s project reporting formats and internal team reviews.
 
 
 ### 5.2  KEY TAKEAWAYS
@@ -984,8 +950,6 @@ My assignments were concentrated on supply: category research, price benchmarkin
 
 I also saw onboarding conversations rather than their conclusions. Commercial terms, margin structures and contracts were settled above my level, and while I prepared proposals and followed prospects up, I was not present when terms were negotiated. My exposure to the platform’s own numbers was similarly limited: I reported defects and prepared listings without visibility of traffic, conversion or revenue.
 
-Two practical limits are worth recording as well. My field visits covered sellers and distributors within reach of Chennai, so the report describes one urban market and not the national picture. And the planned break at the end of May for my semester examinations interrupted the work, which taught me about handover but did mean I saw two shorter stretches rather than one continuous engagement.
-
 
 ### 5.4  RECOMMENDATIONS
 
@@ -1016,8 +980,6 @@ On a personal level the internship was the first work I have done where the outc
 
 What changed most was my attitude to detail. I began by treating a listing as a form to be completed and came to see it as a public statement the platform makes about a product, visible to every customer who searches for it. Once that reframing happened, checking a pack size or a price stopped feeling like an imposition and started feeling like the substance of the job.
 
-The examination break taught me something unplanned. Handing work over and picking it up again weeks later showed me exactly how much of what I knew was in my head rather than in my records, and it was more than I had assumed. I returned with the habit of writing things down so that somebody else could continue them, which is probably the most transferable thing I took from the whole internship.
-
 
 ### 5.6  CONCLUSION
 
@@ -1029,9 +991,7 @@ I am also clear about what remains to be developed: negotiation of commercial te
 
 In conclusion, the internship achieved what a Summer Internship Programme is intended to achieve. It connected the MBA curriculum to live commercial work, it gave me practical experience of the supply side of an online selling platform, and it settled my career direction towards business development and e-commerce operations. I am grateful to the management of Q-Up Private Limited for the opportunity, to **Ms. Saranya Selvapandian** for her guidance and review, and to the business development, operations, marketing and technology teams for their support, and I leave the organisation with both the competence and the confidence to contribute to a professional business development team.
 
-I leave the organisation with an accurate rather than an inflated sense of what I can do, a specific list of what I still need to learn, and the settled intention to build my career in business development and e-commerce operations.
-
-I am grateful to the organisation for sending a trainee into the field rather than keeping him at a desk, because the field is where the lessons were.
+I leave the organisation with an accurate sense of what I can do, a clear list of what I still need to learn, and the settled intention to build my career in business development and e-commerce operations.
 
 
 ---

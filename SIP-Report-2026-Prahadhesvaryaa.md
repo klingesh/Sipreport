@@ -87,13 +87,13 @@ I am also thankful to the members of the internal audit team and to the branch a
 
 This report presents the work carried out during my Summer Internship Programme at Neuberg Diagnostics Private Limited, a Chennai headquartered diagnostics and pathology organisation. The internship was undertaken on-site in the Internal Audit department from 11 May 2026 to 30 July 2026, a period of twelve working weeks, under the guidance of **Ms. S. Saradha**, Chartered Accountant.
 
-The internship was located in a part of the business that students rarely see from the inside. A diagnostics chain earns its revenue through a very large number of small transactions spread across branches, collection centres, walk-in patients and corporate clients, and each of those can be discounted, cancelled, amended or billed on credit. Internal audit exists to test whether those events happened within the organisation’s own rules, and that testing is what I was given to do.
+The internship was located in a part of the business that students rarely see from the inside. A diagnostics chain earns its revenue through a very large number of small transactions across branches, collection centres, walk-in patients and corporate clients, each of which can be discounted, cancelled, amended or billed on credit. Internal audit exists to test whether those events happened within the organisation’s own rules, and that testing is what I was given to do.
 
-The work covered seven connected areas. I verified business-to-business KYC documents so that only eligible corporate customers received corporate benefits, and checked Test Requisition Forms from branches for the laboratory seal. Two further areas concerned pricing: deep discount verification, identifying walk-in customers discounted above thirty per cent and cross-checking them against policy, and free of cost verification, tracing cases billed at a full discount.
+The work covered seven connected areas. I verified business-to-business KYC documents so that only eligible corporate customers received corporate benefits, and checked Test Requisition Forms for the laboratory seal. Two areas concerned pricing: deep discount verification, identifying walk-in customers discounted above thirty per cent, and free of cost verification, tracing cases billed at a full discount.
 
 The remaining areas were cash due monitoring, where I calculated the ageing of outstanding payments; service deletion verification, where I examined tests booked and later removed from the system and established who had deleted each one and why; and follow-up of Action Taken Reports, where I contacted branch staff for the evidence needed to close observations raised during branch audits. The tools were Suflam LIMS, Microsoft Excel and Microsoft Word.
 
-Professionally, the internship gave me three things a classroom cannot. First, an understanding of internal control as something tested rather than described, since a discount policy means very little until somebody verifies transactions against it. Second, an appreciation of documentation as evidence, because an observation carries weight only when the supporting record is attached to it. Third, the professional skill of following up with people who are busy with their own work, which is what closing an audit observation actually requires.
+Professionally, the internship gave me three things a classroom cannot. First, an understanding of internal control as something tested rather than described, since a discount policy means little until somebody verifies transactions against it. Second, an appreciation of documentation as evidence. Third, the professional skill of following up with people busy with their own work, which is what closing an audit observation actually requires.
 
 
 ---
@@ -278,8 +278,6 @@ The second stage was investment and expansion. In 2018 the group announced plans
 
 The third stage was consolidation of the network into a common operating standard, supported by laboratory information systems that record the full life of a sample and by accreditation of laboratories. This is the stage whose effects I saw most directly, because the audit work I performed depended on system records of bookings, discounts, deletions and receipts being available and attributable.
 
-A fourth stage has been the consideration of public listing, with reports in 2022 that the group was evaluating an initial public offering (Economic Times, 2022). Whether or not such a step is taken, preparing for it raises the standard expected of internal control and disclosure, and that expectation is visible in the way commercial transactions are documented and reviewed.
-
 For a student of finance, the useful lesson in this history is that growth by consolidation creates a control agenda of its own. Each laboratory that joins a network brings its own practices, and the work of turning several good laboratories into one dependable organisation is largely the work of standardising processes, systems and documentation.
 
 
@@ -292,10 +290,6 @@ The principal quality framework is accreditation of medical laboratories against
 Alongside accreditation sits the statutory requirement for registration of clinical establishments and adherence to prescribed minimum standards (Ministry of Health and Family Welfare, n.d.). For an organisation operating a network of laboratories and collection centres, compliance has to be demonstrated location by location, which is one reason the branch audit and action taken report cycle I worked on matters as much as the corporate controls do.
 
 The third element is data protection. A diagnostics business holds health information, which is among the most sensitive categories of personal data, and India’s data protection legislation imposes obligations on how such data is collected, used, retained and secured (Government of India, 2023). The practical effect on my own work was direct: extracts were limited to the fields a test required, certain identifiers were masked, and I worked with billing and service records rather than clinical results.
-
-Taken together, these three frameworks explain why the organisation maintains an internal audit function of real substance rather than a token one. The cost of a control failure in this industry is not confined to revenue leakage; it extends to accreditation, to licensing and to patient trust, and those consequences are considerably harder to reverse than a financial one.
-
-For a student, the value of understanding this framework is that it explains why internal audit in this industry is a substantive function rather than a formality, and why the records it tests are required to exist in the first place.
 
 
 ---
@@ -653,16 +647,10 @@ In practice it produced several specific habits. Every exception listing recorde
 
 The same discipline applied to the distinction between a finding and an inference. Where a deletion had been made without a recorded reason, the observation stated that the reason field was blank, not that the deletion was improper. Where a requisition form lacked a laboratory seal, the observation recorded the missing seal rather than concluding that the test had not been authorised. Learning to stop at what the evidence supported, and to leave the conclusion to the person with the authority to draw it, was among the more valuable things the twelve weeks taught me.
 
-Version discipline mattered for the same reason. Verification sheets were saved with dates so that the state of a listing at the time it was reported could be reconstructed, and closed observations retained the evidence that had closed them. An audit file, I came to understand, is a record of what was known when, and its value depends entirely on that being reconstructible.
-
 
 ### 2.13  CONFIDENTIALITY AND DATA HANDLING
 
 Working with live records in a healthcare organisation brought obligations no academic exercise had imposed on me. The data I handled identified patients and corporate clients, and in a diagnostics business even a test name attached to a name is sensitive information. The organisation’s expectations were stated at the outset and were not treated as a formality.
-
-In practical terms, my system access was read-only and confined to the modules my tests required. Extracts were limited to the fields necessary for the verification in hand, and where a test could be performed on aggregated data it was. Working files stayed within the organisation’s systems, and exception listings identified transactions by reference rather than by reproducing patient particulars unnecessarily.
-
-Conduct extended beyond data. Internal audit occupies an awkward position in any organisation, because its work involves telling colleagues that something in their area does not match the rule. I learned that the way an observation is raised determines whether it is answered or resisted, and that accuracy and neutrality of language are not politeness but method. I also learned that a finding is never shared outside the audit team before it has been through review, because a half-verified exception circulating in an organisation does damage that a corrected version cannot repair.
 
 
 ### 2.14  CONCLUSION OF JOB / TASK DESCRIPTION
@@ -676,10 +664,6 @@ Most importantly, the chapter reflects a progression. The work I was given in th
 One further observation belongs here, because it shaped how I understood the whole assignment. Every test I performed had the same underlying structure: a rule, a population of transactions, and a comparison between the two. The rule might be a discount threshold, an eligibility condition, a credit period or an authorisation requirement, and the population might be bills, requisition forms, payment records or deletion logs, but the method did not change. Recognising that pattern was what turned seven apparently separate assignments into a single skill, and it is the reason I would now approach an unfamiliar control with a clear idea of how to begin testing it.
 
 Taken together, the twelve weeks moved from checking whether a document carried a seal to understanding why the seal is required at all, and that shift from procedure to purpose is the difference between performing an audit step and understanding one.
-
-What I carry forward from the chapter is less the list of verifications than the habit of mind behind them: establish the rule first, define the population second, and let the comparison rather than the impression produce the finding. That order of work is what distinguishes an audit from a review, and it is transferable to any control I am asked to test in future.
-
-The next chapter turns from what the work was to how well I performed it.
 
 
 ---
@@ -772,8 +756,6 @@ The clearest evidence of progress is the change in the review comments I receive
 
 Where I fell short was in speed, in the use of advanced analytical tools and in formal knowledge of audit standards, and each of those is addressed in the previous section. Taken together, the performance gave me a realistic picture of what an internal audit department expects: consistent accuracy, evidence for every statement, honest reporting of what is pending and the persistence to see an observation through to closure.
 
-Measured against what a first-year assistant in an internal audit function would be expected to handle, the comparison is reasonably close on the testing side. Eligibility verification, documentation checks, discount and concession testing, ageing analysis, deletion review and follow-up of action taken reports are all tasks an assistant performs, and by the closing weeks I was performing them to a standard that passed review without substantial correction. My exposure fell short of that benchmark in three respects: I did not participate in risk assessment or audit planning, I did not work on the expenditure side of the business, and I did not attend the discussions at which findings were presented to management. Those are the areas in which I have method without practice, and identifying them precisely is one of the more useful outcomes of the twelve weeks.
-
 
 ---
 
@@ -858,18 +840,12 @@ The third concerns my own career direction. Before the internship my interest in
 
 The internship has a direct bearing on the path I intend to follow. The work I performed is the work of the early years of a career in audit and assurance, and having done it under review I now know both that I can perform it and that I want to. That is a more useful outcome than the general interest in finance I had before.
 
-The transferable part is not the specific tests but the habits behind them: reading the policy before the data, documenting the basis of an exception, distinguishing a control failure from a recording gap, and following an observation through to closure. Those habits apply to any control environment, and they are what a first professional role would expect from the outset. Familiarity with a laboratory information system also means I would approach an unfamiliar operational system with a clearer idea of what to look for.
-
-What I still need is equally clear. Risk assessment and audit planning, the expenditure and procurement side of a business, statutory audit methodology and the use of analytics on full populations rather than extracts are all areas where I have knowledge without practice. Those gaps are why I intend to pursue further professional study alongside employment.
-
 
 ### 4.9  UNDERSTANDING OF THE DIAGNOSTICS BUSINESS
 
 A less obvious outcome was a working understanding of how a diagnostics business actually earns and loses money, which I did not have before. Revenue arrives in very large numbers of small transactions, each capable of being discounted, cancelled, amended or billed on credit, and the margin on any one of them is thin enough that a systematic leakage matters more than an occasional large error.
 
 That structure explains why the controls I tested exist in the form they do. Eligibility verification protects corporate pricing from being extended to walk-in patients; discount authorisation limits keep pricing discretion at the level that can be held accountable for it; deletion logging makes a removed test traceable to a person and a reason; and ageing analysis keeps credit from quietly becoming a bad debt. Each control answers a specific way in which revenue can be lost without anybody intending it.
-
-Understanding the business in those terms changed how I read my own findings. An exception stopped being a rule that had been broken and became a place where the organisation was exposed, which is a considerably more useful way for an auditor to think about the work.
 
 
 ---
@@ -979,10 +955,6 @@ For a student about to join a similar department, four things would have helped 
 
 On a personal level the internship changed how I read a set of records. I arrived expecting internal audit to be a matter of checking arithmetic and found it to be a matter of asking whether a transaction should have happened at all. The difference sounds small and is not: the first question can be answered by a formula, while the second requires knowing the policy, the business reason and the person who authorised it.
 
-The work also asked for a kind of composure I had not needed before. Raising an exception means telling a colleague, sometimes a senior one, that something in their branch does not match the rule. Learning to do that in a way that is factual, documented and free of accusation was among the most valuable things the twelve weeks taught me, and it took most of them to learn.
-
-I discovered too that I am suited to this work. I had wondered whether detailed verification would become tedious, and found instead that I took real satisfaction in a clean reconciliation and in an exception list that held up under review. That is worth knowing before choosing a career rather than after, and it has turned a general interest in finance into a specific intention to qualify in audit and assurance.
-
 
 ### 5.6  CONCLUSION
 
@@ -993,10 +965,6 @@ Beyond the technical content, three things changed. First, my understanding of c
 I am also clear about what remains to be developed: greater speed, stronger analytical tools including pivot tables and data analytics, a firmer grounding in the standards on internal audit, and more confidence in escalation. Knowing these gaps precisely, rather than in general terms, is itself an outcome of the internship.
 
 In conclusion, the internship achieved what a Summer Internship Programme is intended to achieve. It connected the MBA (Finance) curriculum to live professional work, it gave me the habits and tools used in an internal audit department, and it settled my career direction towards audit and assurance. I am grateful to the management of Neuberg Diagnostics Private Limited for the opportunity, to **Ms. S. Saradha** for her supervision and review, and to the internal audit team and branch staff for their support, and I leave the organisation with both the competence and the confidence to contribute to a professional finance or audit team.
-
-I leave the organisation with an accurate rather than an inflated sense of what I can do, a specific list of what I still need to learn, and the settled intention to qualify and build my career in audit and assurance.
-
-I am grateful to the department for giving a trainee real tests to perform rather than a constructed exercise, and for reviewing the results as they would a colleague’s.
 
 
 ---
@@ -1023,12 +991,9 @@ I am grateful to the department for giving a trainee real tests to perform rathe
 - Institute of Internal Auditors. (n.d.). International Standards for the Professional Practice of Internal Auditing. Retrieved September 2026, from https://www.theiia.org/
 - Institute of Chartered Accountants of India. (n.d.-b). Standards on Internal Audit and guidance notes. Retrieved September 2026, from https://www.icai.org/
 - National Accreditation Board for Testing and Calibration Laboratories. (n.d.). ISO 15189 accreditation requirements for medical laboratories. Retrieved September 2026, from https://nabl-india.org/
-- Committee of Sponsoring Organizations of the Treadway Commission. (n.d.). Internal control: integrated framework. Retrieved September 2026, from https://www.coso.org/
-- Reserve Bank of India. (n.d.). Master direction on know your customer requirements. Retrieved September 2026, from https://www.rbi.org.in/
 - Ministry of Health and Family Welfare, Government of India. (n.d.). Clinical Establishments (Registration and Regulation) Act: standards for diagnostic laboratories. Retrieved September 2026, from https://clinicalestablishments.gov.in/
 - Government of India. (2023). Digital Personal Data Protection Act, 2023. Ministry of Electronics and Information Technology. Retrieved September 2026, from https://www.meity.gov.in/
 - Neuberg Diagnostics Private Limited. (n.d.-b). Corporate and business-to-business services. Retrieved September 2026, from https://neubergdiagnostics.com/
 - Neuberg Diagnostics Private Limited. (2026, July 30). Internship completion certificate issued to the author.
 
-- International Organization for Standardization. (n.d.). ISO 15189: medical laboratories, requirements for quality and competence. Retrieved September 2026, from https://www.iso.org/
 
