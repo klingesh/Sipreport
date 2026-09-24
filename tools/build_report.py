@@ -123,9 +123,16 @@ def toc_table(width, estimates):
             f'{{{{PAGEREF ch{n}_start|{start}}}}}-'
             f'{{{{PAGEREF ch{n}_end|{end}}}}}'])
     return table(rows, widths=[2, 7, 2], page_width=width, align='center',
-                 font_size=14, shade=None, row_height=640,
+                 font_size=14, shade=None, row_height=rc_toc_row_height(),
                  col_bold=[True, True, True],
                  col_align=['center', 'center', 'center'])
+
+
+def rc_toc_row_height():
+    """Row height for the contents table. The sample reports list chapters
+    only, so the table is made to fill its page by setting generous, evenly
+    spaced rows rather than by inventing extra entries."""
+    return getattr(rc, 'TOC_ROW_HEIGHT', 640)
 
 
 def render_blocks(doc, sec, blocks, width, chapter=None, estimates=None):
@@ -373,7 +380,8 @@ def _height(block, width=TEXT_WIDTH_TWIPS):
     if kind == 'gap':
         return payload * body
     if kind == 'toc':
-        return 7 * 640 / 1440 + 0.3          # seven rows at 640 twips
+        rows = 1 + len(rc.CHAPTERS)          # header row plus one per chapter
+        return rows * rc_toc_row_height() / 1440 + 0.3
     if kind == 'sign':
         return body + 140 / 1440
     if kind == 'certificate_image':

@@ -12,6 +12,14 @@ this repository.
 | Ganeshkumar S — Doodleblue Innovations Private Limited, Digital Marketing | `Ganeshkumar S - SIP Report 2026.docx` | `SIP-Report-2026-Ganesh.md` |
 | Jayasubha S (OSI2511007) — Ashok Leyland Limited, Human Resources & Industrial Relations | `Jayasubha S - SIP Report 2026.docx` | `SIP-Report-2026-Jayasubha.md` |
 
+> **Lingesh, Prahadhesvaryaa and Haameed's reports were revised** to a 50-page
+> layout: every person's name in bold, "Ms." rather than "Mrs." for the Academic
+> Head, a single Times New Roman face throughout, a one-page executive summary, a
+> contents table that fills its page, no shading in any table, fewer bullet lists
+> in favour of prose, and every page at least 80% full. The other three reports
+> are unchanged; rebuilding them would pick up the shared writer changes (no
+> table shading, Times New Roman bullet glyphs).
+
 > **Ganeshkumar's report still has four blanks to fill in** — register number, the two
 > internship certificate dates and the industry mentor's name. They appear as
 > `[REGISTER NUMBER]`, `[START DATE]`, `[END DATE]` and `[NAME OF INDUSTRY MENTOR]` in

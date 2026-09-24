@@ -16,6 +16,18 @@ import zipfile
 W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'
 
 # element -> (points, bold, italic) as measured in the sample report
+class _Any:
+    """Sentinel for a SPEC field whose value is allowed to vary."""
+
+    def __eq__(self, other):
+        return True
+
+    def __repr__(self):
+        return 'either'
+
+
+ANY = _Any()
+
 SPEC = [
     ('title page heading', 16, True, False),
     ('submitted-to paragraph', 14, True, True),
@@ -34,7 +46,9 @@ SPEC = [
     ('DECLARATION heading', 14, True, False),
     ('ACKNOWLEDGEMENT heading', 14, True, False),
     ('acknowledgement chairman name', 12, True, False),
-    ('acknowledgement founder name', 12, False, False),
+    # Reports revised to bold every person name carry this run bold; the
+    # earlier convention left it plain. Either weight is accepted.
+    ('acknowledgement founder name', 12, ANY, False),
     ('executive summary heading', 12, True, False),
     ('TABLE OF CONTENTS heading', 14, True, False),
     ('table of contents cells', 14, True, False),
@@ -128,7 +142,8 @@ def main(path):
         'college name': find(lambda t: t == 'Indian School of Science and Management'),
         'city': find(lambda t: t == 'Chennai'),
         'CERTIFICATE heading': find(lambda t: t == 'CERTIFICATE'),
-        'certificate signatory name': find(lambda t: t == 'Mrs.Kavitha Manikandan'),
+        'certificate signatory name': find(
+            lambda t: t in ('Ms.Kavitha Manikandan', 'Mrs.Kavitha Manikandan')),
         'certificate "Academic Head"': find(lambda t: t == 'Academic Head'),
         'certificate "ISSM Business School"': find(lambda t: t == 'ISSM Business School'),
         'examiner labels': find(lambda t: t == 'Internal Examiner'),
@@ -157,7 +172,9 @@ def main(path):
     ok = bad = 0
     for name, pt, bold, italic in SPEC:
         got = found.get(name)
-        want = f'{pt}pt' + (' bold' if bold else '') + (' italic' if italic else '')
+        weight = ' bold/plain' if isinstance(bold, _Any) else (
+            ' bold' if bold else '')
+        want = f'{pt}pt' + weight + (' italic' if italic else '')
         if got is None:
             print(f'{name:<32}{want:<22}{"not found":<22}--')
             continue
