@@ -169,7 +169,7 @@ def page_field():
 # tables
 # --------------------------------------------------------------------------
 def table(rows, widths=None, header=True, font_size=12, align='left',
-          shade='D9D9D9', page_width=9360, row_height=None, col_bold=None,
+          shade=None, page_width=9360, row_height=None, col_bold=None,
           col_align=None, cell_line=240):
     """rows: list of list of cell strings. widths: list of relative ints.
 
@@ -423,10 +423,11 @@ class Document:
     def _numbering_xml(self):
         levels = []
         for lvl in range(3):
-            # level 0 and 2 use Symbol bullets, level 1 uses a hollow bullet
-            text = {0: '\uf0b7', 1: 'o', 2: '\uf0a7'}[lvl]
-            font = 'Symbol' if lvl == 0 else ('Courier New' if lvl == 1
-                                             else 'Wingdings')
+            # Every level uses a Times New Roman glyph so that the document
+            # carries a single body typeface throughout: no Symbol, Courier
+            # New or Wingdings runs anywhere in the report.
+            text = {0: '\u2022', 1: '\u25cb', 2: '\u25aa'}[lvl]
+            font = 'Times New Roman'
             levels.append(f'''<w:lvl w:ilvl="{lvl}"><w:start w:val="1"/>
 <w:numFmt w:val="bullet"/><w:lvlText w:val="{text}"/><w:lvlJc w:val="left"/>
 <w:pPr><w:ind w:left="{720 + lvl * 360}" w:hanging="360"/></w:pPr>
