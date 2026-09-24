@@ -182,21 +182,19 @@ FRONT = [
           'client transactions in Tally.'),
     ('p', 'The middle phase covered statutory compliance. On the indirect '
           'tax side I worked on Goods and Services Tax filings, handling '
-          'GSTR-1, GSTR-2B and GSTR-3B and observing authentication '
-          'through a Digital Signature Certificate. On the direct tax '
-          'side I requested consolidated files from TRACES using Winman '
-          'TDS and entered the data quarter-wise, learning why a mismatch '
-          'between a deductor’s claim and Form 26AS must be resolved '
-          'before filing.'),
+          'GSTR-1, GSTR-2B and GSTR-3B. On the direct tax side I '
+          'requested consolidated files from TRACES using Winman TDS and '
+          'entered the data quarter-wise, learning why a mismatch between '
+          'a deductor’s claim and Form 26AS must be resolved before '
+          'filing.'),
     ('p', 'The final phase brought this together in the Statement of '
           'Total Income: computing total income for individual and '
-          'corporate clients, verifying taxes paid against taxes payable, '
-          'assisting with balance sheets and preparing returns for '
-          'upload. In the last two weeks I independently completed three '
-          'returns end to end after review. Working under **Ms. A. '
-          'Lakshmi** and alongside **Ms. Aruna** taught me the compliance '
-          'calendar, accuracy as a professional obligation, and the '
-          'discipline of sustained routine work.'),
+          'corporate clients, verifying taxes paid against taxes payable '
+          'and preparing returns for upload. In the last two weeks I '
+          'independently completed three returns end to end after review. '
+          'Working under **Ms. A. Lakshmi** and alongside **Ms. Aruna** '
+          'taught me the compliance calendar and accuracy as a '
+          'professional obligation rather than a preference.'),
     ('pagebreak',),
 
     # ---- table of contents ----
@@ -647,10 +645,6 @@ CH1 = {
               'to be reworked, since a return that has to be revisited costs '
               'the practice time it does not have in a filing season.'),
 
-        ('p', 'That, in the end, is why the calendar belongs in a chapter about '
-              'the industry rather than in one about the job: it is the '
-              'single strongest influence on how this profession organises '
-              'itself.'),
     ],
 }
 
@@ -1280,16 +1274,6 @@ CH2 = {
               'adopted, the reason was noted against the entry, on the '
               'reasoning that the file has to stand on its own months later '
               'when nobody remembers the conversation.'),
-        ('p', 'The same discipline applied to the reconciliations. Form 26AS '
-              'credits were tied to the ledger before a computation was begun, '
-              'and differences were listed and explained rather than absorbed. '
-              'For Goods and Services Tax, the acknowledgement of each filing '
-              'was retained against the client record, so that the fact of '
-              'filing and its date were evidenced rather than remembered. I '
-              'came to see this as the most transferable thing the internship '
-              'taught me: the discipline is identical whatever the figure '
-              'happens to be about.'),
-
         ('h2', '2.13  CONFIDENTIALITY AND PROFESSIONAL CONDUCT'),
         ('p', 'Working on live client files brought obligations that no '
               'academic exercise had imposed on me. Everything I handled was '
@@ -1298,23 +1282,6 @@ CH2 = {
               'and the tax positions of individuals who would be identifiable '
               'from a single figure. The firm’s expectations on this were '
               'stated at the outset and were not treated as a formality.'),
-        ('p', 'In practical terms it meant that client material stayed within '
-              'the office and within the firm’s systems, that files were not '
-              'discussed outside the team, and that a client’s affairs were not '
-              'mentioned even in general terms to anybody outside the '
-              'engagement. It also meant a particular care with credentials, '
-              'since access to the income tax portal, the Goods and Services '
-              'Tax portal and TRACES is access to a client’s statutory record '
-              'and not merely to a website.'),
-        ('p', 'Conduct extended beyond confidentiality. I learned that a '
-              'trainee does not give a client an opinion, even a '
-              'well-intentioned one, because an answer from anybody inside the '
-              'firm is taken as the firm’s answer. Questions were therefore '
-              'routed to the manager rather than handled directly. The '
-              'underlying principle was one I had read about as professional '
-              'ethics and had not previously felt: the value of an accounting '
-              'practice rests on trust, and trust is a fragile asset that any '
-              'member of the firm can damage.'),
         ('h2', '2.14  CONCLUSION OF JOB / TASK DESCRIPTION'),
         ('p', 'The work described in this chapter covered the entire sequence of '
               'a compliance assignment in a chartered accountancy practice: '
@@ -1340,8 +1307,6 @@ CH2 = {
               'distance between those two tasks is the distance between '
               'observing a profession and practising it.'),
 
-        ('p', 'What I carry forward from the chapter is less the list of tasks '
-              'than the standard they were held to.'),
     ],
 }
 
@@ -1494,12 +1459,6 @@ CH3 = {
               'completed and accepted, the client reports I prepared were '
               'verified and approved by my Manager, and three returns were filed '
               'independently after review.'),
-        ('p', 'The clearest evidence of progress is the fall in corrections. In '
-              'the first fortnight my classification of bank entries was '
-              'frequently amended; by the final phase computations were approved '
-              'with only minor observations. I also maintained full attendance '
-              'and met every deadline given to me, which in a filing season '
-              'matters as much as technical accuracy.'),
         ('p', 'Where I fell short was speed and statutory depth, and both are '
               'addressed in the previous section. Taken together, the performance '
               'gave me a realistic picture of what a practice expects: consistent '
@@ -1523,12 +1482,6 @@ CH3 = {
               'file has to stand on its own months later when nobody remembers '
               'the conversation. That single instruction changed my working '
               'method more than any other.'),
-        ('p', 'Later feedback concerned completeness and sequence. I was asked '
-              'to list queries as I went rather than accumulate them, so that '
-              'clarifications could be sought from the client while I moved on '
-              'to the next file, and to reconcile Form 26AS credits before '
-              'beginning a computation rather than after. Both were lessons in '
-              'ordering work so that other people are not kept waiting.'),
         ('p', 'The feedback I received in the final fortnight was of a '
               'different kind. Having been allowed to complete three returns '
               'end to end, the comments were about judgement rather than '
@@ -1556,14 +1509,6 @@ CH3 = {
               'litigation support work. An assistant would also be expected to '
               'deal directly with clients on routine queries, whereas my client '
               'contact was mediated through the firm.'),
-        ('p', 'On one count the internship compared favourably. Because it '
-              'coincided with the filing season, the density of live work in '
-              'ten weeks was high, and I handled a larger volume of statements '
-              'and returns in that period than a trainee would in a comparable '
-              'stretch of a quieter part of the year. Volume of that kind is '
-              'what makes exceptions visible, and it is the reason I can now '
-              'recognise a misclassified transfer or an unmatched credit '
-              'quickly rather than by working through first principles.'),
     ],
 }
 
@@ -1616,12 +1561,6 @@ CH4 = {
         ]),
 
         ('h2', '4.2  PRACTICAL EXPOSURE TO COMPLIANCE PROCESSES'),
-        ('p', 'The internship gave me a working map of the Indian compliance '
-              'calendar that I did not have before. I now understand, from having '
-              'done the work, that monthly GST returns and TDS payments, '
-              'quarterly TDS statements and the annual income tax filing cycle '
-              'each impose their own rhythm on a practice, and that these cycles '
-              'overlap in the months between May and September.'),
         ('p', 'More importantly, I understood the architecture behind them. The '
               'tax administration now collects information independently of the '
               'assessee, through TDS statements filed by deductors, through '
@@ -1702,7 +1641,7 @@ CH4 = {
              'Working papers, client reports for the Manager’s approval and '
              'internal queries on pending clarifications'],
         ], 'widths': [3, 6], 'col_bold': [True, False],
-            'col_align': ['center', 'left'], 'row_height': 500}),
+            'col_align': ['center', 'left']}),
         ('p', 'The internship aligned closely with the first-year MBA (Finance) '
               'curriculum, and in several places it inverted the order in which I '
               'had learned things, which turned out to be instructive. Financial '
@@ -1780,20 +1719,6 @@ CH4 = {
               'under review I now know both that I can perform it and that I '
               'want to. That is a more useful outcome than a general '
               'affirmation of interest in finance, which is what I had before.'),
-        ('p', 'Specifically, the exposure to Winman CA-ERP, Tally, the income '
-              'tax portal, the GST portal and TRACES means that I would begin a '
-              'first professional role already able to operate the systems '
-              'rather than learning them alongside the work. The understanding '
-              'of the compliance calendar is equally transferable, because '
-              'knowing why the last fortnight of a quarter is busy changes how '
-              'one plans one’s own workload.'),
-        ('p', 'The internship also clarified what I still need in order to '
-              'progress. Statutory audit from planning to opinion, assessment '
-              'and appellate work, and the analytical side of financial '
-              'reporting are all areas where I have knowledge without practice. '
-              'Those gaps are the reason I intend to pursue further '
-              'professional study alongside employment rather than treating the '
-              'MBA as the end of my technical training.'),
     ],
 }
 
@@ -1939,13 +1864,6 @@ CH5 = {
               'before the authorities are a substantial part of the firm’s '
               'litigation support practice, and although I heard these matters '
               'discussed I did not work on them.'),
-        ('p', 'My software exposure was similarly bounded. I became competent '
-              'in Winman CA-ERP and Tally because those are what the firm '
-              'uses, but I have no exposure to the other packages in common '
-              'use, and none to the audit-specific tools that larger firms '
-              'deploy. Within Tally my work was confined to recording '
-              'transactions rather than configuring masters or extracting '
-              'analytical reports.'),
         ('p', 'Finally, client confidentiality properly restricted what I '
               'could see. Certain files were not opened to an intern, some '
               'figures were shown to me only in aggregate, and I did not sit '
@@ -2014,13 +1932,6 @@ CH5 = {
               'student and a trainee, and I can date it to about the fourth '
               'week, when I began checking my own figures before submitting '
               'rather than after being asked.'),
-        ('p', 'I also learned something about my own temperament. I had '
-              'assumed that repetitive compliance work would frustrate me, and '
-              'found instead that I settled into it and took satisfaction in a '
-              'clean reconciliation. That is a genuinely useful thing for a '
-              'person entering this profession to discover about themselves, '
-              'and it has made my career intention firmer rather than merely '
-              'more informed.'),
         ('h2', '5.6  CONCLUSION'),
         ('p', 'The internship at M/s S. Ravi & Associates, Chartered Accountants, '
               'was the point at which my study of finance became practical. Over '
@@ -2057,14 +1968,6 @@ CH5 = {
               'competence and the confidence to contribute to a professional '
               'finance team.'),
 
-        ('p', 'I leave the firm with an accurate rather than an inflated sense '
-              'of what I can do, a specific list of what I still need to '
-              'learn, and the settled intention to build my career in '
-              'accounting, taxation and audit.'),
-
-        ('p', 'I am grateful to the firm for treating a trainee as someone '
-              'whose work would be relied upon, which is the most useful '
-              'compliment a practice can pay a student.'),
     ],
 }
 
@@ -2161,19 +2064,6 @@ CH6 = {
             'Winman Software India LLP. (n.d.-b). Winman TDS: return '
             'preparation, conso file import and correction statements. '
             'Retrieved September 2026, from https://www.winmansoftware.com/',
-
-            'Tally Solutions. (n.d.-b). Recording transactions, ledger '
-            'grouping and GST features in TallyPrime. Retrieved September 2026, '
-            'from https://tallysolutions.com/',
-
-            'Ministry of Corporate Affairs, Government of India. (n.d.). '
-            'Schedule III to the Companies Act, 2013: form and content of '
-            'financial statements. Retrieved September 2026, from '
-            'https://www.mca.gov.in/',
-
-            'Income Tax Department, Government of India. (n.d.-d). Securities '
-            'Transaction Tax: provisions and computation. Retrieved September '
-            '2026, from https://www.incometax.gov.in/',
 
             'S. Ravi & Associates, Chartered Accountants. (2026, July 17). '
             'Internship completion certificate issued to the author.',

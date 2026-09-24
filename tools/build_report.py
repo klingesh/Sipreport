@@ -496,6 +496,33 @@ REPORTS = {
 }
 
 
+def _faithful_layout():
+    """Page counts and fill from paginate.py, which measures real Times New
+    Roman widths and models keepNext and widow control. The estimate_pages
+    figures above count characters and run several pages short; prefer these."""
+    import paginate as pg
+    front, body, _ = pg.report_pages(rc)
+    print('measured layout (real glyph widths, keepNext and widow control):')
+    print('  front matter %d pages, numbered %d, total %d'
+          % (len(front), len(body), len(front) + len(body)))
+    stats = pg.chapter_pages(rc)
+    print('  ' + '  '.join('CH%d %dp/%.0f%%' % (n, p, f)
+                           for n, p, f, _ in stats))
+    thin = [i + 1 for i, h in enumerate(body) if h / pg.TEXT_H_IN < 0.80]
+    dividers = []
+    at = 0
+    for _, p, _, _ in stats:
+        dividers.append(at + 1)
+        at += p + 1
+    other = [p for p in thin if p not in dividers]
+    if other:
+        print('  numbered pages under 80%% full: %s'
+              % ', '.join(str(p) for p in other))
+    else:
+        print('  every numbered page is at least 80%% full, apart from the %d '
+              'chapter divider pages' % len(dividers))
+
+
 def build(name):
     """Build one report; returns the paths written."""
     global rc
@@ -510,6 +537,8 @@ def build(name):
     estimate_pages(verbose=True)
     print()
     issues = check_front_pages()
+    print()
+    _faithful_layout()
     cert, logo = find_certificate(), find_logo()
     print(f'\ntitle page logo  : '
           f'{os.path.relpath(logo, ROOT) if logo else "MISSING"}')

@@ -152,22 +152,20 @@ FRONT = [
           'research with field visits to sellers and distributors.'),
     ('p', 'The work covered eight areas. I identified and finalised the '
           'FMCG categories to be taken up for research and onboarding; '
-          'compared prices across retail outlets and competing e-commerce '
-          'platforms so that the platform’s own pricing could be '
-          'positioned sensibly; prepared and later updated product '
-          'listings; and converted raw product and market findings into '
+          'compared prices across retail outlets and competing platforms '
+          'so that our own pricing could be positioned sensibly; prepared '
+          'and updated product listings; and converted raw findings into '
           'structured project reports. A fifth area was data collection '
-          'and validation, checking the accuracy of product data before '
-          'it was used for onboarding decisions.'),
+          'and validation, checking product data before it was used for '
+          'onboarding decisions.'),
     ('p', 'The remaining areas took me into the field. I researched '
           'prospective FMCG sellers and distributors, made field visits, '
           'attended vendor meetings and took part in partnership '
           'discussions; drafted business proposals by email and followed '
-          'prospective clients through to onboarding; and supported '
-          'marketing and platform improvement through promotional '
-          'creatives, a promotional video shoot and the reporting of '
-          'website defects to the development team. A planned break at '
-          'the end of May covered my college semester examinations.'),
+          'prospects through to onboarding; and supported marketing and '
+          'platform improvement through promotional creatives, a video '
+          'shoot and the reporting of website defects. A planned break at '
+          'the end of May covered my semester examinations.'),
     ('p', 'Professionally, the internship gave me three things a '
           'classroom cannot. First, an understanding that a marketplace '
           'grows supply one seller at a time, and that each seller has to '
@@ -625,26 +623,11 @@ CH1 = {
               'presentation. A listing that misstates a pack size or omits a '
               'mandatory declaration is a regulatory exposure as well as a '
               'customer disappointment.'),
-        ('p', 'Category-specific licensing adds a further requirement. Food '
-              'businesses selling online must hold the appropriate licence or '
-              'registration, and platforms are expected to verify that their '
-              'food sellers do (Food Safety and Standards Authority of India, '
-              'n.d.), which is directly relevant to onboarding in the '
-              'fast-moving consumer goods categories I worked on. Tax '
-              'obligations also fall on the operator rather than only on the '
-              'seller, since a platform is required to collect tax at source '
-              'on the consideration it handles (Goods and Services Tax '
-              'Network, n.d.).'),
-        ('p', 'Finally, the policy environment is actively encouraging open '
-              'digital commerce, through a network intended to let buyers and '
-              'sellers transact across platforms rather than within a single '
-              'one (Open Network for Digital Commerce, n.d.). For a smaller '
-              'platform this cuts both ways: it lowers the cost of reaching '
-              'buyers, and it weakens the advantage of having recruited a '
-              'seller exclusively. Either way it reinforces the lesson of the '
-              'internship, that a marketplace competes on the quality of its '
-              'supply relationships rather than on the existence of its '
-              'website.'),
+
+        ('p', 'For a supply-side team the practical upshot is that the '
+              'regulatory position is part of the pitch: a seller is being '
+              'asked to place his goods on a platform that carries duties of '
+              'its own.'),
     ],
 }
 
@@ -1215,13 +1198,6 @@ CH2 = {
               'For product data it meant validating a specification against '
               'the seller’s own material rather than inferring it, and '
               'correcting at source rather than filling a gap by assumption.'),
-        ('p', 'For seller outreach it meant keeping a record of what each '
-              'party had actually undertaken and when the next contact was '
-              'due. This mattered most across the examination break, when work '
-              'I had left had to be resumed weeks later, and it was the clearest '
-              'demonstration I received that documentation is a courtesy to '
-              'colleagues rather than an administrative imposition.'),
-
         ('h2', '2.13  CONDUCT IN THE FIELD'),
         ('p', 'Representing a platform in person to sellers and distributors '
               'brought obligations that desk work does not. In a field '
@@ -1238,14 +1214,6 @@ CH2 = {
               'learned to be accurate about what the platform could not yet '
               'do, since a seller who discovers a limitation after onboarding '
               'is harder to retain than one who was told about it in advance.'),
-        ('p', 'Conduct also meant respecting the seller’s time and '
-              'circumstances. A distributor running a counter has customers '
-              'ahead of a visitor with a proposition, and learning to read '
-              'when to wait, when to leave material and when to return was a '
-              'practical skill rather than a courtesy. Commercial information '
-              'shared in confidence, such as a seller’s margins or his terms '
-              'with another platform, stayed within the team.'),
-
         ('h2', '2.14  COORDINATION ACROSS TEAMS'),
         ('p', 'A single piece of supply-side work frequently involved three '
               'teams, and learning to move between them was part of the job. A '
@@ -1260,13 +1228,6 @@ CH2 = {
               'report that stated what I did, what happened and what should '
               'have happened saved a round of questions, and I learned to do '
               'that after several reports that did not.'),
-        ('p', 'The second lesson was about sequence. In a small organisation '
-              'people are shared rather than dedicated, so a request that '
-              'arrives without context waits. Explaining why a correction '
-              'mattered, and what it unblocked, consistently produced faster '
-              'help than a bare request did. That is an unglamorous '
-              'observation, and it was one of the more useful ones I took from '
-              'the twelve weeks.'),
         ('h2', '2.15  CONCLUSION OF JOB / TASK DESCRIPTION'),
         ('p', 'The work described in this chapter covered the complete sequence '
               'by which an online selling platform builds supply: choosing a '
@@ -1300,29 +1261,6 @@ CH2 = {
               'understanding of the business, and it is the reason I could see, '
               'by the closing weeks, why a correction to a pack size mattered '
               'as much as a meeting with a distributor.'),
-        ('p', 'Taken together, the twelve weeks moved from researching a '
-              'category on a spreadsheet to persuading a distributor in his own '
-              'shop and then listing his products accurately enough for a '
-              'stranger to buy them with confidence. That sequence, from '
-              'analysis through persuasion to execution, is the supply side of '
-              'a marketplace in miniature, and performing all three parts of it '
-              'is what the internship taught me that no case study had.'),
-
-        ('p', 'What I carry forward from the chapter is less the list of tasks '
-              'than the judgement that sat behind them: which category is worth '
-              'the effort, which seller is worth a third visit, and which '
-              'detail in a listing a customer will actually notice. Those are '
-              'decisions rather than procedures, and learning to make them is '
-              'what separated the last fortnight of the internship from the '
-              'first.'),
-
-        ('p', 'The next chapter turns from what the work was to how well I '
-              'performed it, assessed against the standards the team applied '
-              'to my output rather than against my own impression of it.'),
-
-        ('p', 'That assessment is necessarily a mixture of what I was told in '
-              'review and what I could see for myself in the quality of the '
-              'work I produced.'),
     ],
 }
 
@@ -1393,12 +1331,6 @@ CH3 = {
             'Followed defect reports through to the development team rather than '
             'assuming that reporting was the end of the task.',
         ]),
-        ('p', 'Task ownership developed over the period. Early on I treated a '
-              'task as complete when I had done my part; by the end I treated it '
-              'as complete only when the data was validated, the record was '
-              'updated and the next step was either taken or clearly noted for '
-              'somebody else.'),
-
         ('h2', '3.3  ADAPTABILITY AND LEARNING CURVE'),
         ('p', 'The internship required adaptation on several fronts at once: an '
               'unfamiliar industry, an unfamiliar platform, work that alternated '
@@ -1421,13 +1353,6 @@ CH3 = {
             'Resumed work smoothly after the examination break by keeping my '
             'records current before leaving.',
         ]),
-        ('p', 'What made the adaptation possible was the organisation’s practice '
-              'of explaining why a task mattered to the platform’s growth, '
-              'together with the internal team meetings at which progress and '
-              'forthcoming work were reviewed. I also formed the habit of writing '
-              'down a process immediately after it was explained, which is what I '
-              'relied on when the same task recurred for a new category.'),
-
         ('h2', '3.4  COMMUNICATION AND COLLABORATION'),
         ('p', 'This internship involved a great deal of communication outside the '
               'organisation, because most of the work depended on persuading '
@@ -1447,13 +1372,6 @@ CH3 = {
             'reports, raised platform defects with the development team and '
             'reported progress in team meetings.',
         ]),
-        ('p', 'The specific lesson I take from this is that business development '
-              'is conducted through many small, courteous, well-recorded '
-              'interactions rather than through a single persuasive conversation. '
-              'The sellers who eventually onboarded were generally those who had '
-              'been visited, then emailed, then followed up, with each step '
-              'adding a little confidence.'),
-
         ('h2', '3.5  STRENGTHS DEMONSTRATED'),
         ('bullets', [
             '**Research discipline:** gathered category, product and price data '
@@ -1533,9 +1451,10 @@ CH3 = {
               'naming them precisely is one of the more useful outcomes of the '
               'twelve weeks.'),
 
-        ('p', 'On balance the internship met the standard I would set for a '
-              'first placement: the work was real, it was reviewed, and by the '
-              'end of it I was trusted to do it with limited supervision.'),
+        ('p', 'The fairest summary is that the work was real, it was '
+              'reviewed, and by the closing weeks I was trusted to do it with '
+              'limited supervision.'),
+
     ],
 }
 
@@ -1581,12 +1500,6 @@ CH4 = {
         ]),
 
         ('h2', '4.2  PRACTICAL EXPOSURE TO BUSINESS PROCESSES'),
-        ('p', 'The internship gave me a working map of how an online selling '
-              'platform operates that I did not have before. I now understand, '
-              'from having worked on it, how a category moves from selection '
-              'through price benchmarking, seller identification, field '
-              'outreach, partnership discussion, data collection and validation, '
-              'listing, promotion and finally platform support.'),
         ('p', 'More importantly, I understood the commercial architecture behind '
               'that sequence. A marketplace makes money by facilitating '
               'transactions, so its growth depends on two things it does not '
@@ -1662,7 +1575,7 @@ CH4 = {
              'Working across business development, marketing and technology teams '
              'in a small organisation'],
         ], 'widths': [3, 6], 'col_bold': [True, False],
-            'col_align': ['center', 'left'], 'row_height': 500}),
+            'col_align': ['center', 'left']}),
         ('p', 'The internship also exposed the limits of purely academic '
               'preparation. Coursework describes a distribution channel as a '
               'diagram; practice required me to find the distributor, travel to '
@@ -1719,21 +1632,6 @@ CH4 = {
               'know both that I can do it and that I enjoy it. That is a more '
               'useful conclusion than the general interest in marketing I had '
               'before.'),
-        ('p', 'The transferable part is not the FMCG categories but the method: '
-              'researching a market before approaching it, benchmarking with '
-              'the source and date recorded, preparing data that somebody else '
-              'will rely on, making a proposition in person, and following a '
-              'conversation through to a decision. Those apply in any '
-              'supply-side or sales role, and they are what a first '
-              'professional position would expect from the outset.'),
-        ('p', 'What I still need is equally clear. Negotiating commercial '
-              'terms, reading platform analytics, understanding the unit '
-              'economics of an order, and the warehousing and logistics side of '
-              'fulfilment are all areas where I have observation without '
-              'practice. Those gaps are why I intend to seek a first role that '
-              'exposes me to the commercial and analytical side of a '
-              'marketplace rather than to supply alone.'),
-
         ('h2', '4.9  UNDERSTANDING OF THE MARKETPLACE BUSINESS'),
         ('p', 'A less obvious outcome was a working understanding of how a '
               'marketplace actually works, which I did not have before. A '
@@ -1750,12 +1648,6 @@ CH4 = {
               'is the only thing a customer sees, and an error in it is visible '
               'to everyone who searches. Seller outreach exists because none of '
               'the preceding work has any value until somebody agrees to list.'),
-        ('p', 'Seeing the business in those terms changed how I read my own '
-              'tasks. Correcting a pack size stopped being data entry and '
-              'became the removal of a reason for a customer to distrust the '
-              'platform, which is a considerably more useful way to think about '
-              'the work.'),
-
         ('p', 'The broader realisation is that an e-commerce platform is a '
               'business development operation with a technology interface '
               'attached, rather than a technology business that happens to '
@@ -1765,8 +1657,6 @@ CH4 = {
               'each of those things myself, I now read a product page as the '
               'end of a process rather than as a page.'),
 
-        ('p', 'That change of perspective is, I think, the most durable thing '
-              'the internship gave me.'),
     ],
 }
 
@@ -1813,12 +1703,6 @@ CH5 = {
               'and in the closing weeks followed up with clients through to '
               'seller onboarding while managing the correspondence with '
               'prospective partners.'),
-        ('p', 'The work was carried out on the Q-Up platform itself, with '
-              'spreadsheets for category research, product data and price '
-              'comparison, design software for promotional creatives, and email '
-              'for business correspondence, supported by the organisation’s '
-              'project reporting formats and internal team reviews.'),
-
         ('h2', '5.2  KEY TAKEAWAYS'),
         ('h3', '5.2.1  Understanding of the Marketplace Model'),
         ('p', 'Learned that a platform’s growth depends on supply, and that '
@@ -1912,14 +1796,6 @@ CH5 = {
               'negotiated. My exposure to the platform’s own numbers was '
               'similarly limited: I reported defects and prepared listings '
               'without visibility of traffic, conversion or revenue.'),
-        ('p', 'Two practical limits are worth recording as well. My field '
-              'visits covered sellers and distributors within reach of '
-              'Chennai, so the report describes one urban market and not the '
-              'national picture. And the planned break at the end of May for '
-              'my semester examinations interrupted the work, which taught me '
-              'about handover but did mean I saw two shorter stretches rather '
-              'than one continuous engagement.'),
-
         ('h2', '5.4  RECOMMENDATIONS'),
         ('h3', '5.4.1  Suggestions to the Organisation'),
         ('p', 'The following are offered respectfully and from a trainee’s '
@@ -1976,13 +1852,6 @@ CH5 = {
               'reframing happened, checking a pack size or a price stopped '
               'feeling like an imposition and started feeling like the '
               'substance of the job.'),
-        ('p', 'The examination break taught me something unplanned. Handing '
-              'work over and picking it up again weeks later showed me exactly '
-              'how much of what I knew was in my head rather than in my '
-              'records, and it was more than I had assumed. I returned with the '
-              'habit of writing things down so that somebody else could '
-              'continue them, which is probably the most transferable thing I '
-              'took from the whole internship.'),
         ('h2', '5.6  CONCLUSION'),
         ('p', 'The internship at Q-Up Private Limited was the point at which my '
               'study of management became practical. Over twelve weeks I moved '
@@ -2024,14 +1893,11 @@ CH5 = {
               'organisation with both the competence and the confidence to '
               'contribute to a professional business development team.'),
 
-        ('p', 'I leave the organisation with an accurate rather than an '
-              'inflated sense of what I can do, a specific list of what I still '
-              'need to learn, and the settled intention to build my career in '
-              'business development and e-commerce operations.'),
+        ('p', 'I leave the organisation with an accurate sense of what I can '
+              'do, a clear list of what I still need to learn, and the settled '
+              'intention to build my career in business development and '
+              'e-commerce operations.'),
 
-        ('p', 'I am grateful to the organisation for sending a trainee into the '
-              'field rather than keeping him at a desk, because the field is '
-              'where the lessons were.'),
     ],
 }
 
