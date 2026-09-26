@@ -1,6 +1,6 @@
 # SIP Reports
 
-Six Summer Internship Project reports, all built to the format of the sample reports in
+Seven Summer Internship Project reports, all built to the format of the sample reports in
 this repository.
 
 | Report | Submission copy | Text for review |
@@ -11,6 +11,16 @@ this repository.
 | Haameed Abdur Rahman SK (OSI2509017) — Q-Up Private Limited, Business Development & Operations | `Haameed Abdur Rahman SK - SIP Report 2026.docx` | `SIP-Report-2026-Haameed.md` |
 | Ganeshkumar S — Doodleblue Innovations Private Limited, Digital Marketing | `Ganeshkumar S - SIP Report 2026.docx` | `SIP-Report-2026-Ganesh.md` |
 | Jayasubha S (OSI2511007) — Ashok Leyland Limited, Human Resources & Industrial Relations | `Jayasubha S - SIP Report 2026.docx` | `SIP-Report-2026-Jayasubha.md` |
+| Aarnav Rupesh. K (ISSMCHNM250112) — Ecosoft Zolutions Pvt Ltd, Sales / Business Development | `Aarnav Rupesh K - SIP Report 2026.docx` | `SIP-Report-2026-Aarnav.md` |
+
+> **Aarnav's report has placeholders to fill in.** The ISSM office bearers were not
+> supplied and were deliberately not copied from another student's report, so the
+> Chairman, Founder and Academic Head appear as `[NAME OF CHAIRMAN]`,
+> `[NAME OF FOUNDER AND MANAGING DIRECTOR]` and `[NAME OF ACADEMIC HEAD]`. Three
+> `[TO BE PROVIDED]` markers cover the company history, an industry guide's name and
+> the official subject titles. **His register number also needs settling:** the
+> internship certificate reads `ISSMCHNM250112` and is used here, but his written
+> brief gave `OSI2511003`.
 
 > **Lingesh, Prahadhesvaryaa and Haameed's reports were revised**: every
 > person's name in bold, "Ms." rather than "Mrs." for the Academic Head, a single
@@ -46,6 +56,8 @@ per-page fill that match Word closely. The older `estimate_pages` in
 | `tools/content_haameed.py` | All of Haameed's report text. |
 | `tools/content_ganesh.py` | All of Ganeshkumar's report text. |
 | `tools/content_jayasubha.py` | All of Jayasubha's report text. |
+| `tools/content_aarnav.py` | All of Aarnav's report text. |
+| `tools/paginate.py` | Faithful page layout model — the page counts to trust. |
 | `Ganesh chapther 1.docx` | Ganeshkumar's original five-chapter draft, kept as the source for his report. |
 | `Jayasubha_S_SIP_Report.pdf` | Jayasubha's original draft, kept as the source for her report. |
 | `tools/build_report.py` | Renders a content module into a `.docx` and a `.md`. |

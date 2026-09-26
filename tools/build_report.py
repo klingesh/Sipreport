@@ -493,6 +493,11 @@ REPORTS = {
         'docx': 'Jayasubha S - SIP Report 2026.docx',
         'md': 'SIP-Report-2026-Jayasubha.md',
     },
+    'aarnav': {
+        'module': 'content_aarnav',
+        'docx': 'Aarnav Rupesh K - SIP Report 2026.docx',
+        'md': 'SIP-Report-2026-Aarnav.md',
+    },
 }
 
 

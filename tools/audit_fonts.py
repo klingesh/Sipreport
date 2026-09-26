@@ -138,20 +138,29 @@ def main(path):
         'student name': find(lambda t: re.fullmatch(r'[A-Z][A-Z .]+[A-Z.]', t) is not None
                              and 'SUMMER' not in t and 'MASTER' not in t
                              and 'SUBMITTED' not in t and len(t) > 8),
-        'register number': find(lambda t: re.fullmatch(r'OSI\d+', t) is not None),
+        # register numbers appear in two formats across the reports: the
+        # college's OSI##### and the ISSMCHNM###### form used on one
+        # internship certificate
+        'register number': find(
+            lambda t: re.fullmatch(r'(OSI|ISSMCHNM)\d+', t) is not None),
         'college name': find(lambda t: t == 'Indian School of Science and Management'),
         'city': find(lambda t: t == 'Chennai'),
         'CERTIFICATE heading': find(lambda t: t == 'CERTIFICATE'),
+        # the signatory is a named Academic Head in most reports and a
+        # bracketed placeholder where the name has not yet been supplied
         'certificate signatory name': find(
-            lambda t: t in ('Ms.Kavitha Manikandan', 'Mrs.Kavitha Manikandan')),
+            lambda t: t in ('Ms.Kavitha Manikandan', 'Mrs.Kavitha Manikandan')
+            or t.startswith('[NAME OF ACADEMIC HEAD')),
         'certificate "Academic Head"': find(lambda t: t == 'Academic Head'),
         'certificate "ISSM Business School"': find(lambda t: t == 'ISSM Business School'),
         'examiner labels': find(lambda t: t == 'Internal Examiner'),
         'INTERNSHIP CERTIFICATE heading': find(lambda t: t == 'INTERNSHIP CERTIFICATE'),
         'DECLARATION heading': find(lambda t: t == 'DECLARATION'),
         'ACKNOWLEDGEMENT heading': find(lambda t: t == 'ACKNOWLEDGEMENT'),
-        'acknowledgement chairman name': find(lambda t: 'KATHIRVEL' in t),
-        'acknowledgement founder name': find(lambda t: 'PARKAVI' in t),
+        'acknowledgement chairman name': find(
+            lambda t: 'KATHIRVEL' in t or 'NAME OF CHAIRMAN' in t),
+        'acknowledgement founder name': find(
+            lambda t: 'PARKAVI' in t or 'NAME OF FOUNDER' in t),
         'executive summary heading': find(lambda t: t == 'The Executive Summary'),
         'TABLE OF CONTENTS heading': find(lambda t: t == 'TABLE OF CONTENTS'),
         'table of contents cells': find(lambda t: t == 'SL.NO'),
